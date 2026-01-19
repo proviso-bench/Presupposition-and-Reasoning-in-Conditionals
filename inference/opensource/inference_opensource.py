@@ -14,7 +14,6 @@ load_dotenv(Path(__file__).parent.parent.parent / ".env")
 # Set cache directories
 CACHE_DIR = "/cluster/scratch/yongyu/cache"
 os.environ["HF_HOME"] = CACHE_DIR
-os.environ["TRANSFORMERS_CACHE"] = CACHE_DIR
 os.environ["HF_DATASETS_CACHE"] = f"{CACHE_DIR}/datasets"
 
 import json
@@ -23,7 +22,7 @@ from datetime import datetime
 from typing import Dict, List, Optional
 
 import torch
-from transformers import AutoProcessor, AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoProcessor, AutoModelForCausalLM, AutoTokenizer, AutoModel
 
 # Get HuggingFace token
 HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_API_KEY")
@@ -32,7 +31,7 @@ HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_API_KEY")
 MODELS = {
     "qwen": {
         "model_id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
-        "type": "causal_lm"
+        "type": "vision_language"
     },
     "llama": {
         "model_id": "meta-llama/Llama-3.1-8B-Instruct",
@@ -41,15 +40,111 @@ MODELS = {
 }
 
 
-class ModelInference:
-    """Base class for model inference."""
+class QwenVLInference:
+    """Inference class for Qwen Vision-Language models."""
+
+    def __init__(self, model_name: str, device_map: str = "auto"):
+        self.model_name = model_name
+        self.device_map = device_map
+        self.model = None
+        self.processor = None
+
+    def load_model(self):
+        """Load model and processor."""
+        from transformers import Qwen2VLForConditionalGeneration, Qwen2VLProcessor
+
+        token_kwargs = {"token": HUGGINGFACE_TOKEN} if HUGGINGFACE_TOKEN else {}
+
+        print(f"Loading Qwen VL model: {self.model_name}")
+        print(f"Cache directory: {CACHE_DIR}")
+
+        # Load processor
+        self.processor = AutoProcessor.from_pretrained(
+            self.model_name,
+            trust_remote_code=True,
+            **token_kwargs
+        )
+
+        # Load model with trust_remote_code for custom architectures
+        self.model = AutoModel.from_pretrained(
+            self.model_name,
+            device_map=self.device_map,
+            torch_dtype=torch.bfloat16,
+            trust_remote_code=True,
+            **token_kwargs
+        )
+
+        print(f"Model loaded successfully")
+
+    def generate(
+        self,
+        prompt: str,
+        max_new_tokens: int = 1024,
+        temperature: float = 0.7,
+        **kwargs
+    ) -> Dict:
+        """Generate response for a prompt."""
+
+        if self.model is None:
+            raise RuntimeError("Model not loaded. Call load_model() first.")
+
+        # Format as chat messages (text-only)
+        messages = [
+            {"role": "user", "content": [{"type": "text", "text": prompt}]}
+        ]
+
+        # Apply chat template
+        text = self.processor.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True
+        )
+
+        # Process inputs
+        inputs = self.processor(
+            text=[text],
+            return_tensors="pt",
+            padding=True
+        )
+        inputs = inputs.to(self.model.device)
+
+        # Generation parameters
+        generate_kwargs = {
+            "max_new_tokens": max_new_tokens,
+            "temperature": temperature,
+            "do_sample": True if temperature > 0 else False,
+            "top_p": kwargs.get("top_p", 0.9),
+        }
+
+        # Generate
+        with torch.no_grad():
+            outputs = self.model.generate(**inputs, **generate_kwargs)
+
+        # Decode response
+        generated_ids_trimmed = [
+            out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, outputs)
+        ]
+        response = self.processor.batch_decode(
+            generated_ids_trimmed,
+            skip_special_tokens=True,
+            clean_up_tokenization_spaces=False
+        )[0]
+
+        return {
+            "response": response,
+            "model": self.model_name,
+            "tokens_generated": len(generated_ids_trimmed[0])
+        }
+
+
+class LlamaInference:
+    """Inference class for Llama and standard causal LM models."""
 
     def __init__(self, model_name: str, device_map: str = "auto"):
         self.model_name = model_name
         self.device_map = device_map
         self.model = None
         self.tokenizer = None
-        self.processor = None
 
     def load_model(self):
         """Load model and tokenizer."""
@@ -58,20 +153,12 @@ class ModelInference:
         print(f"Loading model: {self.model_name}")
         print(f"Cache directory: {CACHE_DIR}")
 
-        # Try to load tokenizer first, fall back to processor
-        try:
-            self.tokenizer = AutoTokenizer.from_pretrained(
-                self.model_name,
-                trust_remote_code=True,
-                **token_kwargs
-            )
-        except Exception:
-            self.processor = AutoProcessor.from_pretrained(
-                self.model_name,
-                trust_remote_code=True,
-                **token_kwargs
-            )
-            self.tokenizer = self.processor.tokenizer if hasattr(self.processor, 'tokenizer') else self.processor
+        # Load tokenizer
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            self.model_name,
+            trust_remote_code=True,
+            **token_kwargs
+        )
 
         # Load model
         self.model = AutoModelForCausalLM.from_pretrained(
@@ -149,6 +236,17 @@ class ModelInference:
         }
 
 
+def get_inference_class(model_config: dict):
+    """Get the appropriate inference class based on model type."""
+    model_type = model_config.get("type", "causal_lm")
+    model_id = model_config["model_id"]
+
+    if model_type == "vision_language":
+        return QwenVLInference(model_id)
+    else:
+        return LlamaInference(model_id)
+
+
 def load_prompt_template(prompt_type: str) -> str:
     """Load prompt template from file."""
     prompt_dir = Path(__file__).parent.parent.parent / "prompt"
@@ -195,7 +293,7 @@ def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
     model_id = model_config["model_id"]
 
     # Initialize and load model
-    inference = ModelInference(model_id)
+    inference = get_inference_class(model_config)
     inference.load_model()
 
     # Load data and prompt template
