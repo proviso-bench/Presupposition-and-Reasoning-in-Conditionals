@@ -5,6 +5,13 @@ echo "=========================================="
 echo "Conditional Probability Benchmark Inference"
 echo "=========================================="
 
+# Set cache directories
+export HF_HOME=/cluster/scratch/yongyu/cache
+export TRANSFORMERS_CACHE=/cluster/scratch/yongyu/cache
+export HF_DATASETS_CACHE=/cluster/scratch/yongyu/cache/datasets
+
+echo "Cache directory: $HF_HOME"
+
 # Install dependencies
 echo "Installing dependencies..."
 pip install -r requirements.txt

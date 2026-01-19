@@ -3,16 +3,23 @@ Open-source model inference script for Conditional Probability Benchmark.
 Models: Qwen/Qwen3-VL-30B-A3B-Thinking, meta-llama/Llama-3.1-8B-Instruct
 """
 
-import json
 import os
-import argparse
 from pathlib import Path
-from datetime import datetime
 from dotenv import load_dotenv
-from huggingface_hub import InferenceClient
 
-# Load environment variables
+# Load environment variables BEFORE importing HuggingFace libraries
 load_dotenv(Path(__file__).parent.parent.parent / ".env")
+
+# Set cache directories
+CACHE_DIR = "/cluster/scratch/yongyu/cache"
+os.environ["HF_HOME"] = CACHE_DIR
+os.environ["TRANSFORMERS_CACHE"] = CACHE_DIR
+os.environ["HF_DATASETS_CACHE"] = f"{CACHE_DIR}/datasets"
+
+import json
+import argparse
+from datetime import datetime
+from huggingface_hub import InferenceClient
 
 # Model configurations
 MODELS = {
