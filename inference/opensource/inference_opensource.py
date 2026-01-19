@@ -1,6 +1,7 @@
 """
 Open-source model inference script for Conditional Probability Benchmark.
 Models: Qwen/Qwen3-VL-30B-A3B-Thinking, meta-llama/Llama-3.1-8B-Instruct
+Uses local transformers for inference.
 """
 
 import os
@@ -19,13 +20,134 @@ os.environ["HF_DATASETS_CACHE"] = f"{CACHE_DIR}/datasets"
 import json
 import argparse
 from datetime import datetime
-from huggingface_hub import InferenceClient
+from typing import Dict, List, Optional
+
+import torch
+from transformers import AutoProcessor, AutoModelForCausalLM, AutoTokenizer
+
+# Get HuggingFace token
+HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_API_KEY")
 
 # Model configurations
 MODELS = {
-    "qwen": "Qwen/Qwen3-VL-30B-A3B-Thinking",
-    "llama": "meta-llama/Llama-3.1-8B-Instruct"
+    "qwen": {
+        "model_id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
+        "type": "causal_lm"
+    },
+    "llama": {
+        "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+        "type": "causal_lm"
+    }
 }
+
+
+class ModelInference:
+    """Base class for model inference."""
+
+    def __init__(self, model_name: str, device_map: str = "auto"):
+        self.model_name = model_name
+        self.device_map = device_map
+        self.model = None
+        self.tokenizer = None
+        self.processor = None
+
+    def load_model(self):
+        """Load model and tokenizer."""
+        token_kwargs = {"token": HUGGINGFACE_TOKEN} if HUGGINGFACE_TOKEN else {}
+
+        print(f"Loading model: {self.model_name}")
+        print(f"Cache directory: {CACHE_DIR}")
+
+        # Try to load tokenizer first, fall back to processor
+        try:
+            self.tokenizer = AutoTokenizer.from_pretrained(
+                self.model_name,
+                trust_remote_code=True,
+                **token_kwargs
+            )
+        except Exception:
+            self.processor = AutoProcessor.from_pretrained(
+                self.model_name,
+                trust_remote_code=True,
+                **token_kwargs
+            )
+            self.tokenizer = self.processor.tokenizer if hasattr(self.processor, 'tokenizer') else self.processor
+
+        # Load model
+        self.model = AutoModelForCausalLM.from_pretrained(
+            self.model_name,
+            device_map=self.device_map,
+            torch_dtype=torch.bfloat16,
+            trust_remote_code=True,
+            **token_kwargs
+        )
+
+        # Set pad token if not set
+        if self.tokenizer.pad_token is None:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
+
+        print(f"Model loaded successfully on device: {self.model.device}")
+
+    def generate(
+        self,
+        prompt: str,
+        max_new_tokens: int = 1024,
+        temperature: float = 0.7,
+        **kwargs
+    ) -> Dict:
+        """Generate response for a prompt."""
+
+        if self.model is None:
+            raise RuntimeError("Model not loaded. Call load_model() first.")
+
+        # Format as chat messages
+        messages = [{"role": "user", "content": prompt}]
+
+        # Apply chat template
+        if hasattr(self.tokenizer, 'apply_chat_template'):
+            input_text = self.tokenizer.apply_chat_template(
+                messages,
+                add_generation_prompt=True,
+                tokenize=False
+            )
+        else:
+            input_text = prompt
+
+        # Tokenize
+        inputs = self.tokenizer(
+            input_text,
+            return_tensors="pt",
+            padding=True,
+            truncation=True,
+            max_length=4096
+        ).to(self.model.device)
+
+        # Generation parameters
+        generate_kwargs = {
+            "max_new_tokens": max_new_tokens,
+            "temperature": temperature,
+            "do_sample": True if temperature > 0 else False,
+            "top_p": kwargs.get("top_p", 0.9),
+            "pad_token_id": self.tokenizer.pad_token_id,
+            "eos_token_id": self.tokenizer.eos_token_id,
+        }
+
+        # Generate
+        with torch.no_grad():
+            outputs = self.model.generate(**inputs, **generate_kwargs)
+
+        # Decode response (only the new tokens)
+        response = self.tokenizer.decode(
+            outputs[0][inputs["input_ids"].shape[-1]:],
+            skip_special_tokens=True
+        )
+
+        return {
+            "response": response,
+            "model": self.model_name,
+            "tokens_generated": len(outputs[0]) - inputs["input_ids"].shape[-1]
+        }
+
 
 def load_prompt_template(prompt_type: str) -> str:
     """Load prompt template from file."""
@@ -38,16 +160,17 @@ def load_prompt_template(prompt_type: str) -> str:
     with open(prompt_file, "r") as f:
         return f.read()
 
+
 def load_data() -> list:
     """Load problem set data."""
     data_path = Path(__file__).parent.parent.parent / "data" / "problem_set.json"
     with open(data_path, "r") as f:
         return json.load(f)
 
+
 def format_prompt(template: str, item: dict, prompt_type: str) -> str:
     """Format prompt with item data."""
     if prompt_type == "with_context":
-        # Generate a context based on the title
         context = f"You are evaluating a scenario about {item['title']}."
         return template.format(
             context=context,
@@ -60,28 +183,29 @@ def format_prompt(template: str, item: dict, prompt_type: str) -> str:
             statement_2=item["statement_2"]
         )
 
+
 def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
     """Run inference on all items."""
-    # Initialize client
-    api_key = os.getenv("HUGGINGFACE_API_KEY")
-    if not api_key:
-        raise ValueError("HUGGINGFACE_API_KEY not found in environment variables")
 
-    client = InferenceClient(api_key=api_key)
+    # Get model config
+    model_config = MODELS.get(model_name)
+    if not model_config:
+        raise ValueError(f"Unknown model: {model_name}. Available: {list(MODELS.keys())}")
 
-    # Load data and prompt
+    model_id = model_config["model_id"]
+
+    # Initialize and load model
+    inference = ModelInference(model_id)
+    inference.load_model()
+
+    # Load data and prompt template
     data = load_data()
     template = load_prompt_template(prompt_type)
-
-    # Get model ID
-    model_id = MODELS.get(model_name)
-    if not model_id:
-        raise ValueError(f"Unknown model: {model_name}. Available: {list(MODELS.keys())}")
 
     results = []
     total_items = len(data) * num_runs
 
-    print(f"Running inference with {model_id}")
+    print(f"\nRunning inference with {model_id}")
     print(f"Prompt type: {prompt_type}")
     print(f"Total generations: {total_items}")
     print("-" * 50)
@@ -91,17 +215,8 @@ def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
             prompt = format_prompt(template, item, prompt_type)
 
             try:
-                # Create chat completion
-                messages = [{"role": "user", "content": prompt}]
-
-                response = client.chat.completions.create(
-                    model=model_id,
-                    messages=messages,
-                    max_tokens=1024,
-                    temperature=0.7
-                )
-
-                response_text = response.choices[0].message.content
+                output = inference.generate(prompt, max_new_tokens=1024, temperature=0.7)
+                response_text = output["response"]
 
                 result = {
                     "id": item["id"],
@@ -113,6 +228,7 @@ def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
                     "prompt_type": prompt_type,
                     "model": model_id,
                     "response": response_text,
+                    "tokens_generated": output.get("tokens_generated"),
                     "timestamp": datetime.now().isoformat()
                 }
                 results.append(result)
@@ -139,6 +255,7 @@ def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
 
     return results
 
+
 def save_results(results: list, model_name: str, prompt_type: str):
     """Save results to JSON file."""
     output_dir = Path(__file__).parent / "outputs"
@@ -152,6 +269,7 @@ def save_results(results: list, model_name: str, prompt_type: str):
 
     print(f"\nResults saved to: {output_file}")
     return output_file
+
 
 def main():
     parser = argparse.ArgumentParser(description="Run open-source model inference")
@@ -175,6 +293,12 @@ def main():
         default=2,
         help="Number of runs per item (default: 2)"
     )
+    parser.add_argument(
+        "--device-map",
+        type=str,
+        default="auto",
+        help="Device map for model loading (default: auto)"
+    )
 
     args = parser.parse_args()
 
@@ -182,6 +306,7 @@ def main():
     save_results(results, args.model, args.prompt_type)
 
     print(f"\nTotal results: {len(results)}")
+
 
 if __name__ == "__main__":
     main()
