@@ -12,9 +12,9 @@ from dotenv import load_dotenv
 load_dotenv(Path(__file__).parent.parent.parent / ".env")
 
 # Set cache directories
-CACHE_DIR = "/cluster/scratch/yongyu/cache"
-os.environ["HF_HOME"] = CACHE_DIR
-os.environ["HF_DATASETS_CACHE"] = f"{CACHE_DIR}/datasets"
+# CACHE_DIR = "/cluster/scratch/yongyu/cache"
+# os.environ["HF_HOME"] = CACHE_DIR
+# os.environ["HF_DATASETS_CACHE"] = f"{CACHE_DIR}/datasets"
 
 import json
 import argparse
