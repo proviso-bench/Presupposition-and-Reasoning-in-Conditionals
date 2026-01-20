@@ -30,7 +30,7 @@ HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_API_KEY")
 # Model configurations - Text-only models
 MODELS = {
     "qwen": {
-        "model_id": "Qwen/Qwen3-VL-8B-Instruct",
+        "model_id": "Qwen/Qwen2-7B-Instruct",
         "type": "causal_lm"
     },
     "llama": {
