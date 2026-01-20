@@ -54,7 +54,7 @@ class ModelInference:
         token_kwargs = {"token": HUGGINGFACE_TOKEN} if HUGGINGFACE_TOKEN else {}
 
         print(f"Loading model: {self.model_name}")
-        print(f"Cache directory: {CACHE_DIR}")
+        # print(f"Cache directory: {CACHE_DIR}")
 
         # Load tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(
