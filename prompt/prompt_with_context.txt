@@ -1,4 +1,4 @@
-In each item, you will be given a brief context followed by a statement made by a speaker. Assume that the speaker is honest, reliable, and helpful, and that you both share relevant background assumptions.
+In each item, you will be given background about a person followed by a statement made by a speaker about the same person. Assume that the speaker is honest, reliable, and helpful, and that you both share relevant background assumptions.
 
 After reading the statement, you will be asked to judge how likely a second statement is to be true.
 Please respond using a scale from 0 (very unlikely) to 7 (very likely).
@@ -12,7 +12,7 @@ After your reasoning, provide your final answer in the format: "Final Rating: [0
 
 ---
 
-Context: {context}
+Context: {background}
 
 Speaker's statement: {statement_1}
 

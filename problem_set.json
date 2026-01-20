@@ -1,632 +1,722 @@
 [
-    {
-      "id": 1,
-      "title": "having a wetsuit",
-      "probability": "high",
-      "statement_1": "If Jack is a scuba diver, he will bring his wetsuit.",
-      "statement_2": "Jack has a wetsuit."
-    },
-    {
-      "id": 2,
-      "title": "having a wetsuit",
-      "probability": "mid",
-      "statement_1": "If Tim likes swimming, he will pack his wetsuit.",
-      "statement_2": "Tim has a wetsuit."
-    },
-    {
-      "id": 3,
-      "title": "having a wetsuit",
-      "probability": "low",
-      "statement_1": "If Sara likes coffee, she’ll forget her wetsuit.",
-      "statement_2": "Sara has a wetsuit."
-    },
-    {
-      "id": 4,
-      "title": "having a son",
-      "probability": "high",
-      "statement_1": "If Martha has a daughter-in-law, her son lives nearby.",
-      "statement_2": "Martha has a son."
-    },
-    {
-      "id": 5,
-      "title": "having a son",
-      "probability": "mid",
-      "statement_1": "If John is retired, his son checks on them regularly.",
-      "statement_2": "John has a son."
-    },
-    {
-      "id": 6,
-      "title": "having a son",
-      "probability": "low",
-      "statement_1": "If Lara is left-handed, her son will visit her.",
-      "statement_2": "Lara has a son."
-    },
-    {
-      "id": 7,
-      "title": "having a guitar",
-      "probability": "high",
-      "statement_1": "If Alex is a musician, he will tune his guitar before playing.",
-      "statement_2": "Alex has a guitar."
-    },
-    {
-      "id": 8,
-      "title": "having a guitar",
-      "probability": "mid",
-      "statement_1": "If Jamie likes music, she will bring her guitar.",
-      "statement_2": "Jamie has a guitar."
-    },
-    {
-      "id": 9,
-      "title": "having a guitar",
-      "probability": "low",
-      "statement_1": "If Lucas speaks French, he will borrow his guitar to a friend.",
-      "statement_2": "Lucas has a guitar."
-    },
-    {
-      "id": 10,
-      "title": "having an apron",
-      "probability": "high",
-      "statement_1": "If Maya is a baker, she will tie on her apron before baking.",
-      "statement_2": "Maya has an apron."
-    },
-    {
-      "id": 11,
-      "title": "having an apron",
-      "probability": "mid",
-      "statement_1": "If James works from home, he will hang his apron by his desk.",
-      "statement_2": "James has an apron."
-    },
-    {
-      "id": 12,
-      "title": "having an apron",
-      "probability": "low",
-      "statement_1": "If Sara was born in March, she will pack her apron for a trip.",
-      "statement_2": "Sara has an apron."
-    },
-    {
-      "id": 13,
-      "title": "having a wife",
-      "probability": "high",
-      "statement_1": "If Alex is married, he will introduce his wife at a family gathering.",
-      "statement_2": "Alex has a wife."
-    },
-    {
-      "id": 14,
-      "title": "having a wife",
-      "probability": "mid",
-      "statement_1": "If Jamie is over 30, he will bring his wife to the dinner party.",
-      "statement_2": "Jamie has a wife."
-    },
-    {
-      "id": 15,
-      "title": "having a wife",
-      "probability": "low",
-      "statement_1": "If Chris works downtown, he will meet his wife for lunch.",
-      "statement_2": "Chris has a wife."
-    },
-    {
-      "id": 16,
-      "title": "having a stamp collection",
-      "probability": "high",
-      "statement_1": "If Daniel is interested in postal history, he will display his stamp collection.",
-      "statement_2": "Daniel has a stamp collection."
-    },
-    {
-      "id": 17,
-      "title": "having a stamp collection",
-      "probability": "mid",
-      "statement_1": "If Margaret is a retired postman, she will display her stamp collection at home.",
-      "statement_2": "Margaret has a stamp collection."
-    },
-    {
-      "id": 18,
-      "title": "having a stamp collection",
-      "probability": "low",
-      "statement_1": "If Leo is vegetarian, he will store his stamp collection in a box.",
-      "statement_2": "Leo has a stamp collection."
-    },
-    {
-      "id": 19,
-      "title": "having a bicycle",
-      "probability": "high",
-      "statement_1": "If Ethan commutes using non-motorized transportation, he will lock his bicycle outside before going in.",
-      "statement_2": "Ethan has a bicycle."
-    },
-    {
-      "id": 20,
-      "title": "having a bicycle",
-      "probability": "mid",
-      "statement_1": "If Priya exercises regularly, she will use her bicycle.",
-      "statement_2": "Priya has a bicycle."
-    },
-    {
-      "id": 21,
-      "title": "having a bicycle",
-      "probability": "low",
-      "statement_1": "If Noah enjoys hiking, he will load his bicycle onto the car rack.",
-      "statement_2": "Noah has a bicycle."
-    },
-    {
-      "id": 22,
-      "title": "having a telescope",
-      "probability": "high",
-      "statement_1": "If Olivia is an astronomer, she will calibrate her telescope before nightfall.",
-      "statement_2": "Olivia has a telescope."
-    },
-    {
-      "id": 23,
-      "title": "having a telescope",
-      "probability": "mid",
-      "statement_1": "If Daniel is interested in science, he will bring his telescope.",
-      "statement_2": "Daniel has a telescope."
-    },
-    {
-      "id": 24,
-      "title": "having a telescope",
-      "probability": "low",
-      "statement_1": "If Emma drinks tea, she will watch the stars with her telescope.",
-      "statement_2": "Emma has a telescope."
-    },
-    {
-      "id": 25,
-      "title": "having beading tools",
-      "probability": "high",
-      "statement_1": "If Lina makes jewelry, she will pack her beading tools in her suitcase.",
-      "statement_2": "Lina has beading tools."
-    },
-    {
-      "id": 26,
-      "title": "having beading tools",
-      "probability": "mid",
-      "statement_1": "If Marcus enjoys crafts, he will organize his beading tools in a small case.",
-      "statement_2": "Marcus has beading tools."
-    },
-    {
-      "id": 27,
-      "title": "having beading tools",
-      "probability": "low",
-      "statement_1": "If Sophie wears blue, she will bring her beading tools.",
-      "statement_2": "Sophie has beading tools."
-    },
-    {
-      "id": 28,
-      "title": "having beading tools",
-      "probability": "high",
-      "statement_1": "If Alex works from home, he will be working on his laptop all day.",
-      "statement_2": "Alex has a laptop."
-    },
-    {
-      "id": 29,
-      "title": "having beading tools",
-      "probability": "mid",
-      "statement_1": "If Maria is in her 40s, she will bring her laptop.",
-      "statement_2": "Maria has a laptop."
-    },
-    {
-      "id": 30,
-      "title": "having beading tools",
-      "probability": "low",
-      "statement_1": "If Daniel likes coffee, he will put his laptop on the table.",
-      "statement_2": "Daniel has a laptop."
-    },
-    {
-      "id": 31,
-      "title": "having grandchildren",
-      "probability": "high",
-      "statement_1": "If Nadia has adult children, she will celebrate with her grandchildren.",
-      "statement_2": "Nadia has grandchildren."
-    },
-    {
-      "id": 32,
-      "title": "having grandchildren",
-      "probability": "mid",
-      "statement_1": "If Robert is over 60, he will buy gifts for his grandchildren.",
-      "statement_2": "Robert has grandchildren."
-    },
-    {
-      "id": 33,
-      "title": "having grandchildren",
-      "probability": "low",
-      "statement_1": "If Elena is left-handed, she will take care of her grandchildren.",
-      "statement_2": "Elena has grandchildren."
-    },
-    {
-      "id": 34,
-      "title": "having ball markers and tees",
-      "probability": "high",
-      "statement_1": "If Kevin plays golf, he will pack his ball markers and tees before heading out.",
-      "statement_2": "Kevin has ball markers and tees."
-    },
-    {
-      "id": 35,
-      "title": "having ball markers and tees",
-      "probability": "mid",
-      "statement_1": "If Aisha is a member of a sports club, she will keep her ball markers and tees in a small pouch.",
-      "statement_2": "Aisha has ball markers and tees."
-    },
-    {
-      "id": 36,
-      "title": "having ball markers and tees",
-      "probability": "low",
-      "statement_1": "If Louis speaks French, he will bring his ball markers and tees.",
-      "statement_2": "Louis has ball markers and tees."
-    },
-    {
-      "id": 37,
-      "title": "having a boat",
-      "probability": "high",
-      "statement_1": "If Priya has private access to a boat dock, she will tie up her boat there after a trip.",
-      "statement_2": "Priya has a boat."
-    },
-    {
-      "id": 38,
-      "title": "having a boat",
-      "probability": "mid",
-      "statement_1": "If Daniel enjoys water recreational activities, he will travel by his boat.",
-      "statement_2": "Daniel has a boat."
-    },
-    {
-      "id": 39,
-      "title": "having a boat",
-      "probability": "low",
-      "statement_1": "If Maya was born in July, she will travel by her boat.",
-      "statement_2": "Maya has a boat."
-    },
-    {
-      "id": 40,
-      "title": "having a bookcase",
-      "probability": "high",
-      "statement_1": "If Aiden reads a lot, he will organize his books in his bookcase every weekend.",
-      "statement_2": "Aiden has a bookcase."
-    },
-    {
-      "id": 41,
-      "title": "having a bookcase",
-      "probability": "mid",
-      "statement_1": "If Sofia is a college graduate, she will assemble her bookcase.",
-      "statement_2": "Sofia has a bookcase."
-    },
-    {
-      "id": 42,
-      "title": "having a bookcase",
-      "probability": "low",
-      "statement_1": "If Marcus lives in temporary housing, he will bring his bookcase.",
-      "statement_2": "Marcus has a bookcase."
-    },
-    {
-      "id": 43,
-      "title": "having a wrench",
-      "probability": "high",
-      "statement_1": "If Leo works in construction, he will tighten the bolts using his wrench.",
-      "statement_2": "Leo has a wrench."
-    },
-    {
-      "id": 44,
-      "title": "having a wrench",
-      "probability": "mid",
-      "statement_1": "If Nina owns a car, she will keep her wrench in the trunk for emergencies.",
-      "statement_2": "Nina has a wrench."
-    },
-    {
-      "id": 45,
-      "title": "having a wrench",
-      "probability": "low",
-      "statement_1": "If Sarah is vegetarian, she will place her wrench back on the shelf.",
-      "statement_2": "Sarah has a wrench."
-    },
-    {
-      "id": 46,
-      "title": "having a house",
-      "probability": "high",
-      "statement_1": "If Daniel owns a property, he will renovate his house next year.",
-      "statement_2": "Daniel has a house."
-    },
-    {
-      "id": 47,
-      "title": "having a house",
-      "probability": "mid",
-      "statement_1": "If Priya lives in the suburbs, she will drive to her house.",
-      "statement_2": "Priya has a house."
-    },
-    {
-      "id": 48,
-      "title": "having a house",
-      "probability": "low",
-      "statement_1": "If Lucas enjoys hiking, he will leave his house early.",
-      "statement_2": "Lucas has a house."
-    },
-    {
-      "id": 49,
-      "title": "having credit cards",
-      "probability": "high",
-      "statement_1": "If Alex travels frequently, he will keep his credit cards in a travel wallet.",
-      "statement_2": "Alex has credit cards."
-    },
-    {
-      "id": 50,
-      "title": "having credit cards",
-      "probability": "mid",
-      "statement_1": "If Maria works full-time, she will check the balance on her credit cards.",
-      "statement_2": "Maria has credit cards."
-    },
-    {
-      "id": 51,
-      "title": "having credit cards",
-      "probability": "low",
-      "statement_1": "If Daniel drinks tea, he will leave his credit cards on the kitchen counter.",
-      "statement_2": "Daniel has credit cards."
-    },
-    {
-      "id": 52,
-      "title": "having a smartphone",
-      "probability": "high",
-      "statement_1": "If Alex is a college student, he will check his smartphone for class messages.",
-      "statement_2": "Alex has a smartphone."
-    },
-    {
-      "id": 53,
-      "title": "having a smartphone",
-      "probability": "mid",
-      "statement_1": "If Maya is a schoolgirl, she will use her smartphone.",
-      "statement_2": "Maya has a smartphone."
-    },
-    {
-      "id": 54,
-      "title": "having a smartphone",
-      "probability": "low",
-      "statement_1": "If Daniel wears blue, he will leave his smartphone in his pocket.",
-      "statement_2": "Daniel has a smartphone."
-    },
-    {
-      "id": 55,
-      "title": "having a game console",
-      "probability": "high",
-      "statement_1": "If Alex is a YouTube streamer, he will connect his game console to start a live stream.",
-      "statement_2": "Alex has a game console."
-    },
-    {
-      "id": 56,
-      "title": "having a game console",
-      "probability": "mid",
-      "statement_1": "If John is under 30, he will update the software on his game console.",
-      "statement_2": "John has a game console."
-    },
-    {
-      "id": 57,
-      "title": "having a game console",
-      "probability": "low",
-      "statement_1": "If Daniel likes coffee, he will place his game console on the shelf.",
-      "statement_2": "Daniel has a game console."
-    },
-    {
-      "id": 58,
-      "title": "having a brother",
-      "probability": "high",
-      "statement_1": "If Alex has siblings, he will call his brother on the weekend.",
-      "statement_2": "Alex has a brother."
-    },
-    {
-      "id": 59,
-      "title": "having a brother",
-      "probability": "mid",
-      "statement_1": "If Maya has a large family, she will invite her brother.",
-      "statement_2": "Maya has a brother."
-    },
-    {
-      "id": 60,
-      "title": "having a brother",
-      "probability": "low",
-      "statement_1": "If Daniel is left-handed, he will teach his brother mathematics.",
-      "statement_2": "Daniel has a brother."
-    },
-    {
-      "id": 61,
-      "title": "having a watch",
-      "probability": "high",
-      "statement_1": "If Alex is punctual, he will glance at his watch before every appointment.",
-      "statement_2": "Alex has a watch."
-    },
-    {
-      "id": 62,
-      "title": "having a watch",
-      "probability": "mid",
-      "statement_1": "If Maria works in construction, she will wipe dust off her watch after the shift.",
-      "statement_2": "Maria has a watch."
-    },
-    {
-      "id": 63,
-      "title": "having a watch",
-      "probability": "low",
-      "statement_1": "If Daniel speaks French, he will wear his watch.",
-      "statement_2": "Daniel has a watch."
-    },
-    {
-      "id": 64,
-      "title": "having an apartment",
-      "probability": "high",
-      "statement_1": "If Maya earns a high income, she will renew the lease on her apartment this year.",
-      "statement_2": "Maya has an apartment."
-    },
-    {
-      "id": 65,
-      "title": "having an apartment",
-      "probability": "mid",
-      "statement_1": "If Daniel works downtown, he will walk back to his apartment after work.",
-      "statement_2": "Daniel has an apartment."
-    },
-    {
-      "id": 66,
-      "title": "having an apartment",
-      "probability": "low",
-      "statement_1": "If Alex was born in May, he will repaint his apartment.",
-      "statement_2": "Alex has an apartment."
-    },
-    {
-      "id": 67,
-      "title": "having a German Shepherd",
-      "probability": "high",
-      "statement_1": "If Alex has experience training large dogs, he will walk his German Shepherd every morning.",
-      "statement_2": "Alex has a German Shepherd."
-    },
-    {
-      "id": 68,
-      "title": "having a German Shepherd",
-      "probability": "mid",
-      "statement_1": "If Maya likes large dog breeds, she will take her German Shepherd out.",
-      "statement_2": "Maya has a German Shepherd."
-    },
-    {
-      "id": 69,
-      "title": "having a German Shepherd",
-      "probability": "low",
-      "statement_1": "If Daniel works downtown, he will bring his German Shepherd.",
-      "statement_2": "Daniel has a German Shepherd."
-    },
-    {
-      "id": 70,
-      "title": "having a camera",
-      "probability": "high",
-      "statement_1": "If Alex is a photographer, he will clean the lens on his camera.",
-      "statement_2": "Alex has a camera."
-    },
-    {
-      "id": 71,
-      "title": "having a camera",
-      "probability": "mid",
-      "statement_1": "If Maya travels frequently, she will pack her camera.",
-      "statement_2": "Maya has a camera."
-    },
-    {
-      "id": 72,
-      "title": "having a camera",
-      "probability": "low",
-      "statement_1": "If Daniel is vegetarian, he will store his camera in a drawer.",
-      "statement_2": "Daniel has a camera."
-    },
-    {
-      "id": 73,
-      "title": "having a tablet ",
-      "probability": "high",
-      "statement_1": "If Alex is a student, he will take notes on his tablet.",
-      "statement_2": "Alex has a tablet."
-    },
-    {
-      "id": 74,
-      "title": "having a tablet ",
-      "probability": "mid",
-      "statement_1": "If Maya is under 35, she will bring her tablet.",
-      "statement_2": "Maya has a tablet."
-    },
-    {
-      "id": 75,
-      "title": "having a tablet ",
-      "probability": "low",
-      "statement_1": "If Daniel enjoys hiking, he will charge his tablet.",
-      "statement_2": "Daniel has a tablet."
-    },
-    {
-      "id": 76,
-      "title": "having a sister, ",
-      "probability": "high",
-      "statement_1": "If Alex has siblings, he will call his sister to catch up on the weekend.",
-      "statement_2": "Alex has a sister."
-    },
-    {
-      "id": 77,
-      "title": "having a sister, ",
-      "probability": "mid",
-      "statement_1": "If Maya has a large family, she will invite her sister.",
-      "statement_2": "Maya has a sister."
-    },
-    {
-      "id": 78,
-      "title": "having a sister, ",
-      "probability": "low",
-      "statement_1": "If Daniel drinks tea, he will make tea for his sister.",
-      "statement_2": "Daniel has a sister."
-    },
-    {
-      "id": 79,
-      "title": "having an Instagram account",
-      "probability": "high",
-      "statement_1": "If Alex uses social media, he will post a photo to his Instagram account.",
-      "statement_2": "Alex has an Instagram account."
-    },
-    {
-      "id": 80,
-      "title": "having an Instagram account",
-      "probability": "mid",
-      "statement_1": "If Maya is over 40, she will check her Instagram account.",
-      "statement_2": "Maya has an Instagram account."
-    },
-    {
-      "id": 81,
-      "title": "having an Instagram account",
-      "probability": "low",
-      "statement_1": "If Daniel wears blue, he will log out of his Instagram account.",
-      "statement_2": "Daniel has an Instagram account."
-    },
-    {
-      "id": 82,
-      "title": "having a car",
-      "probability": "high",
-      "statement_1": "If Alex commutes long distances to work, he will fill up his car before Monday morning.",
-      "statement_2": "Alex has a car."
-    },
-    {
-      "id": 83,
-      "title": "having a car",
-      "probability": "mid",
-      "statement_1": "If Maya lives outside downtown, she will park her car in the driveway.",
-      "statement_2": "Maya has a car."
-    },
-    {
-      "id": 84,
-      "title": "having a car",
-      "probability": "low",
-      "statement_1": "If Daniel likes coffee, he will drive his car.",
-      "statement_2": "Daniel has a car."
-    },
-    {
-      "id": 85,
-      "title": "having a Rolex, ",
-      "probability": "high",
-      "statement_1": "If Alex is wealthy, he will have his Rolex serviced regularly.",
-      "statement_2": "Alex has a Rolex."
-    },
-    {
-      "id": 86,
-      "title": "having a Rolex, ",
-      "probability": "mid",
-      "statement_1": "If Maya works in finance, she will wear her Rolex.",
-      "statement_2": "Maya has a Rolex."
-    },
-    {
-      "id": 87,
-      "title": "having a Rolex, ",
-      "probability": "low",
-      "statement_1": "If Daniel speaks French, he will wear his Rolex.",
-      "statement_2": "Daniel has a Rolex."
-    },
-    {
-      "id": 88,
-      "title": "having a daughter,",
-      "probability": "high",
-      "statement_1": "If Alex has children, he will attend his daughter’s school recital this year.",
-      "statement_2": "Alex has a daughter."
-    },
-    {
-      "id": 89,
-      "title": "having a daughter,",
-      "probability": "mid",
-      "statement_1": "If Maya is married, she will bring her daughter to the party.",
-      "statement_2": "Maya has a daughter."
-    },
-    {
-      "id": 90,
-      "title": "having a daughter,",
-      "probability": "low",
-      "statement_1": "If Daniel is left-handed, he will teach his daughter mathematics.",
-      "statement_2": "Daniel has a daughter."
-    }
-  ]
+  {
+    "id": 1,
+    "title": "having a wetsuit",
+    "probability": "high",
+    "statement_1": "If Jack is a scuba diver, he will bring his wetsuit.",
+    "statement_2": "Jack has a wetsuit.",
+    "background": "Jack is from Ottawa."
+  },
+  {
+    "id": 2,
+    "title": "having a wetsuit",
+    "probability": "mid",
+    "statement_1": "If Tim likes swimming, he will pack his wetsuit.",
+    "statement_2": "Tim has a wetsuit.",
+    "background": "Tim is from Ottawa."
+  },
+  {
+    "id": 3,
+    "title": "having a wetsuit",
+    "probability": "low",
+    "statement_1": "If Sara likes coffee, she\u2019ll forget her wetsuit.",
+    "statement_2": "Sara has a wetsuit.",
+    "background": "Sara is from Ottawa."
+  },
+  {
+    "id": 4,
+    "title": "having a son",
+    "probability": "high",
+    "statement_1": "If Martha has a daughter-in-law, her son lives nearby.",
+    "statement_2": "Martha has a son.",
+    "background": "Martha is from your neighborhood."
+  },
+  {
+    "id": 5,
+    "title": "having a son",
+    "probability": "mid",
+    "statement_1": "If John is retired, his son checks on them regularly.",
+    "statement_2": "John has a son.",
+    "background": "John is from your neighborhood."
+  },
+  {
+    "id": 6,
+    "title": "having a son",
+    "probability": "low",
+    "statement_1": "If Lara is left-handed, her son will visit her.",
+    "statement_2": "Lara has a son.",
+    "background": "Lara is from your neighborhood."
+  },
+  {
+    "id": 7,
+    "title": "having a guitar",
+    "probability": "high",
+    "statement_1": "If Alex is a musician, he will tune his guitar before playing.",
+    "statement_2": "Alex has a guitar.",
+    "background": "You see someone named Alex at the gym for the first time."
+  },
+  {
+    "id": 8,
+    "title": "having a guitar",
+    "probability": "mid",
+    "statement_1": "If Jamie likes music, she will bring her guitar.",
+    "statement_2": "Jamie has a guitar.",
+    "background": "You see someone named Jamie at the gym for the first time."
+  },
+  {
+    "id": 9,
+    "title": "having a guitar",
+    "probability": "low",
+    "statement_1": "If Lucas speaks French, he will borrow his guitar to a friend.",
+    "statement_2": "Lucas has a guitar.",
+    "background": "You see someone named Lucas at the gym for the first time."
+  },
+  {
+    "id": 10,
+    "title": "having an apron",
+    "probability": "high",
+    "statement_1": "If Maya is a baker, she will tie on her apron before baking.",
+    "statement_2": "Maya has an apron.",
+    "background": "Maya is from Toronto."
+  },
+  {
+    "id": 11,
+    "title": "having an apron",
+    "probability": "mid",
+    "statement_1": "If James works from home, he will hang his apron by his desk.",
+    "statement_2": "James has an apron.",
+    "background": "James is from Toronto."
+  },
+  {
+    "id": 12,
+    "title": "having an apron",
+    "probability": "low",
+    "statement_1": "If Sara was born in March, she will pack her apron for a trip.",
+    "statement_2": "Sara has an apron.",
+    "background": "Sara is from Toronto."
+  },
+  {
+    "id": 13,
+    "title": "having a wife",
+    "probability": "high",
+    "statement_1": "If Alex is married, he will introduce his wife at a family gathering.",
+    "statement_2": "Alex has a wife.",
+    "background": "Alex is from your city."
+  },
+  {
+    "id": 14,
+    "title": "having a wife",
+    "probability": "mid",
+    "statement_1": "If Jamie is over 30, he will bring his wife to the dinner party.",
+    "statement_2": "Jamie has a wife.",
+    "background": "Jamie is from your city."
+  },
+  {
+    "id": 15,
+    "title": "having a wife",
+    "probability": "low",
+    "statement_1": "If Chris works downtown, he will meet his wife for lunch.",
+    "statement_2": "Chris has a wife.",
+    "background": "Chris is from your city."
+  },
+  {
+    "id": 16,
+    "title": "having a stamp collection",
+    "probability": "high",
+    "statement_1": "If Daniel is interested in postal history, he will display his stamp collection.",
+    "statement_2": "Daniel has a stamp collection.",
+    "background": "Daniel is from your hometown."
+  },
+  {
+    "id": 17,
+    "title": "having a stamp collection",
+    "probability": "mid",
+    "statement_1": "If Margaret is a retired postman, she will display her stamp collection at home.",
+    "statement_2": "Margaret has a stamp collection.",
+    "background": "Margaret is from your hometown."
+  },
+  {
+    "id": 18,
+    "title": "having a stamp collection",
+    "probability": "low",
+    "statement_1": "If Leo is vegetarian, he will store his stamp collection in a box.",
+    "statement_2": "Leo has a stamp collection.",
+    "background": "Leo is from your hometown."
+  },
+  {
+    "id": 19,
+    "title": "having a bicycle",
+    "probability": "high",
+    "statement_1": "If Ethan commutes using non-motorized transportation, he will lock his bicycle outside before going in.",
+    "statement_2": "Ethan has a bicycle.",
+    "background": "You see someone named Ethan at the library for the first time."
+  },
+  {
+    "id": 20,
+    "title": "having a bicycle",
+    "probability": "mid",
+    "statement_1": "If Priya exercises regularly, she will use her bicycle.",
+    "statement_2": "Priya has a bicycle.",
+    "background": "You see someone named Priya at the library for the first time."
+  },
+  {
+    "id": 21,
+    "title": "having a bicycle",
+    "probability": "low",
+    "statement_1": "If Noah enjoys hiking, he will load his bicycle onto the car rack.",
+    "statement_2": "Noah has a bicycle.",
+    "background": "You see someone named Noah at the library for the first time."
+  },
+  {
+    "id": 22,
+    "title": "having a telescope",
+    "probability": "high",
+    "statement_1": "If Olivia is an astronomer, she will calibrate her telescope before nightfall.",
+    "statement_2": "Olivia has a telescope.",
+    "background": "You see someone named Olivia at the coffee shop for the first time."
+  },
+  {
+    "id": 23,
+    "title": "having a telescope",
+    "probability": "mid",
+    "statement_1": "If Daniel is interested in science, he will bring his telescope.",
+    "statement_2": "Daniel has a telescope.",
+    "background": "You see someone named Daniel at the coffee shop for the first time."
+  },
+  {
+    "id": 24,
+    "title": "having a telescope",
+    "probability": "low",
+    "statement_1": "If Emma drinks tea, she will watch the stars with her telescope.",
+    "statement_2": "Emma has a telescope.",
+    "background": "You see someone named Emma at the coffee shop for the first time."
+  },
+  {
+    "id": 25,
+    "title": "having beading tools",
+    "probability": "high",
+    "statement_1": "If Lina makes jewelry, she will pack her beading tools in her suitcase.",
+    "statement_2": "Lina has beading tools.",
+    "background": "You see someone named Lina at the airport for the first time."
+  },
+  {
+    "id": 26,
+    "title": "having beading tools",
+    "probability": "mid",
+    "statement_1": "If Marcus enjoys crafts, he will organize his beading tools in a small case.",
+    "statement_2": "Marcus has beading tools.",
+    "background": "You see someone named Marcus at the airport for the first time."
+  },
+  {
+    "id": 27,
+    "title": "having beading tools",
+    "probability": "low",
+    "statement_1": "If Sophie wears blue, she will bring her beading tools.",
+    "statement_2": "Sophie has beading tools.",
+    "background": "You see someone named Sophie at the airport for the first time."
+  },
+  {
+    "id": 28,
+    "title": "having beading tools",
+    "probability": "high",
+    "statement_1": "If Alex works from home, he will be working on his laptop all day.",
+    "statement_2": "Alex has a laptop.",
+    "background": "Alex is from Ottawa."
+  },
+  {
+    "id": 29,
+    "title": "having beading tools",
+    "probability": "mid",
+    "statement_1": "If Maria is in her 40s, she will bring her laptop.",
+    "statement_2": "Maria has a laptop.",
+    "background": "Maria is from Ottawa."
+  },
+  {
+    "id": 30,
+    "title": "having beading tools",
+    "probability": "low",
+    "statement_1": "If Daniel likes coffee, he will put his laptop on the table.",
+    "statement_2": "Daniel has a laptop.",
+    "background": "Daniel is from Ottawa."
+  },
+  {
+    "id": 31,
+    "title": "having grandchildren",
+    "probability": "high",
+    "statement_1": "If Nadia has adult children, she will celebrate with her grandchildren.",
+    "statement_2": "Nadia has grandchildren.",
+    "background": "Nadia is from your neighborhood."
+  },
+  {
+    "id": 32,
+    "title": "having grandchildren",
+    "probability": "mid",
+    "statement_1": "If Robert is over 60, he will buy gifts for his grandchildren.",
+    "statement_2": "Robert has grandchildren.",
+    "background": "Robert is from your neighborhood."
+  },
+  {
+    "id": 33,
+    "title": "having grandchildren",
+    "probability": "low",
+    "statement_1": "If Elena is left-handed, she will take care of her grandchildren.",
+    "statement_2": "Elena has grandchildren.",
+    "background": "Elena is from your neighborhood."
+  },
+  {
+    "id": 34,
+    "title": "having ball markers and tees",
+    "probability": "high",
+    "statement_1": "If Kevin plays golf, he will pack his ball markers and tees before heading out.",
+    "statement_2": "Kevin has ball markers and tees.",
+    "background": "You see someone named Kevin at the gym for the first time."
+  },
+  {
+    "id": 35,
+    "title": "having ball markers and tees",
+    "probability": "mid",
+    "statement_1": "If Aisha is a member of a sports club, she will keep her ball markers and tees in a small pouch.",
+    "statement_2": "Aisha has ball markers and tees.",
+    "background": "You see someone named Aisha at the gym for the first time."
+  },
+  {
+    "id": 36,
+    "title": "having ball markers and tees",
+    "probability": "low",
+    "statement_1": "If Louis speaks French, he will bring his ball markers and tees.",
+    "statement_2": "Louis has ball markers and tees.",
+    "background": "You see someone named Louis at the gym for the first time."
+  },
+  {
+    "id": 37,
+    "title": "having a boat",
+    "probability": "high",
+    "statement_1": "If Priya has private access to a boat dock, she will tie up her boat there after a trip.",
+    "statement_2": "Priya has a boat.",
+    "background": "Priya is from Toronto."
+  },
+  {
+    "id": 38,
+    "title": "having a boat",
+    "probability": "mid",
+    "statement_1": "If Daniel enjoys water recreational activities, he will travel by his boat.",
+    "statement_2": "Daniel has a boat.",
+    "background": "Daniel is from Toronto."
+  },
+  {
+    "id": 39,
+    "title": "having a boat",
+    "probability": "low",
+    "statement_1": "If Maya was born in July, she will travel by her boat.",
+    "statement_2": "Maya has a boat.",
+    "background": "Maya is from Toronto."
+  },
+  {
+    "id": 40,
+    "title": "having a bookcase",
+    "probability": "high",
+    "statement_1": "If Aiden reads a lot, he will organize his books in his bookcase every weekend.",
+    "statement_2": "Aiden has a bookcase.",
+    "background": "Aiden is from your city."
+  },
+  {
+    "id": 41,
+    "title": "having a bookcase",
+    "probability": "mid",
+    "statement_1": "If Sofia is a college graduate, she will assemble her bookcase.",
+    "statement_2": "Sofia has a bookcase.",
+    "background": "Sofia is from your city."
+  },
+  {
+    "id": 42,
+    "title": "having a bookcase",
+    "probability": "low",
+    "statement_1": "If Marcus lives in temporary housing, he will bring his bookcase.",
+    "statement_2": "Marcus has a bookcase.",
+    "background": "Marcus is from your city."
+  },
+  {
+    "id": 43,
+    "title": "having a wrench",
+    "probability": "high",
+    "statement_1": "If Leo works in construction, he will tighten the bolts using his wrench.",
+    "statement_2": "Leo has a wrench.",
+    "background": "Leo is from your hometown."
+  },
+  {
+    "id": 44,
+    "title": "having a wrench",
+    "probability": "mid",
+    "statement_1": "If Nina owns a car, she will keep her wrench in the trunk for emergencies.",
+    "statement_2": "Nina has a wrench.",
+    "background": "Nina is from your hometown."
+  },
+  {
+    "id": 45,
+    "title": "having a wrench",
+    "probability": "low",
+    "statement_1": "If Sarah is vegetarian, she will place her wrench back on the shelf.",
+    "statement_2": "Sarah has a wrench.",
+    "background": "Sarah is from your hometown."
+  },
+  {
+    "id": 46,
+    "title": "having a house",
+    "probability": "high",
+    "statement_1": "If Daniel owns a property, he will renovate his house next year.",
+    "statement_2": "Daniel has a house.",
+    "background": "You see someone named Daniel at the library for the first time."
+  },
+  {
+    "id": 47,
+    "title": "having a house",
+    "probability": "mid",
+    "statement_1": "If Priya lives in the suburbs, she will drive to her house.",
+    "statement_2": "Priya has a house.",
+    "background": "You see someone named Priya at the library for the first time."
+  },
+  {
+    "id": 48,
+    "title": "having a house",
+    "probability": "low",
+    "statement_1": "If Lucas enjoys hiking, he will leave his house early.",
+    "statement_2": "Lucas has a house.",
+    "background": "You see someone named Lucas at the library for the first time."
+  },
+  {
+    "id": 49,
+    "title": "having credit cards",
+    "probability": "high",
+    "statement_1": "If Alex travels frequently, he will keep his credit cards in a travel wallet.",
+    "statement_2": "Alex has credit cards.",
+    "background": "You see someone named Alex at the coffee shop for the first time."
+  },
+  {
+    "id": 50,
+    "title": "having credit cards",
+    "probability": "mid",
+    "statement_1": "If Maria works full-time, she will check the balance on her credit cards.",
+    "statement_2": "Maria has credit cards.",
+    "background": "You see someone named Maria at the coffee shop for the first time."
+  },
+  {
+    "id": 51,
+    "title": "having credit cards",
+    "probability": "low",
+    "statement_1": "If Daniel drinks tea, he will leave his credit cards on the kitchen counter.",
+    "statement_2": "Daniel has credit cards.",
+    "background": "You see someone named Daniel at the coffee shop for the first time."
+  },
+  {
+    "id": 52,
+    "title": "having a smartphone",
+    "probability": "high",
+    "statement_1": "If Alex is a college student, he will check his smartphone for class messages.",
+    "statement_2": "Alex has a smartphone.",
+    "background": "You see someone named Alex at the airport for the first time."
+  },
+  {
+    "id": 53,
+    "title": "having a smartphone",
+    "probability": "mid",
+    "statement_1": "If Maya is a schoolgirl, she will use her smartphone.",
+    "statement_2": "Maya has a smartphone.",
+    "background": "You see someone named Maya at the airport for the first time."
+  },
+  {
+    "id": 54,
+    "title": "having a smartphone",
+    "probability": "low",
+    "statement_1": "If Daniel wears blue, he will leave his smartphone in his pocket.",
+    "statement_2": "Daniel has a smartphone.",
+    "background": "You see someone named Daniel at the airport for the first time."
+  },
+  {
+    "id": 55,
+    "title": "having a game console",
+    "probability": "high",
+    "statement_1": "If Alex is a YouTube streamer, he will connect his game console to start a live stream.",
+    "statement_2": "Alex has a game console.",
+    "background": "Alex is from Ottawa."
+  },
+  {
+    "id": 56,
+    "title": "having a game console",
+    "probability": "mid",
+    "statement_1": "If John is under 30, he will update the software on his game console.",
+    "statement_2": "John has a game console.",
+    "background": "John is from Ottawa."
+  },
+  {
+    "id": 57,
+    "title": "having a game console",
+    "probability": "low",
+    "statement_1": "If Daniel likes coffee, he will place his game console on the shelf.",
+    "statement_2": "Daniel has a game console.",
+    "background": "Daniel is from Ottawa."
+  },
+  {
+    "id": 58,
+    "title": "having a brother",
+    "probability": "high",
+    "statement_1": "If Alex has siblings, he will call his brother on the weekend.",
+    "statement_2": "Alex has a brother.",
+    "background": "Alex is from your neighborhood."
+  },
+  {
+    "id": 59,
+    "title": "having a brother",
+    "probability": "mid",
+    "statement_1": "If Maya has a large family, she will invite her brother.",
+    "statement_2": "Maya has a brother.",
+    "background": "Maya is from your neighborhood."
+  },
+  {
+    "id": 60,
+    "title": "having a brother",
+    "probability": "low",
+    "statement_1": "If Daniel is left-handed, he will teach his brother mathematics.",
+    "statement_2": "Daniel has a brother.",
+    "background": "Daniel is from your neighborhood."
+  },
+  {
+    "id": 61,
+    "title": "having a watch",
+    "probability": "high",
+    "statement_1": "If Alex is punctual, he will glance at his watch before every appointment.",
+    "statement_2": "Alex has a watch.",
+    "background": "You see someone named Alex at the gym for the first time."
+  },
+  {
+    "id": 62,
+    "title": "having a watch",
+    "probability": "mid",
+    "statement_1": "If Maria works in construction, she will wipe dust off her watch after the shift.",
+    "statement_2": "Maria has a watch.",
+    "background": "You see someone named Maria at the gym for the first time."
+  },
+  {
+    "id": 63,
+    "title": "having a watch",
+    "probability": "low",
+    "statement_1": "If Daniel speaks French, he will wear his watch.",
+    "statement_2": "Daniel has a watch.",
+    "background": "You see someone named Daniel at the gym for the first time."
+  },
+  {
+    "id": 64,
+    "title": "having an apartment",
+    "probability": "high",
+    "statement_1": "If Maya earns a high income, she will renew the lease on her apartment this year.",
+    "statement_2": "Maya has an apartment.",
+    "background": "Maya is from Toronto."
+  },
+  {
+    "id": 65,
+    "title": "having an apartment",
+    "probability": "mid",
+    "statement_1": "If Daniel works downtown, he will walk back to his apartment after work.",
+    "statement_2": "Daniel has an apartment.",
+    "background": "Daniel is from Toronto."
+  },
+  {
+    "id": 66,
+    "title": "having an apartment",
+    "probability": "low",
+    "statement_1": "If Alex was born in May, he will repaint his apartment.",
+    "statement_2": "Alex has an apartment.",
+    "background": "Alex is from Toronto."
+  },
+  {
+    "id": 67,
+    "title": "having a German Shepherd",
+    "probability": "high",
+    "statement_1": "If Alex has experience training large dogs, he will walk his German Shepherd every morning.",
+    "statement_2": "Alex has a German Shepherd.",
+    "background": "Alex is from your city."
+  },
+  {
+    "id": 68,
+    "title": "having a German Shepherd",
+    "probability": "mid",
+    "statement_1": "If Maya likes large dog breeds, she will take her German Shepherd out.",
+    "statement_2": "Maya has a German Shepherd.",
+    "background": "Maya is from your city."
+  },
+  {
+    "id": 69,
+    "title": "having a German Shepherd",
+    "probability": "low",
+    "statement_1": "If Daniel works downtown, he will bring his German Shepherd.",
+    "statement_2": "Daniel has a German Shepherd.",
+    "background": "Daniel is from your city."
+  },
+  {
+    "id": 70,
+    "title": "having a camera",
+    "probability": "high",
+    "statement_1": "If Alex is a photographer, he will clean the lens on his camera.",
+    "statement_2": "Alex has a camera.",
+    "background": "Alex is from your hometown."
+  },
+  {
+    "id": 71,
+    "title": "having a camera",
+    "probability": "mid",
+    "statement_1": "If Maya travels frequently, she will pack her camera.",
+    "statement_2": "Maya has a camera.",
+    "background": "Maya is from your hometown."
+  },
+  {
+    "id": 72,
+    "title": "having a camera",
+    "probability": "low",
+    "statement_1": "If Daniel is vegetarian, he will store his camera in a drawer.",
+    "statement_2": "Daniel has a camera.",
+    "background": "Daniel is from your hometown."
+  },
+  {
+    "id": 73,
+    "title": "having a tablet ",
+    "probability": "high",
+    "statement_1": "If Alex is a student, he will take notes on his tablet.",
+    "statement_2": "Alex has a tablet.",
+    "background": "You see someone named Alex at a library for the first time."
+  },
+  {
+    "id": 74,
+    "title": "having a tablet ",
+    "probability": "mid",
+    "statement_1": "If Maya is under 35, she will bring her tablet.",
+    "statement_2": "Maya has a tablet.",
+    "background": "You see someone named Maya at a library for the first time."
+  },
+  {
+    "id": 75,
+    "title": "having a tablet ",
+    "probability": "low",
+    "statement_1": "If Daniel enjoys hiking, he will charge his tablet.",
+    "statement_2": "Daniel has a tablet.",
+    "background": "You see someone named Daniel at a library for the first time."
+  },
+  {
+    "id": 76,
+    "title": "having a sister, ",
+    "probability": "high",
+    "statement_1": "If Alex has siblings, he will call his sister to catch up on the weekend.",
+    "statement_2": "Alex has a sister.",
+    "background": "You see someone named Alex at the coffee shop for the first time."
+  },
+  {
+    "id": 77,
+    "title": "having a sister, ",
+    "probability": "mid",
+    "statement_1": "If Maya has a large family, she will invite her sister.",
+    "statement_2": "Maya has a sister.",
+    "background": "You see someone named Maya at the coffee shop for the first time."
+  },
+  {
+    "id": 78,
+    "title": "having a sister, ",
+    "probability": "low",
+    "statement_1": "If Daniel drinks tea, he will make tea for his sister.",
+    "statement_2": "Daniel has a sister.",
+    "background": "You see someone named Daniel at the coffee shop for the first time."
+  },
+  {
+    "id": 79,
+    "title": "having an Instagram account",
+    "probability": "high",
+    "statement_1": "If Alex uses social media, he will post a photo to his Instagram account.",
+    "statement_2": "Alex has an Instagram account.",
+    "background": "You see someone named Alex at the airport for the first time."
+  },
+  {
+    "id": 80,
+    "title": "having an Instagram account",
+    "probability": "mid",
+    "statement_1": "If Maya is over 40, she will check her Instagram account.",
+    "statement_2": "Maya has an Instagram account.",
+    "background": "You see someone named Maya at the airport for the first time."
+  },
+  {
+    "id": 81,
+    "title": "having an Instagram account",
+    "probability": "low",
+    "statement_1": "If Daniel wears blue, he will log out of his Instagram account.",
+    "statement_2": "Daniel has an Instagram account.",
+    "background": "You see someone named Daniel at the airport for the first time."
+  },
+  {
+    "id": 82,
+    "title": "having a car",
+    "probability": "high",
+    "statement_1": "If Alex commutes long distances to work, he will fill up his car before Monday morning.",
+    "statement_2": "Alex has a car.",
+    "background": "Alex is from Ottawa."
+  },
+  {
+    "id": 83,
+    "title": "having a car",
+    "probability": "mid",
+    "statement_1": "If Maya lives outside downtown, she will park her car in the driveway.",
+    "statement_2": "Maya has a car.",
+    "background": "Maya is from Ottawa."
+  },
+  {
+    "id": 84,
+    "title": "having a car",
+    "probability": "low",
+    "statement_1": "If Daniel likes coffee, he will drive his car.",
+    "statement_2": "Daniel has a car.",
+    "background": "Daniel is from Ottawa."
+  },
+  {
+    "id": 85,
+    "title": "having a Rolex, ",
+    "probability": "high",
+    "statement_1": "If Alex is wealthy, he will have his Rolex serviced regularly.",
+    "statement_2": "Alex has a Rolex.",
+    "background": "You see someone named Alex at the gym for the first time."
+  },
+  {
+    "id": 86,
+    "title": "having a Rolex, ",
+    "probability": "mid",
+    "statement_1": "If Maya works in finance, she will wear her Rolex.",
+    "statement_2": "Maya has a Rolex.",
+    "background": "You see someone named Maya at the gym for the first time."
+  },
+  {
+    "id": 87,
+    "title": "having a Rolex, ",
+    "probability": "low",
+    "statement_1": "If Daniel speaks French, he will wear his Rolex.",
+    "statement_2": "Daniel has a Rolex.",
+    "background": "You see someone named Daniel at the gym for the first time."
+  },
+  {
+    "id": 88,
+    "title": "having a daughter,",
+    "probability": "high",
+    "statement_1": "If Alex has children, he will attend his daughter\u2019s school recital this year.",
+    "statement_2": "Alex has a daughter.",
+    "background": "Alex is from your neighborhood."
+  },
+  {
+    "id": 89,
+    "title": "having a daughter,",
+    "probability": "mid",
+    "statement_1": "If Maya is married, she will bring her daughter to the party.",
+    "statement_2": "Maya has a daughter.",
+    "background": "Maya is from your neighborhood."
+  },
+  {
+    "id": 90,
+    "title": "having a daughter,",
+    "probability": "low",
+    "statement_1": "If Daniel is left-handed, he will teach his daughter mathematics.",
+    "statement_2": "Daniel has a daughter.",
+    "background": "Daniel is from your neighborhood."
+  }
+]

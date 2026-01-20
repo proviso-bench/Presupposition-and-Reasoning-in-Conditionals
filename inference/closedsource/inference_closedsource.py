@@ -41,10 +41,10 @@ def load_data() -> list:
 def format_prompt(template: str, item: dict, prompt_type: str) -> str:
     """Format prompt with item data."""
     if prompt_type == "with_context":
-        # Generate a context based on the title
-        context = f"You are evaluating a scenario about {item['title']}."
+        # Use the background field from the item
+        background = item.get("background", f"You are evaluating a scenario about {item['title']}.")
         return template.format(
-            context=context,
+            background=background,
             statement_1=item["statement_1"],
             statement_2=item["statement_2"]
         )
@@ -136,6 +136,9 @@ def run_inference(model_name: str, prompt_type: str):
                 "model": model_id,
                 "response": response_text
             }
+            # Add background if using with_context prompt type
+            if prompt_type == "with_context" and "background" in item:
+                result["background"] = item["background"]
             results.append(result)
 
             current = item_idx + 1
@@ -154,6 +157,9 @@ def run_inference(model_name: str, prompt_type: str):
                 "response": None,
                 "error": str(e)
             }
+            # Add background if using with_context prompt type
+            if prompt_type == "with_context" and "background" in item:
+                result["background"] = item["background"]
             results.append(result)
 
     return results
