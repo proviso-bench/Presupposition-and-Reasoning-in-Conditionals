@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "having a wetsuit",
+    "probability": "high",
+    "statement_1": "If Jack is a scuba diver, he will bring his wetsuit.",
+    "statement_2": "Jack has a wetsuit.",
+    "prompt_type": "with_context",
+    "model": "gpt-5",
+    "response": "1. The speaker\u2019s conditional implies that if Jack is a scuba diver, he would bring his own wetsuit\u2014so in that case he has one. But it does not tell us whether he is actually a scuba diver.\n2. Background: People from Ottawa are not especially likely to be scuba divers. Outside of diving (or similar activities like open-water swimming/triathlon), owning a wetsuit is uncommon.\n3. Since we have no evidence that Jack is a scuba diver, the conditional doesn\u2019t strongly increase the likelihood that he has a wetsuit. It remains somewhat unlikely.\n\nFinal Rating: 2",
+    "background": "Jack is from Ottawa."
+  },
+  {
+    "id": 2,
+    "title": "having a wetsuit",
+    "probability": "mid",
+    "statement_1": "If Tim likes swimming, he will pack his wetsuit.",
+    "statement_2": "Tim has a wetsuit.",
+    "prompt_type": "with_context",
+    "model": "gpt-5",
+    "response": "Step-by-step reasoning:\n1. The speaker\u2019s conditional \u201cIf Tim likes swimming, he will pack his wetsuit\u201d pragmatically presupposes that Tim has a wetsuit\u2014using \u201chis wetsuit\u201d typically implies possession.\n2. World knowledge: People who pack wetsuits generally own them; Ottawa\u2019s colder waters make wetsuit ownership plausible for open-water swimmers.\n3. Even though the conditional doesn\u2019t assert that Tim likes swimming, the phrasing strongly suggests he has a wetsuit irrespective of the antecedent being met.\n\nFinal Rating: 6",
+    "background": "Tim is from Ottawa."
+  },
+  {
+    "id": 3,
+    "title": "having a wetsuit",
+    "probability": "low",
+    "statement_1": "If Sara likes coffee, she\u2019ll forget her wetsuit.",
+    "statement_2": "Sara has a wetsuit.",
+    "prompt_type": "with_context",
+    "model": "gpt-5",
+    "response": "Step-by-step reasoning:\n1. The speaker\u2019s conditional \u201cIf Sara likes coffee, she\u2019ll forget her wetsuit\u201d uses \u201cher wetsuit,\u201d which pragmatically presupposes that Sara has a wetsuit to forget.\n2. Background: Being from Ottawa doesn\u2019t strongly predict owning a wetsuit; baseline likelihood is relatively low.\n3. The presupposition from the reliable speaker\u2019s statement significantly raises the probability that Sara has a wetsuit, outweighing the low baseline from location.\n\nFinal Rating: 6",
+    "background": "Sara is from Ottawa."
+  },
+  {
+    "id": 4,
+    "title": "having a son",
+    "probability": "high",
+    "statement_1": "If Martha has a daughter-in-law, her son lives nearby.",
+    "statement_2": "Martha has a son.",
+    "prompt_type": "with_context",
+    "model": "gpt-5",
+    "response": "Step-by-step reasoning:\n1. The speaker\u2019s conditional (\u201cIf Martha has a daughter-in-law, her son lives nearby\u201d) does not assert that Martha has a daughter-in-law, nor that she has a son. It only links those facts if the antecedent holds.\n2. World knowledge: Having a daughter-in-law typically implies having a son (in common usage). But since the antecedent isn\u2019t confirmed, this doesn\u2019t increase the likelihood that she has a son.\n3. Therefore, the conditional provides no direct evidence about whether Martha has a son; the probability remains at a base-rate, roughly neutral.\n\nFinal Rating: 4",
+    "background": "Martha is from your neighborhood."
+  },
+  {
+    "id": 5,
+    "title": "having a son",
+    "probability": "mid",
+    "statement_1": "If John is retired, his son checks on them regularly.",
+    "statement_2": "John has a son.",
+    "prompt_type": "with_context",
+    "model": "gpt-5",
+    "response": "1. The speaker\u2019s conditional uses the definite description \u201chis son,\u201d which typically presupposes that John has a son.\n2. Given shared background and that the speaker is honest and helpful, they wouldn\u2019t use \u201chis son\u201d if John had no son.\n3. Thus, the conditional strongly increases the likelihood that John has a son.\n\nFinal Rating: 7",
+    "background": "John is from your neighborhood."
+  },
+  {
+    "id": 6,
+    "title": "having a son",
+    "probability": "low",
+    "statement_1": "If Lara is left-handed, her son will visit her.",
+    "statement_2": "Lara has a son.",
+    "prompt_type": "with_context",
+    "model": "gpt-5",
+    "response": "Step-by-step reasoning:\n1. The speaker\u2019s conditional \u201cIf Lara is left-handed, her son will visit her\u201d uses the definite description \u201cher son,\u201d which typically presupposes that Lara has a son.\n2. Given the speaker is honest, reliable, and helpful, they would not use \u201cher son\u201d unless they believed Lara has a son. The antecedent (being left-handed) does not license or filter this presupposition.\n3. Therefore, the conditional strongly increases the likelihood that Lara has a son.\n\nFinal Rating: 7",
+    "background": "Lara is from your neighborhood."
+  },
+  {
+    "id": 7,
+    "title": "having a guitar",
+    "probability": "high",
+    "statement_1": "If Alex is a musician, he will tune his guitar before playing.",
+    "statement_2": "Alex has a guitar.",
+    "prompt_type": "with_context",
+    "model": "gpt-5",
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in the scenario where Alex is a musician, he plays guitar and would tune his guitar before playing. It does not assert that Alex is in fact a musician or that he currently has a guitar.\n2. Relevant background: Not all musicians are guitarists, and many non-musicians can own guitars. The gym context adds no information.\n3. The conditional slightly increases the chance Alex has a guitar (since it frames guitar as his instrument if he is a musician), but it\u2019s still quite uncertain overall.\n\nFinal Rating: 4",
+    "background": "You see someone named Alex at the gym for the first time."
+  },
+  {
+    "id": 8,
+    "title": "having a guitar",
+    "probability": "mid",
+    "statement_1": "If Jamie likes music, she will bring her guitar.",
+    "statement_2": "Jamie has a guitar.",
+    "prompt_type": "with_context",
+    "model": "gpt-5",
+    "response": "Step-by-step reasoning:\n1. The conditional says: if Jamie likes music, she will bring her guitar. Referring to \u201cher guitar\u201d typically presupposes that Jamie owns a guitar.\n2. Given the speaker is reliable and helpful, they likely wouldn\u2019t use \u201cher guitar\u201d unless Jamie indeed has one. The oddness of bringing a guitar to the gym doesn\u2019t undermine the ownership implication.\n3. Therefore, independent of whether Jamie likes music, the statement strongly suggests Jamie has a guitar.\n\nFinal Rating: 6",
+    "background": "You see someone named Jamie at the gym for the first time."
+  }
+]

@@ -1,8 +1,3 @@
-"""
-Open-source model inference script for Conditional Probability Benchmark.
-Models: Qwen/QwQ-32B, meta-llama/Llama-3.1-8B-Instruct
-Uses local transformers for inference.
-"""
 
 import os
 from pathlib import Path
@@ -153,7 +148,7 @@ def load_prompt_template(prompt_type: str) -> str:
 
 def load_data() -> list:
     """Load problem set data."""
-    data_path = Path(__file__).parent.parent.parent / "data" / "problem_set.json"
+    data_path = Path(__file__).parent.parent.parent / "problem_set.json"
     with open(data_path, "r") as f:
         return json.load(f)
 

@@ -34,7 +34,7 @@ def load_prompt_template(prompt_type: str) -> str:
 
 def load_data() -> list:
     """Load problem set data."""
-    data_path = Path(__file__).parent.parent.parent / "data" / "problem_set.json"
+    data_path = Path(__file__).parent.parent.parent / "problem_set.json"
     with open(data_path, "r") as f:
         return json.load(f)
 
@@ -112,15 +112,29 @@ def run_inference(model_name: str, prompt_type: str):
     data = load_data()
     template = load_prompt_template(prompt_type)
 
-    results = []
+    # Load existing results to resume if interrupted
+    output_file = get_output_file(model_name, prompt_type)
+    existing_results = load_existing_results(output_file)
+    
+    # Start with existing results converted to list (sorted by id)
+    all_results = [existing_results[id] for id in sorted(existing_results.keys())] if existing_results else []
+    results_dict = existing_results.copy()  # Keep dict for quick lookups
+    
     total_items = len(data)
 
     print(f"Running inference with {model_id}")
     print(f"Prompt type: {prompt_type}")
     print(f"Total generations: {total_items}")
+    if existing_results:
+        print(f"Found {len(existing_results)} existing results - will update incrementally")
     print("-" * 50)
 
     for item_idx, item in enumerate(data):
+        # Skip if already processed
+        if item["id"] in results_dict:
+            print(f"[{item_idx + 1}/{total_items}] ID: {item['id']} - Already processed, skipping")
+            continue
+            
         prompt = format_prompt(template, item, prompt_type)
 
         try:
@@ -139,10 +153,16 @@ def run_inference(model_name: str, prompt_type: str):
             # Add background if using with_context prompt type
             if prompt_type == "with_context" and "background" in item:
                 result["background"] = item["background"]
-            results.append(result)
+            
+            # Add to results
+            results_dict[item["id"]] = result
+            all_results = [results_dict[id] for id in sorted(results_dict.keys())]
+            
+            # Save incrementally after each item
+            save_results_incremental(all_results, model_name, prompt_type)
 
             current = item_idx + 1
-            print(f"[{current}/{total_items}] ID: {item['id']}")
+            print(f"[{current}/{total_items}] ID: {item['id']} - Saved")
 
         except Exception as e:
             print(f"Error on item {item['id']}: {e}")
@@ -160,17 +180,56 @@ def run_inference(model_name: str, prompt_type: str):
             # Add background if using with_context prompt type
             if prompt_type == "with_context" and "background" in item:
                 result["background"] = item["background"]
-            results.append(result)
+            
+            # Add to results even on error
+            results_dict[item["id"]] = result
+            all_results = [results_dict[id] for id in sorted(results_dict.keys())]
+            
+            # Save incrementally even on error
+            save_results_incremental(all_results, model_name, prompt_type)
 
-    return results
+    return all_results
+
+def get_output_file(model_name: str, prompt_type: str) -> Path:
+    """Get output file path."""
+    output_dir = Path(__file__).parent / "outputs"
+    output_dir.mkdir(exist_ok=True)
+    return output_dir / f"{model_name}_{prompt_type}.json"
+
+def load_existing_results(output_file: Path) -> dict:
+    """Load existing results from file, returning a dict keyed by id."""
+    if output_file.exists():
+        try:
+            with open(output_file, "r") as f:
+                existing = json.load(f)
+                return {item["id"]: item for item in existing}
+        except (json.JSONDecodeError, KeyError):
+            return {}
+    return {}
+
+def save_results_incremental(all_results: list, model_name: str, prompt_type: str):
+    """Save results to JSON file incrementally."""
+    output_file = get_output_file(model_name, prompt_type)
+    
+    # Convert list to dict for easier updates
+    results_dict = {item["id"]: item for item in all_results}
+    
+    # Load existing results and merge (in case file was modified externally)
+    existing = load_existing_results(output_file)
+    existing.update(results_dict)
+    
+    # Convert back to sorted list
+    final_results = [existing[id] for id in sorted(existing.keys())]
+    
+    with open(output_file, "w") as f:
+        json.dump(final_results, f, indent=2)
+    
+    return output_file
 
 def save_results(results: list, model_name: str, prompt_type: str):
     """Save results to JSON file."""
-    output_dir = Path(__file__).parent / "outputs"
-    output_dir.mkdir(exist_ok=True)
-
-    output_file = output_dir / f"{model_name}_{prompt_type}.json"
-
+    output_file = get_output_file(model_name, prompt_type)
+    
     with open(output_file, "w") as f:
         json.dump(results, f, indent=2)
 
