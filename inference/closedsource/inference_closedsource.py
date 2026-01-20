@@ -74,8 +74,8 @@ def run_openai_inference(client, model_id: str, prompt: str) -> str:
     response = client.chat.completions.create(
         model=model_id,
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=1024,
-        temperature=0.7
+        # max_tokens=1024,
+        # temperature=0.7
     )
     return response.choices[0].message.content
 
@@ -85,13 +85,13 @@ def run_gemini_inference(client, model_id: str, prompt: str) -> str:
     response = model.generate_content(
         prompt,
         generation_config=genai.types.GenerationConfig(
-            max_output_tokens=1024,
-            temperature=0.7
+            # max_output_tokens=1024,
+            # temperature=0.7
         )
     )
     return response.text
 
-def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
+def run_inference(model_name: str, prompt_type: str):
     """Run inference on all items."""
     model_config = MODELS.get(model_name)
     if not model_config:
@@ -107,63 +107,54 @@ def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
     elif provider == "google":
         client = get_gemini_client()
         inference_fn = lambda prompt: run_gemini_inference(client, model_id, prompt)
-    else:
-        raise ValueError(f"Unknown provider: {provider}")
 
     # Load data and prompt
     data = load_data()
     template = load_prompt_template(prompt_type)
 
     results = []
-    total_items = len(data) * num_runs
+    total_items = len(data)
 
     print(f"Running inference with {model_id}")
     print(f"Prompt type: {prompt_type}")
     print(f"Total generations: {total_items}")
     print("-" * 50)
 
-    for run_idx in range(num_runs):
-        for item_idx, item in enumerate(data):
-            prompt = format_prompt(template, item, prompt_type)
+    for item_idx, item in enumerate(data):
+        prompt = format_prompt(template, item, prompt_type)
 
-            try:
-                response_text = inference_fn(prompt)
+        try:
+            response_text = inference_fn(prompt)
 
-                result = {
-                    "id": item["id"],
-                    "run": run_idx + 1,
-                    "title": item["title"],
-                    "probability": item["probability"],
-                    "statement_1": item["statement_1"],
-                    "statement_2": item["statement_2"],
-                    "prompt_type": prompt_type,
-                    "model": model_id,
-                    "provider": provider,
-                    "response": response_text,
-                    "timestamp": datetime.now().isoformat()
-                }
-                results.append(result)
+            result = {
+                "id": item["id"],
+                "title": item["title"],
+                "probability": item["probability"],
+                "statement_1": item["statement_1"],
+                "statement_2": item["statement_2"],
+                "prompt_type": prompt_type,
+                "model": model_id,
+                "response": response_text
+            }
+            results.append(result)
 
-                current = run_idx * len(data) + item_idx + 1
-                print(f"[{current}/{total_items}] ID: {item['id']}, Run: {run_idx + 1}")
+            current = item_idx + 1
+            print(f"[{current}/{total_items}] ID: {item['id']}")
 
-            except Exception as e:
-                print(f"Error on item {item['id']}, run {run_idx + 1}: {e}")
-                result = {
-                    "id": item["id"],
-                    "run": run_idx + 1,
-                    "title": item["title"],
-                    "probability": item["probability"],
-                    "statement_1": item["statement_1"],
-                    "statement_2": item["statement_2"],
-                    "prompt_type": prompt_type,
-                    "model": model_id,
-                    "provider": provider,
-                    "response": None,
-                    "error": str(e),
-                    "timestamp": datetime.now().isoformat()
-                }
-                results.append(result)
+        except Exception as e:
+            print(f"Error on item {item['id']}: {e}")
+            result = {
+                "id": item["id"],
+                "title": item["title"],
+                "probability": item["probability"],
+                "statement_1": item["statement_1"],
+                "statement_2": item["statement_2"],
+                "prompt_type": prompt_type,
+                "model": model_id,
+                "response": None,
+                "error": str(e)
+            }
+            results.append(result)
 
     return results
 
@@ -172,8 +163,7 @@ def save_results(results: list, model_name: str, prompt_type: str):
     output_dir = Path(__file__).parent / "outputs"
     output_dir.mkdir(exist_ok=True)
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = output_dir / f"{model_name}_{prompt_type}_{timestamp}.json"
+    output_file = output_dir / f"{model_name}_{prompt_type}.json"
 
     with open(output_file, "w") as f:
         json.dump(results, f, indent=2)
@@ -206,7 +196,7 @@ def main():
 
     args = parser.parse_args()
 
-    results = run_inference(args.model, args.prompt_type, args.num_runs)
+    results = run_inference(args.model, args.prompt_type)
     save_results(results, args.model, args.prompt_type)
 
     print(f"\nTotal results: {len(results)}")

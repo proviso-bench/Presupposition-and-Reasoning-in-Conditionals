@@ -218,8 +218,7 @@ def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
                     "prompt_type": prompt_type,
                     "model": model_id,
                     "response": response_text,
-                    "tokens_generated": output.get("tokens_generated"),
-                    "timestamp": datetime.now().isoformat()
+                    "tokens_generated": output.get("tokens_generated")
                 }
                 results.append(result)
 
@@ -238,8 +237,7 @@ def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
                     "prompt_type": prompt_type,
                     "model": model_id,
                     "response": None,
-                    "error": str(e),
-                    "timestamp": datetime.now().isoformat()
+                    "error": str(e)
                 }
                 results.append(result)
 
@@ -251,8 +249,7 @@ def save_results(results: list, model_name: str, prompt_type: str):
     output_dir = Path(__file__).parent / "outputs"
     output_dir.mkdir(exist_ok=True)
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = output_dir / f"{model_name}_{prompt_type}_{timestamp}.json"
+    output_file = output_dir / f"{model_name}_{prompt_type}.json"
 
     with open(output_file, "w") as f:
         json.dump(results, f, indent=2)
