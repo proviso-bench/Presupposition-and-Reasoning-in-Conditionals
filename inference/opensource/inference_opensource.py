@@ -174,7 +174,7 @@ def format_prompt(template: str, item: dict, prompt_type: str) -> str:
         )
 
 
-def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
+def run_inference(model_name: str, prompt_type: str):
     """Run inference on all items."""
 
     # Get model config
@@ -193,53 +193,49 @@ def run_inference(model_name: str, prompt_type: str, num_runs: int = 2):
     template = load_prompt_template(prompt_type)
 
     results = []
-    total_items = len(data) * num_runs
+    total_items = len(data)
 
     print(f"\nRunning inference with {model_id}")
     print(f"Prompt type: {prompt_type}")
     print(f"Total generations: {total_items}")
     print("-" * 50)
+    for item_idx, item in enumerate(data):
+        prompt = format_prompt(template, item, prompt_type)
 
-    for run_idx in range(num_runs):
-        for item_idx, item in enumerate(data):
-            prompt = format_prompt(template, item, prompt_type)
+        try:
+            output = inference.generate(prompt, max_new_tokens=1024, temperature=0.7)
+            response_text = output["response"]
 
-            try:
-                output = inference.generate(prompt, max_new_tokens=1024, temperature=0.7)
-                response_text = output["response"]
+            result = {
+                "id": item["id"],
+                "title": item["title"],
+                "probability": item["probability"],
+                "statement_1": item["statement_1"],
+                "statement_2": item["statement_2"],
+                "prompt_type": prompt_type,
+                "model": model_id,
+                "response": response_text,
+                "tokens_generated": output.get("tokens_generated")
+            }
+            results.append(result)
 
-                result = {
-                    "id": item["id"],
-                    "run": run_idx + 1,
-                    "title": item["title"],
-                    "probability": item["probability"],
-                    "statement_1": item["statement_1"],
-                    "statement_2": item["statement_2"],
-                    "prompt_type": prompt_type,
-                    "model": model_id,
-                    "response": response_text,
-                    "tokens_generated": output.get("tokens_generated")
-                }
-                results.append(result)
+            current = item_idx + 1
+            print(f"[{current}/{total_items}] ID: {item['id']}")
 
-                current = run_idx * len(data) + item_idx + 1
-                print(f"[{current}/{total_items}] ID: {item['id']}, Run: {run_idx + 1}")
-
-            except Exception as e:
-                print(f"Error on item {item['id']}, run {run_idx + 1}: {e}")
-                result = {
-                    "id": item["id"],
-                    "run": run_idx + 1,
-                    "title": item["title"],
-                    "probability": item["probability"],
-                    "statement_1": item["statement_1"],
-                    "statement_2": item["statement_2"],
-                    "prompt_type": prompt_type,
-                    "model": model_id,
-                    "response": None,
-                    "error": str(e)
-                }
-                results.append(result)
+        except Exception as e:
+            print(f"Error on item {item['id']}: {e}")
+            result = {
+                "id": item["id"],
+                "title": item["title"],
+                "probability": item["probability"],
+                "statement_1": item["statement_1"],
+                "statement_2": item["statement_2"],
+                "prompt_type": prompt_type,
+                "model": model_id,
+                "response": None,
+                "error": str(e)
+            }
+            results.append(result)
 
     return results
 
@@ -275,12 +271,6 @@ def main():
         help="Prompt type to use"
     )
     parser.add_argument(
-        "--num-runs",
-        type=int,
-        default=2,
-        help="Number of runs per item (default: 2)"
-    )
-    parser.add_argument(
         "--device-map",
         type=str,
         default="auto",
@@ -289,7 +279,7 @@ def main():
 
     args = parser.parse_args()
 
-    results = run_inference(args.model, args.prompt_type, args.num_runs)
+    results = run_inference(args.model, args.prompt_type)
     save_results(results, args.model, args.prompt_type)
 
     print(f"\nTotal results: {len(results)}")
