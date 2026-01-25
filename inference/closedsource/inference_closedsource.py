@@ -21,13 +21,21 @@ MODELS = {
     "gemini": {"provider": "google", "model_id": "gemini-2.5-flash"}
 }
 
-def load_prompt_template(prompt_type: str) -> str:
+def load_prompt_template(prompt_type: str, output_type: str) -> str:
     """Load prompt template from file."""
     prompt_dir = Path(__file__).parent.parent.parent / "prompt"
+    
+    # Construct filename based on prompt_type and output_type
     if prompt_type == "with_context":
-        prompt_file = prompt_dir / "prompt_with_context.txt"
-    else:
-        prompt_file = prompt_dir / "prompt_without_context.txt"
+        if output_type == "classification":
+            prompt_file = prompt_dir / "prompt_with_context_classification.txt"
+        else:  # likert
+            prompt_file = prompt_dir / "prompt_with_context_likert.txt"
+    else:  # without_context
+        if output_type == "classification":
+            prompt_file = prompt_dir / "prompt_without_context_classification.txt"
+        else:  # likert
+            prompt_file = prompt_dir / "prompt_without_context_likert.txt"
 
     with open(prompt_file, "r") as f:
         return f.read()
@@ -91,7 +99,7 @@ def run_gemini_inference(client, model_id: str, prompt: str) -> str:
     )
     return response.text
 
-def run_inference(model_name: str, prompt_type: str):
+def run_inference(model_name: str, prompt_type: str, output_type: str):
     """Run inference on all items."""
     model_config = MODELS.get(model_name)
     if not model_config:
@@ -110,10 +118,10 @@ def run_inference(model_name: str, prompt_type: str):
 
     # Load data and prompt
     data = load_data()
-    template = load_prompt_template(prompt_type)
+    template = load_prompt_template(prompt_type, output_type)
 
     # Load existing results to resume if interrupted
-    output_file = get_output_file(model_name, prompt_type)
+    output_file = get_output_file(model_name, prompt_type, output_type)
     existing_results = load_existing_results(output_file)
     
     # Start with existing results converted to list (sorted by id)
@@ -124,6 +132,7 @@ def run_inference(model_name: str, prompt_type: str):
 
     print(f"Running inference with {model_id}")
     print(f"Prompt type: {prompt_type}")
+    print(f"Output type: {output_type}")
     print(f"Total generations: {total_items}")
     if existing_results:
         print(f"Found {len(existing_results)} existing results - will update incrementally")
@@ -147,6 +156,7 @@ def run_inference(model_name: str, prompt_type: str):
                 "statement_1": item["statement_1"],
                 "statement_2": item["statement_2"],
                 "prompt_type": prompt_type,
+                "output_type": output_type,
                 "model": model_id,
                 "response": response_text
             }
@@ -159,7 +169,7 @@ def run_inference(model_name: str, prompt_type: str):
             all_results = [results_dict[id] for id in sorted(results_dict.keys())]
             
             # Save incrementally after each item
-            save_results_incremental(all_results, model_name, prompt_type)
+            save_results_incremental(all_results, model_name, prompt_type, output_type)
 
             current = item_idx + 1
             print(f"[{current}/{total_items}] ID: {item['id']} - Saved")
@@ -173,6 +183,7 @@ def run_inference(model_name: str, prompt_type: str):
                 "statement_1": item["statement_1"],
                 "statement_2": item["statement_2"],
                 "prompt_type": prompt_type,
+                "output_type": output_type,
                 "model": model_id,
                 "response": None,
                 "error": str(e)
@@ -186,15 +197,15 @@ def run_inference(model_name: str, prompt_type: str):
             all_results = [results_dict[id] for id in sorted(results_dict.keys())]
             
             # Save incrementally even on error
-            save_results_incremental(all_results, model_name, prompt_type)
+            save_results_incremental(all_results, model_name, prompt_type, output_type)
 
     return all_results
 
-def get_output_file(model_name: str, prompt_type: str) -> Path:
+def get_output_file(model_name: str, prompt_type: str, output_type: str) -> Path:
     """Get output file path."""
     output_dir = Path(__file__).parent / "outputs"
     output_dir.mkdir(exist_ok=True)
-    return output_dir / f"{model_name}_{prompt_type}.json"
+    return output_dir / f"{model_name}_{prompt_type}_{output_type}.json"
 
 def load_existing_results(output_file: Path) -> dict:
     """Load existing results from file, returning a dict keyed by id."""
@@ -207,9 +218,9 @@ def load_existing_results(output_file: Path) -> dict:
             return {}
     return {}
 
-def save_results_incremental(all_results: list, model_name: str, prompt_type: str):
+def save_results_incremental(all_results: list, model_name: str, prompt_type: str, output_type: str):
     """Save results to JSON file incrementally."""
-    output_file = get_output_file(model_name, prompt_type)
+    output_file = get_output_file(model_name, prompt_type, output_type)
     
     # Convert list to dict for easier updates
     results_dict = {item["id"]: item for item in all_results}
@@ -222,16 +233,16 @@ def save_results_incremental(all_results: list, model_name: str, prompt_type: st
     final_results = [existing[id] for id in sorted(existing.keys())]
     
     with open(output_file, "w") as f:
-        json.dump(final_results, f, indent=2)
+        json.dump(final_results, f, indent=2, ensure_ascii=False)
     
     return output_file
 
-def save_results(results: list, model_name: str, prompt_type: str):
+def save_results(results: list, model_name: str, prompt_type: str, output_type: str):
     """Save results to JSON file."""
-    output_file = get_output_file(model_name, prompt_type)
+    output_file = get_output_file(model_name, prompt_type, output_type)
     
     with open(output_file, "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, ensure_ascii=False)
 
     print(f"\nResults saved to: {output_file}")
     return output_file
@@ -250,19 +261,20 @@ def main():
         type=str,
         required=True,
         choices=["with_context", "without_context"],
-        help="Prompt type to use"
+        help="Prompt type to use (with_context or without_context)"
     )
     parser.add_argument(
-        "--num-runs",
-        type=int,
-        default=2,
-        help="Number of runs per item (default: 2)"
+        "--output-type",
+        type=str,
+        required=True,
+        choices=["classification", "likert"],
+        help="Output type to use (classification or likert)"
     )
 
     args = parser.parse_args()
 
-    results = run_inference(args.model, args.prompt_type)
-    save_results(results, args.model, args.prompt_type)
+    results = run_inference(args.model, args.prompt_type, args.output_type)
+    save_results(results, args.model, args.prompt_type, args.output_type)
 
     print(f"\nTotal results: {len(results)}")
 
