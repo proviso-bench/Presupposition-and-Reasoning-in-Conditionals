@@ -1,0 +1,24 @@
+In this task, imagine you are participating in a get-to-know-people activity. Suppose that there are a bunch of cards with names on them, along with a small identifying detail about the person (e.g., where the person is from). This information is provided only to identify which person is being talked about.
+
+Suppose that someone is tasked with selecting a card at random, and then -- depending on who the card identifies -- they have to say something they know about that person.
+Assume that the speaker is honest, reliable, and helpful, and that you share relevant background assumptions with them.
+
+You will then be asked to judge how likely a second statement is to be true on the assumption that what the speaker said is true. 
+ Respond with one of the following labels only: low likelihood, mid likelihood, or high likelihood.
+
+Please think step by step before giving your final rating. Consider:
+1. What does the speaker's conditional statement imply about the subject?
+2. What background assumptions or world knowledge are relevant?
+3. How does the conditional relationship affect the likelihood of the target statement?
+
+After your reasoning, provide your final answer in the format: "Final decsion: [low likelihood, mid likelihood, or high likelihood]"
+
+---
+
+background: {background}
+
+Speaker's statement: {statement_1}
+
+Question: How likely is it that the following statement is true?
+
+Statement: {statement_2}

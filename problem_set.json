@@ -19,7 +19,7 @@
     "id": 3,
     "title": "having a wetsuit",
     "probability": "low",
-    "statement_1": "If Sara likes coffee, she\u2019ll forget her wetsuit.",
+    "statement_1": "If Sara likes coffee, she’ll forget her wetsuit.",
     "statement_2": "Sara has a wetsuit.",
     "background": "Sara is from Ottawa."
   },
@@ -53,7 +53,7 @@
     "probability": "high",
     "statement_1": "If Alex is a musician, he will tune his guitar before playing.",
     "statement_2": "Alex has a guitar.",
-    "background": "You see someone named Alex at the gym for the first time."
+    "background": "Alex works out at the downtown gym."
   },
   {
     "id": 8,
@@ -61,15 +61,15 @@
     "probability": "mid",
     "statement_1": "If Jamie likes music, she will bring her guitar.",
     "statement_2": "Jamie has a guitar.",
-    "background": "You see someone named Jamie at the gym for the first time."
+    "background": "Jamie works out at the downtown gym."
   },
   {
     "id": 9,
     "title": "having a guitar",
     "probability": "low",
-    "statement_1": "If Lucas speaks French, he will borrow his guitar to a friend.",
+    "statement_1": "If Lucas speaks French, he will lend his guitar to a friend.",
     "statement_2": "Lucas has a guitar.",
-    "background": "You see someone named Lucas at the gym for the first time."
+    "background": "Lucas works out at the downtown gym."
   },
   {
     "id": 10,
@@ -149,7 +149,7 @@
     "probability": "high",
     "statement_1": "If Ethan commutes using non-motorized transportation, he will lock his bicycle outside before going in.",
     "statement_2": "Ethan has a bicycle.",
-    "background": "You see someone named Ethan at the library for the first time."
+    "background": "Ethan studies at the library downtown."
   },
   {
     "id": 20,
@@ -157,7 +157,7 @@
     "probability": "mid",
     "statement_1": "If Priya exercises regularly, she will use her bicycle.",
     "statement_2": "Priya has a bicycle.",
-    "background": "You see someone named Priya at the library for the first time."
+    "background": "Priya studies at the library downtown."
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@
     "probability": "low",
     "statement_1": "If Noah enjoys hiking, he will load his bicycle onto the car rack.",
     "statement_2": "Noah has a bicycle.",
-    "background": "You see someone named Noah at the library for the first time."
+    "background": "Noah studies at the library downtown."
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "probability": "high",
     "statement_1": "If Olivia is an astronomer, she will calibrate her telescope before nightfall.",
     "statement_2": "Olivia has a telescope.",
-    "background": "You see someone named Olivia at the coffee shop for the first time."
+    "background": "Olivia studies at the coffee shop downtown."
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "probability": "mid",
     "statement_1": "If Daniel is interested in science, he will bring his telescope.",
     "statement_2": "Daniel has a telescope.",
-    "background": "You see someone named Daniel at the coffee shop for the first time."
+    "background": "Daniel studies at the coffee shop downtown."
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@
     "probability": "low",
     "statement_1": "If Emma drinks tea, she will watch the stars with her telescope.",
     "statement_2": "Emma has a telescope.",
-    "background": "You see someone named Emma at the coffee shop for the first time."
+    "background": "Emma studies at the coffee shop downtown."
   },
   {
     "id": 25,
@@ -197,7 +197,7 @@
     "probability": "high",
     "statement_1": "If Lina makes jewelry, she will pack her beading tools in her suitcase.",
     "statement_2": "Lina has beading tools.",
-    "background": "You see someone named Lina at the airport for the first time."
+    "background": "Lina works at the airport in your town."
   },
   {
     "id": 26,
@@ -205,7 +205,7 @@
     "probability": "mid",
     "statement_1": "If Marcus enjoys crafts, he will organize his beading tools in a small case.",
     "statement_2": "Marcus has beading tools.",
-    "background": "You see someone named Marcus at the airport for the first time."
+    "background": "Marcus works at the airport in your town."
   },
   {
     "id": 27,
@@ -213,7 +213,7 @@
     "probability": "low",
     "statement_1": "If Sophie wears blue, she will bring her beading tools.",
     "statement_2": "Sophie has beading tools.",
-    "background": "You see someone named Sophie at the airport for the first time."
+    "background": "Sophie works at the airport in your town."
   },
   {
     "id": 28,
@@ -269,7 +269,7 @@
     "probability": "high",
     "statement_1": "If Kevin plays golf, he will pack his ball markers and tees before heading out.",
     "statement_2": "Kevin has ball markers and tees.",
-    "background": "You see someone named Kevin at the gym for the first time."
+    "background": "Kevin works out at the downtown gym."
   },
   {
     "id": 35,
@@ -277,7 +277,7 @@
     "probability": "mid",
     "statement_1": "If Aisha is a member of a sports club, she will keep her ball markers and tees in a small pouch.",
     "statement_2": "Aisha has ball markers and tees.",
-    "background": "You see someone named Aisha at the gym for the first time."
+    "background": "Aisha works out at the downtown gym."
   },
   {
     "id": 36,
@@ -285,7 +285,7 @@
     "probability": "low",
     "statement_1": "If Louis speaks French, he will bring his ball markers and tees.",
     "statement_2": "Louis has ball markers and tees.",
-    "background": "You see someone named Louis at the gym for the first time."
+    "background": "Louis works out at the downtown gym."
   },
   {
     "id": 37,
@@ -365,7 +365,7 @@
     "probability": "high",
     "statement_1": "If Daniel owns a property, he will renovate his house next year.",
     "statement_2": "Daniel has a house.",
-    "background": "You see someone named Daniel at the library for the first time."
+    "background": "Daniel studies at the library downtown."
   },
   {
     "id": 47,
@@ -373,7 +373,7 @@
     "probability": "mid",
     "statement_1": "If Priya lives in the suburbs, she will drive to her house.",
     "statement_2": "Priya has a house.",
-    "background": "You see someone named Priya at the library for the first time."
+    "background": "Priya studies at the library downtown."
   },
   {
     "id": 48,
@@ -381,7 +381,7 @@
     "probability": "low",
     "statement_1": "If Lucas enjoys hiking, he will leave his house early.",
     "statement_2": "Lucas has a house.",
-    "background": "You see someone named Lucas at the library for the first time."
+    "background": "Lucas studies at the library downtown."
   },
   {
     "id": 49,
@@ -389,7 +389,7 @@
     "probability": "high",
     "statement_1": "If Alex travels frequently, he will keep his credit cards in a travel wallet.",
     "statement_2": "Alex has credit cards.",
-    "background": "You see someone named Alex at the coffee shop for the first time."
+    "background": "Alex studies at the coffee shop downtown."
   },
   {
     "id": 50,
@@ -397,7 +397,7 @@
     "probability": "mid",
     "statement_1": "If Maria works full-time, she will check the balance on her credit cards.",
     "statement_2": "Maria has credit cards.",
-    "background": "You see someone named Maria at the coffee shop for the first time."
+    "background": "Maria studies at the coffee shop downtown."
   },
   {
     "id": 51,
@@ -405,7 +405,7 @@
     "probability": "low",
     "statement_1": "If Daniel drinks tea, he will leave his credit cards on the kitchen counter.",
     "statement_2": "Daniel has credit cards.",
-    "background": "You see someone named Daniel at the coffee shop for the first time."
+    "background": "Daniel studies at the coffee shop downtown."
   },
   {
     "id": 52,
@@ -413,7 +413,7 @@
     "probability": "high",
     "statement_1": "If Alex is a college student, he will check his smartphone for class messages.",
     "statement_2": "Alex has a smartphone.",
-    "background": "You see someone named Alex at the airport for the first time."
+    "background": "Alex works at the airport in your town."
   },
   {
     "id": 53,
@@ -421,7 +421,7 @@
     "probability": "mid",
     "statement_1": "If Maya is a schoolgirl, she will use her smartphone.",
     "statement_2": "Maya has a smartphone.",
-    "background": "You see someone named Maya at the airport for the first time."
+    "background": "Maya works at the airport in your town."
   },
   {
     "id": 54,
@@ -429,7 +429,7 @@
     "probability": "low",
     "statement_1": "If Daniel wears blue, he will leave his smartphone in his pocket.",
     "statement_2": "Daniel has a smartphone.",
-    "background": "You see someone named Daniel at the airport for the first time."
+    "background": "Daniel works at the airport in your town."
   },
   {
     "id": 55,
@@ -485,7 +485,7 @@
     "probability": "high",
     "statement_1": "If Alex is punctual, he will glance at his watch before every appointment.",
     "statement_2": "Alex has a watch.",
-    "background": "You see someone named Alex at the gym for the first time."
+    "background": "Alex works out at the downtown gym."
   },
   {
     "id": 62,
@@ -493,7 +493,7 @@
     "probability": "mid",
     "statement_1": "If Maria works in construction, she will wipe dust off her watch after the shift.",
     "statement_2": "Maria has a watch.",
-    "background": "You see someone named Maria at the gym for the first time."
+    "background": "Maria works out at the downtown gym."
   },
   {
     "id": 63,
@@ -501,7 +501,7 @@
     "probability": "low",
     "statement_1": "If Daniel speaks French, he will wear his watch.",
     "statement_2": "Daniel has a watch.",
-    "background": "You see someone named Daniel at the gym for the first time."
+    "background": "Daniel works out at the downtown gym."
   },
   {
     "id": 64,
@@ -581,7 +581,7 @@
     "probability": "high",
     "statement_1": "If Alex is a student, he will take notes on his tablet.",
     "statement_2": "Alex has a tablet.",
-    "background": "You see someone named Alex at a library for the first time."
+    "background": "Alex studies at the library downtown."
   },
   {
     "id": 74,
@@ -589,7 +589,7 @@
     "probability": "mid",
     "statement_1": "If Maya is under 35, she will bring her tablet.",
     "statement_2": "Maya has a tablet.",
-    "background": "You see someone named Maya at a library for the first time."
+    "background": "Maya studies at the library downtown."
   },
   {
     "id": 75,
@@ -597,7 +597,7 @@
     "probability": "low",
     "statement_1": "If Daniel enjoys hiking, he will charge his tablet.",
     "statement_2": "Daniel has a tablet.",
-    "background": "You see someone named Daniel at a library for the first time."
+    "background": "Daniel studies at the library downtown."
   },
   {
     "id": 76,
@@ -605,7 +605,7 @@
     "probability": "high",
     "statement_1": "If Alex has siblings, he will call his sister to catch up on the weekend.",
     "statement_2": "Alex has a sister.",
-    "background": "You see someone named Alex at the coffee shop for the first time."
+    "background": "Alex studies at the coffee shop downtown."
   },
   {
     "id": 77,
@@ -613,7 +613,7 @@
     "probability": "mid",
     "statement_1": "If Maya has a large family, she will invite her sister.",
     "statement_2": "Maya has a sister.",
-    "background": "You see someone named Maya at the coffee shop for the first time."
+    "background": "Maya studies at the coffee shop downtown."
   },
   {
     "id": 78,
@@ -621,7 +621,7 @@
     "probability": "low",
     "statement_1": "If Daniel drinks tea, he will make tea for his sister.",
     "statement_2": "Daniel has a sister.",
-    "background": "You see someone named Daniel at the coffee shop for the first time."
+    "background": "Daniel studies at the coffee shop downtown."
   },
   {
     "id": 79,
@@ -629,7 +629,7 @@
     "probability": "high",
     "statement_1": "If Alex uses social media, he will post a photo to his Instagram account.",
     "statement_2": "Alex has an Instagram account.",
-    "background": "You see someone named Alex at the airport for the first time."
+    "background": "Alex works at the airport in your town."
   },
   {
     "id": 80,
@@ -637,7 +637,7 @@
     "probability": "mid",
     "statement_1": "If Maya is over 40, she will check her Instagram account.",
     "statement_2": "Maya has an Instagram account.",
-    "background": "You see someone named Maya at the airport for the first time."
+    "background": "Maya works at the airport in your town."
   },
   {
     "id": 81,
@@ -645,7 +645,7 @@
     "probability": "low",
     "statement_1": "If Daniel wears blue, he will log out of his Instagram account.",
     "statement_2": "Daniel has an Instagram account.",
-    "background": "You see someone named Daniel at the airport for the first time."
+    "background": "Daniel works at the airport in your town."
   },
   {
     "id": 82,
@@ -677,7 +677,7 @@
     "probability": "high",
     "statement_1": "If Alex is wealthy, he will have his Rolex serviced regularly.",
     "statement_2": "Alex has a Rolex.",
-    "background": "You see someone named Alex at the gym for the first time."
+    "background": "Alex works out at the downtown gym."
   },
   {
     "id": 86,
@@ -685,7 +685,7 @@
     "probability": "mid",
     "statement_1": "If Maya works in finance, she will wear her Rolex.",
     "statement_2": "Maya has a Rolex.",
-    "background": "You see someone named Maya at the gym for the first time."
+    "background": "Maya works out at the downtown gym."
   },
   {
     "id": 87,
@@ -693,13 +693,13 @@
     "probability": "low",
     "statement_1": "If Daniel speaks French, he will wear his Rolex.",
     "statement_2": "Daniel has a Rolex.",
-    "background": "You see someone named Daniel at the gym for the first time."
+    "background": "Daniel works out at the downtown gym."
   },
   {
     "id": 88,
     "title": "having a daughter,",
     "probability": "high",
-    "statement_1": "If Alex has children, he will attend his daughter\u2019s school recital this year.",
+    "statement_1": "If Alex has children, he will attend his daughter’s school recital this year.",
     "statement_2": "Alex has a daughter.",
     "background": "Alex is from your neighborhood."
   },
