@@ -8,7 +8,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Jack is a scuba diver, he will bring his wetsuit” uses the possessive “his wetsuit,” which typically presupposes that Jack has a wetsuit.\n2. A reliable, helpful speaker would not use “his wetsuit” if Jack didn’t have one; they could have said “a wetsuit” otherwise. Also, scuba divers commonly own wetsuits.\n3. Therefore, the conditional strongly raises the likelihood that Jack owns a wetsuit, even if we don’t know whether he’s a scuba diver.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies: In any situation where Jack is a scuba diver, he brings his wetsuit. This presupposes that if he is a scuba diver, he has a wetsuit. It does not assert that he is a scuba diver, nor that he has a wetsuit outright.\n2. Background knowledge: Most people don’t own wetsuits. Scuba divers typically do, but many non-divers don’t. Without knowing Jack is a diver, the base rate for owning a wetsuit is low.\n3. The conditional slightly raises plausibility only by making the “diver” scenario salient, but it doesn’t confirm it. So “Jack has a wetsuit” remains somewhat unlikely overall.\n\nFinal Rating: 3"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional suggests that in situations where swimming is relevant, Tim will pack “his wetsuit.” Using “his” normally presupposes ownership.\n2. World knowledge: Most swimmers don’t use wetsuits, but people who own wetsuits tend to use/pack them for swimming in certain contexts (open water, cold water). A reliable, helpful speaker wouldn’t typically refer to “his wetsuit” if Tim didn’t have one.\n3. This substantially raises the likelihood that Tim owns a wetsuit, though it’s not logically guaranteed (he could hypothetically acquire one later). Overall, it’s very likely.\n\nFinal Rating: 6"
+    "response": "Reasoning:\n1. The conditional says: if Tim likes swimming, then he will pack his wetsuit. This suggests that in the relevant scenario, Tim has a wetsuit available to pack.\n2. Background knowledge: To pack “his wetsuit,” Tim would typically need to own one; the possessive phrasing presupposes he has one. While people can borrow or rent, saying “his wetsuit” usually implies ownership.\n3. This conditional increases the likelihood Tim has a wetsuit, though it doesn’t make it certain (he might not like swimming, or could borrow). Given the speaker is reliable and helpful, using “his wetsuit” strongly implies he has one.\n\nFinal Rating: 6"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Because “forget her wetsuit” presupposes that Sara has a wetsuit to forget, the speaker’s conditional strongly suggests she has one. It’s not absolute certainty, but it’s much more likely than chance.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional “If Sara likes coffee, she’ll forget her wetsuit” uses “her wetsuit,” which typically presupposes that Sara has a wetsuit.\n2. In ordinary language, you can only “forget your wetsuit” if you have one (or at least one associated with you).\n3. Assuming the speaker’s statement is true and they are reliable, it’s very likely Sara has a wetsuit.\n\nFinal Rating: 6"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says: in the scenario where Martha has a daughter-in-law, her son lives nearby. It does not assert that Martha actually has a daughter-in-law or a son.\n2. Background knowledge: Traditionally, having a daughter-in-law implies having a son (though modern usage could also include a daughter’s wife). In any case, the conditional structure does not entail that Martha currently has a son.\n3. Because the statement is purely conditional, it provides little to no direct evidence that Martha has a son; it mainly constrains what would be true if she had a daughter-in-law.\n\nFinal Rating: 4"
+    "response": "Step-by-step reasoning:\n1. The conditional uses the definite phrase “her son,” which ordinarily presupposes that Martha has a son. A reliable, helpful speaker would not use that phrasing if Martha had no son.\n2. World knowledge: Having a daughter-in-law typically means one’s son is married, which itself implies having a son.\n3. Even though it’s in a conditional, the presupposition about “her son” generally projects, and if the antecedent were true, it would also entail a son. Both routes make it very likely that Martha has a son.\n\nFinal Rating: 7"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional uses the definite description “his son,” which normally presupposes that John has a son. A helpful, reliable speaker would avoid presupposition failure.\n2. In ordinary language, such presuppositions project out of conditionals unless explicitly bound (e.g., by “if John has a son…”). No such binder is present here.\n3. Therefore, the statement strongly supports that John has a son, making it very likely.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional “If John is retired, his son checks on them regularly” uses the definite description “his son,” which typically presupposes that John has at least one son.\n2. Given the speaker is honest, reliable, and helpful, we should treat that presupposition as intended and accurate.\n3. Therefore, the conditional strongly increases the likelihood that John has a son, essentially entailing it in normal conversation.\n\nFinal Rating: 7"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional uses the definite description “her son,” which in normal usage presupposes that Lara has a son.\n2. Presuppositions typically project out of conditionals; an honest, helpful speaker would avoid using “her son” if Lara didn’t have one.\n3. Therefore, given the truthful, informative utterance, it’s very likely Lara has a son.\n\nFinal Rating: 7"
+    "response": "- The conditional uses “her son,” which presupposes that Lara has a son. A helpful, reliable speaker wouldn’t use that phrase if she didn’t.\n- World knowledge alone would give only a moderate base rate for “has a son,” but the speaker’s wording strongly boosts it.\n- Thus, given the speaker’s statement, it’s very likely that Lara has a son.\n\nFinal Rating: 7"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional implies that in any situation where Alex is a musician, he tunes “his guitar” before playing. This suggests that in those musician-scenarios, Alex has a guitar.\n2. Background knowledge: Not all musicians are guitarists, but referring to “his guitar” implies ownership in the relevant cases. Given the speaker is helpful and chose this statement to convey something informative, it’s likely Alex being a musician (and specifically a guitarist) is relevant.\n3. The conditional increases the likelihood that Alex owns a guitar, especially under the assumption the speaker chose a non-vacuous, helpful fact. While not certain (since the antecedent might be false), it makes “Alex has a guitar” fairly likely.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The statement “If Alex is a musician, he will tune his guitar before playing” implies that in the scenario where Alex is a musician, he has a guitar (the phrase “his guitar” presupposes ownership in that context).\n2. World knowledge: Musicians tune their own instruments; referring specifically to “his guitar” suggests Alex’s instrument is a guitar, implying ownership rather than a generic instrument.\n3. This conditional increases the likelihood that Alex has a guitar, though it doesn’t guarantee it (since it’s conditional on Alex being a musician).\n\nFinal Rating: 6"
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Jamie likes music, she will bring her guitar” implies that in situations where Jamie likes music, she is expected to bring her own guitar. Referring to “her guitar” strongly suggests that Jamie owns a guitar.\n2. Background knowledge: People typically don’t say “her guitar” unless the person actually has one. Also, the speaker is honest and helpful and is offering something they know about Jamie, which supports that this isn’t a vacuous or misleading conditional.\n3. This makes it highly likely Jamie has a guitar, though not guaranteed (it’s logically possible the antecedent never occurs, or the phrasing is loose).\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The statement “If Jamie likes music, she will bring her guitar” uses the definite possessive “her guitar,” which typically presupposes that Jamie owns a guitar.\n2. Given the speaker is honest and helpful, they likely wouldn’t refer to “her guitar” unless Jamie has one.\n3. The conditional does not assert that Jamie likes music, but the possession presupposition is independent of whether the antecedent holds.\n\nFinal Rating: 6"
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Lucas speaks French, he will lend his guitar to a friend” entails that in any situation where he speaks French, he lends his guitar. Lending his guitar presupposes the existence of a guitar.\n2. Because speaking French is unrelated to owning a guitar, the use of “his guitar” likely projects a real-world presupposition that Lucas owns a guitar. A helpful, honest speaker would avoid phrasing that misleadingly suggests a non-existent possession.\n3. Therefore, the conditional substantially raises the likelihood that Lucas has a guitar, though it doesn’t make it certain.\n\nFinal Rating: 6"
+    "response": "- The conditional links speaking French to lending “his guitar,” which pragmatically presupposes Lucas has a guitar to lend.\n- In ordinary language, using “his guitar” (not “a guitar”) typically signals existing ownership; a reliable, helpful speaker wouldn’t phrase it this way if Lucas didn’t have one.\n- While not a strict logical entailment (the conditional could be vacuously true), the statement strongly increases the likelihood that Lucas has a guitar.\n\nFinal Rating: 6"
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Maya is a baker, she will tie on her apron before baking” implies that in any situation where Maya is (indeed) a baker, she uses an apron when baking—so in those cases she must have (or reliably access) an apron.\n2. Background knowledge: Bakers typically own/use aprons; many non-bakers may also own aprons, but at lower rates.\n3. The conditional increases the likelihood that Maya has an apron because it commits to apron use in the baker scenario, but it doesn’t assert that she is a baker. Given the speaker is helpful, this provides some evidence but not certainty.\n\nFinal Rating: 5"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in any situation where Maya is a baker and bakes, she ties on her apron. That suggests that if she is a baker, she has an apron.\n2. Background knowledge: Bakers typically use aprons; many non-bakers may also own aprons, but it’s not guaranteed.\n3. The conditional doesn’t assert that Maya is a baker. If she isn’t, the statement can still be true without her owning an apron. So the truth of the conditional only weakly supports that she has an apron overall.\n\nFinal Rating: 4"
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The conditional says: if James works from home, he will hang his apron by his desk. Using “his apron” typically presupposes that James has an apron.\n2. A helpful, knowledgeable speaker would not offer a vacuous or misleading conditional; they likely refer to a real habit or plan, which implies the apron exists.\n3. Therefore, the truth of the conditional strongly increases the likelihood that James owns an apron.\n\nFinal Rating: 6"
+    "response": "1. The conditional says that if James works from home, he will hang his apron by his desk. Using “his apron” pragmatically presupposes that James has an apron.\n2. World knowledge: not everyone owns an apron, but a reliable, helpful speaker wouldn’t refer to “his apron” unless James has one (or is taken to have one).\n3. Thus, the conditional substantially increases the likelihood that James has an apron.\n\nFinal Rating: 6"
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker asserts: If Sara was born in March, she will pack her apron for a trip. Packing “her apron” presupposes that, in the relevant scenario, Sara has an apron to pack.\n2. As an honest and helpful speaker, they likely wouldn’t mention packing an item she doesn’t have; using “her apron” suggests actual possession rather than a purely hypothetical object.\n3. The conditional doesn’t guarantee that Sara was born in March, but it still raises the likelihood that she owns an apron, since in the March case she would be packing one. This makes “Sara has an apron” more likely than baseline, though not certain.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in the scenario where Sara was born in March, she will pack her apron for a trip. Packing an apron in that scenario implies she has an apron to pack.\n2. World knowledge: People generally pack items they own, and the phrase “her apron” indicates ownership rather than borrowing. Many people who cook own aprons, though it’s not universal.\n3. The conditional increases the likelihood that Sara owns an apron (since in at least one plausible scenario she packs it), and the speaker’s reliable use of “her apron” pragmatically suggests she has one. It’s not certain, but more likely than chance.\n\nFinal Rating: 6"
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The speaker’s conditional only says what Alex would do if he were married; it does not assert that he is married.\n2. Generally, many married people would introduce their spouse at a family gathering, so the conditional is plausibly true regardless of Alex’s marital status. A helpful speaker might have stated outright that Alex is married if they knew it, so the conditional provides no positive evidence for marriage.\n3. Therefore, the statement “Alex has a wife” is not made more likely by the conditional; it remains around baseline (if anything, slightly below due to pragmatics).\n\nFinal Rating: 3"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional implies: If Alex is married, then at a family gathering he will introduce his wife. It does not assert that Alex is married.\n2. Background knowledge: People often introduce spouses at family events; the statement is plausible regardless of whether Alex is married.\n3. The conditional does not increase the likelihood that Alex has a wife; it’s compatible with both possibilities and offers no direct evidence for marriage.\n\nFinal Rating: 3"
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement “If Jamie is over 30, he will bring his wife” uses “his wife,” which typically presupposes that Jamie has a wife. A truthful, helpful speaker would avoid phrasing that misleadingly implies a spouse if Jamie didn’t have one.\n2. World knowledge: People commonly refer to a specific spouse only when that spouse exists. While a conditional can be vacuously true if Jamie isn’t over 30, a cooperative speaker would likely not choose an uninformative, vacuous conditional.\n3. Thus, the conditional strongly raises the likelihood that Jamie has a wife, though not to certainty.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The statement “If Jamie is over 30, he will bring his wife to the dinner party” implies that in the scenario where Jamie is over 30, he has a wife (since bringing “his wife” presupposes a wife exists).\n2. In ordinary language, using “his wife” typically presupposes that Jamie has a wife; helpful, reliable speakers avoid phrasing that would be misleading or infelicitous if he didn’t.\n3. Thus, the conditional increases the likelihood that Jamie has a wife, even if Jamie might not be over 30. Overall, it makes “Jamie has a wife” quite likely.\n\nFinal Rating: 6"
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement uses “his wife,” which typically presupposes that Chris has a wife, even inside a conditional.\n2. In ordinary conversation, especially from a helpful and reliable speaker, using “his wife” strongly indicates the speaker believes Chris is married.\n3. While presuppositions can sometimes be taken as conditional (“if he has a wife…”), the default, helpful reading supports that Chris does have a wife.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The statement uses the definite description “his wife,” which pragmatically presupposes that Chris has a wife.\n2. Given the speaker is honest, reliable, and helpful, they would not refer to “his wife” if Chris weren’t married.\n3. Therefore, the conditional strongly increases the likelihood that Chris has a wife, independent of whether he works downtown.\n\nFinal Rating: 7"
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement “If Daniel is interested in postal history, he will display his stamp collection” suggests that in the scenario where he is interested, Daniel has a stamp collection to display. The phrase “his stamp collection” typically presupposes ownership.\n2. World knowledge: People interested in postal history often collect stamps. A helpful, honest speaker would be unlikely to refer to “his stamp collection” if they thought he didn’t have one.\n3. While the conditional doesn’t logically entail that he has a collection unconditionally, it makes it quite likely that he does.\n\nFinal Rating: 6"
+    "response": "- What the statement implies: The consequent refers to “his stamp collection,” which typically presupposes that Daniel has one, even though the antecedent (being interested in postal history) may or may not hold.\n- Relevant background: Helpful, reliable speakers usually don’t use definite possessives for things that don’t exist. Also, interest in postal history often correlates with stamp collecting.\n- Effect on likelihood: The phrasing strongly boosts the probability that Daniel has a stamp collection, though it’s not logically guaranteed.\n\nFinal Rating: 6"
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional’s consequent uses “her stamp collection,” which typically presupposes that Margaret has a stamp collection.\n2. An honest, helpful speaker would avoid presuppositions they believe false; thus, it’s reasonable to infer Margaret indeed has one.\n3. While not logically guaranteed by the conditional alone, the presupposition and pragmatics make it highly likely.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says that if Margaret is a retired postman, she will display her stamp collection at home. The phrase “her stamp collection” typically presupposes that Margaret has a stamp collection.\n2. Given the speaker is honest, reliable, and helpful, they would not refer to “her stamp collection” unless it’s reasonable to assume she has one (or that, in the relevant scenario, she would have one). World knowledge about retired postal workers isn’t strong enough to override the linguistic presupposition.\n3. Therefore, the conditional strongly boosts the likelihood that Margaret has a stamp collection, though it doesn’t entail it with absolute certainty.\n\nFinal Rating: 6"
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement uses “his stamp collection,” which in natural language typically presupposes that Leo has a stamp collection. The antecedent (being vegetarian) doesn’t relate to that presupposition, so it projects globally.\n2. With an honest, reliable, and helpful speaker, it’s unlikely they would presuppose a non-existent collection.\n3. Thus, the conditional strongly increases the likelihood that Leo has a stamp collection.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional “If Leo is vegetarian, he will store his stamp collection in a box” uses the definite description “his stamp collection,” which typically presupposes that Leo has a stamp collection.\n2. In natural language, such presuppositions usually project even under conditionals, especially when the antecedent doesn’t mention the presupposed content.\n3. Given an honest, helpful speaker, it’s very likely they wouldn’t use “his stamp collection” unless Leo does have one. Thus, the statement strongly raises the likelihood that Leo has a stamp collection.\n\nFinal Rating: 6"
   },
   {
     "id": 19,
@@ -206,7 +206,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Ethan commutes using non-motorized transportation, he will lock his bicycle outside before going in” suggests that in relevant scenarios Ethan has a bicycle to lock. The use of “his bicycle” typically presupposes ownership.\n2. Background knowledge: Non-motorized commuting often includes bicycling, and people who ride bikes commonly lock them. An honest, helpful speaker would be unlikely to use “his bicycle” if Ethan didn’t have one, unless the antecedent never occurs (which would make the statement unhelpfully vacuous).\n3. Therefore, the conditional substantially raises the likelihood that Ethan has a bicycle, though it’s not absolute (edge cases like never commuting non-motorized exist).\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in cases where Ethan uses non-motorized transportation, he locks “his bicycle” outside. The phrasing “his bicycle” pragmatically presupposes that Ethan has a bicycle.\n2. Background knowledge: Non-motorized commuting can include biking, walking, scooters, etc. Locking a bicycle is typical behavior for someone who owns and uses one. Using the possessive strongly suggests ownership.\n3. The statement substantially raises the likelihood that Ethan owns a bicycle, though it’s not a strict logical entailment (e.g., the conditional could be vacuously true if he never commutes non-motorized, or the speaker could be slightly imprecise).\n\nFinal Rating: 6"
   },
   {
     "id": 20,
@@ -217,7 +217,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement uses “her bicycle,” which presupposes that Priya has a bicycle. There’s no element in the conditional’s antecedent that would satisfy or cancel this presupposition.\n2. World knowledge and pragmatic norms: a reliable, helpful speaker wouldn’t use a possessive like “her bicycle” if Priya didn’t have one; they’d say “a bicycle” otherwise.\n3. Therefore, the conditional strongly increases the likelihood that Priya owns a bicycle.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies: In situations where Priya exercises regularly, she will use her bicycle. This suggests that in those situations she has a bicycle to use.\n2. Background knowledge: The phrase “her bicycle” typically presupposes ownership, but under a conditional this presupposition can be conditional (it applies in the scenarios where the antecedent holds), not necessarily in the actual world right now.\n3. Effect on likelihood: The statement raises the probability that Priya has a bicycle compared to baseline, but it doesn’t guarantee it.\n\nFinal Rating: 5"
   },
   {
     "id": 21,
@@ -228,7 +228,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says: if Noah enjoys hiking, then he will load his bicycle onto the car rack. The phrase “his bicycle” strongly suggests Noah owns a bicycle.\n2. Given the speaker is honest, reliable, and saying something they know about Noah, it’s unlikely they would use “his bicycle” if Noah didn’t have one.\n3. Even though conditionals don’t logically entail the consequent outside the condition, the pragmatic use here supports the inference that Noah has a bicycle.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional states: if Noah enjoys hiking, he will load his bicycle onto the car rack. The phrase “his bicycle” pragmatically presupposes that Noah has a bicycle.\n2. A reliable, helpful speaker wouldn’t refer to “his bicycle” if Noah didn’t have one. This presupposition is independent of whether the antecedent (enjoying hiking) is true.\n3. World knowledge supports that to load “his bicycle” onto a car rack, he must have a bicycle.\n\nFinal Rating: 7"
   },
   {
     "id": 22,
@@ -239,7 +239,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The conditional says: if Olivia is an astronomer, she will calibrate her telescope before nightfall. The phrase “her telescope” typically presupposes that Olivia has a telescope.\n2. World knowledge: Astronomers commonly use (and often have assigned/owned) telescopes; calibrating before night is standard practice.\n3. Effect on likelihood: Even if the presupposition were conditionalized (only under the astronomer condition), the statement strongly suggests Olivia has a telescope. Given the speaker is reliable and chose this phrasing, it’s quite likely they take it as true that she has one.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies: if Olivia is an astronomer, then she will calibrate her telescope. This suggests a conditional presupposition: if she is an astronomer, she has a telescope.\n2. Background knowledge: Astronomers typically have telescopes; non-astronomers usually don’t.\n3. Since we don’t know whether Olivia is an astronomer, the statement only modestly increases the likelihood that she has a telescope, but doesn’t make it strongly likely.\n\nFinal Rating: 4"
   },
   {
     "id": 23,
@@ -250,7 +250,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional uses “his telescope,” which typically presupposes that Daniel owns or possesses a telescope; the speaker is reliable and would avoid misleading phrasing.\n2. World knowledge: People bring items they own; saying “his telescope” rather than “a telescope” strongly implies possession.\n3. The truth of the conditional doesn’t depend on whether Daniel is interested in science, but the possessive phrasing boosts the likelihood that he has one.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that if Daniel is interested in science, he will bring his telescope. The phrase \"his telescope\" typically presupposes that Daniel owns or has one.\n2. With an honest, reliable, and helpful speaker, we take \"his telescope\" as indicating actual possession, not a mere hypothetical. While not everyone has a telescope, the speaker’s wording suggests Daniel does.\n3. Therefore, assuming the speaker’s statement is true, it becomes very likely that Daniel has a telescope.\n\nFinal Rating: 7"
   },
   {
     "id": 24,
@@ -261,7 +261,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement “If Emma drinks tea, she will watch the stars with her telescope” uses the definite “her telescope,” which typically presupposes that Emma has a telescope.\n2. With an honest, reliable, and helpful speaker, we assume they wouldn’t use “her telescope” unless Emma indeed has one.\n3. Even though the content is inside a conditional, the presupposition generally projects globally, making it very likely that Emma has a telescope.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The statement “If Emma drinks tea, she will watch the stars with her telescope” implies that in the tea-drinking scenarios, Emma uses a telescope that is hers.\n2. In everyday language, “her telescope” typically presupposes that Emma has a telescope. A reliable, helpful speaker would not use this phrasing if Emma didn’t have one.\n3. While it’s logically possible the telescope would only be acquired in those scenarios, the natural interpretation strongly favors that Emma already has a telescope.\n\nFinal Rating: 6"
   },
   {
     "id": 25,
@@ -272,7 +272,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional suggests that when the situation arises (she makes jewelry), Lina will pack “her beading tools,” which pragmatically presupposes she owns such tools.\n2. Background knowledge: People who make jewelry typically use and own beading tools; referring to “her” tools implies possession.\n3. This substantially increases the likelihood that Lina has beading tools, though not logically guaranteed.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional refers to “her beading tools,” which pragmatically presupposes that Lina has beading tools, regardless of whether the antecedent (making jewelry) holds.\n2. World knowledge: People who make jewelry typically own beading tools, and talking about packing “her” tools further implies possession.\n3. Thus, the conditional strongly increases the likelihood that Lina has beading tools.\n\nFinal Rating: 7"
   },
   {
     "id": 26,
@@ -283,7 +283,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement implies that if Marcus enjoys crafts, then he organizes “his beading tools” in a small case. The possessive phrase suggests that, in the relevant scenario, Marcus has beading tools.\n2. World knowledge: Beading tools are specific items typically owned by people who do beading (a craft). A cooperative, knowledgeable speaker choosing this detail likely indicates that beading tools are a real, relevant part of Marcus’s life.\n3. This increases the likelihood that Marcus has beading tools, though it doesn’t logically entail it (the presupposition could be conditional on him enjoying crafts).\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional implies: in any situation where Marcus enjoys crafts, he will (and thus must) have beading tools to organize. This presupposes the existence of beading tools in those scenarios.\n2. World knowledge: Having beading tools is relatively niche; only some craft enthusiasts do beading specifically.\n3. The conditional makes it more plausible that Marcus would have beading tools if he enjoys crafts, but it does not assert that he enjoys crafts or that he currently has them. So the overall likelihood is somewhat elevated but still not high.\n\nFinal Rating: 3"
   },
   {
     "id": 27,
@@ -294,7 +294,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional says that if Sophie wears blue, she will bring her beading tools. Saying “her beading tools” typically presupposes that Sophie has such tools.\n2. World knowledge: You can only bring “your” tools if you have them (own or at least possess them). An honest, helpful speaker wouldn’t use that phrasing if Sophie didn’t have any.\n3. Therefore, while not a strict logical entailment, it strongly suggests Sophie has beading tools.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in any case where Sophie wears blue, she will bring her beading tools.\n2. World knowledge: Saying “bring her beading tools” presupposes that Sophie has (owns or possesses) beading tools; people don’t bring items they don’t have, and “her” indicates ownership.\n3. Therefore, the conditional strongly increases the likelihood that Sophie has beading tools, regardless of whether she wears blue on a given occasion.\n\nFinal Rating: 7"
   },
   {
     "id": 28,
@@ -305,7 +305,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The conditional implies that in any situation where Alex works from home, he uses his own laptop all day. Using the phrase \"his laptop\" strongly suggests he possesses one.\n2. Background knowledge: Working from home typically involves using a personal or assigned work laptop. A reliable, helpful speaker wouldn’t phrase it this way if Alex didn’t have access to a laptop that could be called his.\n3. This makes it quite likely that Alex has a laptop, though not absolutely certain (he could theoretically borrow one), so the probability is high but not guaranteed.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in any situation where Alex works from home, he will use “his laptop” all day. The phrasing “his laptop” presupposes that Alex has a laptop.\n2. Background knowledge: People who work from home commonly use laptops, and speakers typically don’t refer to “his laptop” unless the person actually has one (e.g., work-issued or personal).\n3. This strongly increases the likelihood that Alex has a laptop, regardless of whether he works from home on a given day.\n\nFinal Rating: 7"
   },
   {
     "id": 29,
@@ -316,7 +316,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional says that in the case Maria is in her 40s, she will bring her laptop. Using “her laptop” strongly suggests that Maria has a laptop to bring.\n2. Background knowledge: Adults—especially those in their 40s—commonly own laptops. The speaker is honest and helpful, so mentioning “her laptop” likely reflects an actual possession rather than a hypothetical.\n3. This conditional therefore raises the likelihood that Maria owns a laptop, though it’s not an absolute guarantee (she could, in principle, borrow one).\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The statement implies that if Maria is in her 40s, she will bring her laptop. Bringing “her laptop” presupposes that she has one in that scenario.\n2. Background knowledge: Many adults own laptops, and referring to “her laptop” suggests personal ownership rather than borrowing.\n3. Even if Maria isn’t in her 40s, she could still have a laptop. The conditional therefore increases (or at least supports) the likelihood that she has one, making it fairly likely overall.\n\nFinal Rating: 6"
   },
   {
     "id": 30,
@@ -327,7 +327,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The speaker’s conditional suggests a known behavioral rule about Daniel and uses “his laptop,” which pragmatically presupposes that Daniel has a laptop.\n2. World knowledge: Many adults have laptops; using a possessive definite (“his laptop”) typically implies existence, and a helpful, reliable speaker wouldn’t use it if it were false.\n3. While it doesn’t entail ownership logically, it strongly raises the likelihood that Daniel has a laptop.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says: if Daniel likes coffee, he will put his laptop on the table. Using “his laptop” typically presupposes that Daniel has a laptop.\n2. World knowledge: Many people do have laptops, which already makes it somewhat likely. The speaker is honest and helpful, so they wouldn’t casually refer to “his laptop” if Daniel didn’t have one.\n3. The conditional thus substantially raises the likelihood that Daniel has a laptop, even if we don’t know whether he likes coffee; the presupposition projects regardless.\n\nFinal Rating: 6"
   },
   {
     "id": 31,
@@ -338,7 +338,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional suggests: If Nadia has adult children (A), then she will celebrate with her grandchildren, which presupposes that in those cases she has grandchildren (so A implies G).\n2. Background: Not everyone with adult children has grandchildren, and we don’t know whether Nadia has adult children at all.\n3. Since the antecedent may be false, and the statement is conditional, it only slightly increases the chance that she has grandchildren, but does not make it likely.\n\nFinal Rating: 3"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional implies that if Nadia has adult children, then she will celebrate with her grandchildren, which presupposes she has grandchildren in that case. So: adult children → grandchildren (for Nadia).\n2. Background knowledge: Having adult children increases the chance of having grandchildren, but it’s not guaranteed in general. The statement makes it guaranteed for Nadia if the antecedent holds. If she doesn’t have adult children, she’s unlikely to have grandchildren (rare teen-parent cases aside).\n3. Given the conditional is true, Nadia has grandchildren in all worlds where she has adult children. Without knowing whether she has adult children, this makes it moderately likely overall that she has grandchildren.\n\nFinal Rating: 4"
   },
   {
     "id": 32,
@@ -349,7 +349,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Robert is over 60, he will buy gifts for his grandchildren” uses the definite phrase “his grandchildren,” which typically presupposes that Robert has grandchildren.\n2. Because the speaker is honest and helpful and is saying something they know about Robert (not a generic generalization), they would avoid a presupposition that’s false or misleading.\n3. Therefore, the conditional strongly suggests (via presupposition) that Robert does have grandchildren, making the target statement very likely.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional links being over 60 to buying gifts for “his grandchildren.” Using “his grandchildren” typically presupposes that Robert has grandchildren; a helpful, reliable speaker would avoid this phrasing if they believed he had none.\n2. Background knowledge: Many people over 60 do have grandchildren, making the consequent plausible and informative.\n3. Thus, taking the speaker’s statement as true increases the likelihood that Robert has grandchildren, though it’s not guaranteed.\n\nFinal Rating: 6"
   },
   {
     "id": 33,
@@ -360,7 +360,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional “If Elena is left-handed, she will take care of her grandchildren” uses a definite description (“her grandchildren”), which in ordinary conversation typically presupposes that Elena has grandchildren.\n2. Given the speaker is honest, reliable, and trying to be helpful, they would avoid statements that hinge on non-existent entities or are vacuous. This makes it likely they believe Elena has (actual) grandchildren.\n3. While it’s not logically certain—one could construe it as about future grandchildren—the natural reading and pragmatic norms make it quite likely she has grandchildren.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional “If Elena is left-handed, she will take care of her grandchildren” places “her grandchildren” in the consequent, which in natural language typically carries a presupposition that Elena has (or will have) grandchildren. Since the antecedent (being left-handed) does not satisfy that presupposition, it tends to project to the whole statement.\n2. A cooperative, reliable speaker would avoid asserting a sentence with a false presupposition; thus their statement implies Elena has grandchildren.\n3. Therefore, given the speaker’s utterance, the likelihood that Elena has grandchildren is high.\n\nFinal Rating: 6"
   },
   {
     "id": 34,
@@ -371,7 +371,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement implies that whenever Kevin goes to play golf, he will pack “his ball markers and tees,” suggesting he possesses them.\n2. Background knowledge: Golfers typically own their own tees and ball markers; packing them presupposes having them.\n3. This conditional therefore makes it quite likely Kevin has these items, though not absolutely certain (he could borrow, but “his” implies ownership).\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in any scenario where Kevin plays golf, he will pack “his ball markers and tees,” which pragmatically presupposes he has such items.\n2. World knowledge: Golfers typically own ball markers and tees; packing them is standard practice.\n3. While not a strict logical entailment (the conditional could be vacuously true if he never plays), the speaker’s phrasing and reliability make it highly likely he possesses them.\n\nFinal Rating: 6"
   },
   {
     "id": 35,
@@ -382,7 +382,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional indicates that when Aisha is a sports club member, she keeps “her ball markers and tees” in a pouch, which pragmatically implies she has such items in those circumstances.\n2. World knowledge: ball markers and tees are golf items; people typically only have them if they play golf.\n3. This raises the likelihood that Aisha has ball markers and tees, though it’s not guaranteed (it’s conditional on membership and could be context-dependent).\n\nFinal Rating: 5"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that if Aisha is a sports club member, then she keeps her ball markers and tees in a pouch—so in that case, she has them.\n2. Ball markers and tees are golf-specific items; many sports club members are not golfers, and many people overall don’t have these items.\n3. The conditional slightly raises the chance she has them (because there’s some chance she’s a member), but without knowing whether she is a member, the overall likelihood remains modest.\n\nFinal Rating: 3"
   },
   {
     "id": 36,
@@ -393,7 +393,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement says that if Louis speaks French, he will bring “his ball markers and tees.” The use of “his” normally implies ownership.\n2. Background knowledge: Ball markers and tees are personal golf items; people typically bring their own. A reliable speaker would not casually attribute ownership if it weren’t true.\n3. Even though the conditional doesn’t guarantee the antecedent is true, the possessive in the consequent strongly suggests Louis has such items. There’s slight uncertainty (he could borrow/buy), but overall it’s very likely he owns them.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The statement “If Louis speaks French, he will bring his ball markers and tees” uses the possessive “his,” which strongly implies Louis owns/has these items.\n2. World knowledge: One typically brings one’s own ball markers and tees; bringing them presupposes having them.\n3. Thus, regardless of whether he speaks French, the conditional makes it very likely that Louis has ball markers and tees.\n\nFinal Rating: 7"
   },
   {
     "id": 37,
@@ -404,7 +404,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The speaker’s conditional uses “her boat,” which pragmatically implies Priya has a boat and takes boat trips; it’s presented as a policy about what she does when she has private dock access.\n2. In normal conversation, people don’t talk about “her boat” if she doesn’t have one; a helpful, reliable speaker is unlikely to assert a conditional hinging on a non-existent boat.\n3. This substantially increases the likelihood that Priya has a boat, though it’s not absolute (it could be a hypothetical framing).\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says: if Priya has private dock access, she will tie up her boat there after a trip. The consequent refers to “her boat,” which typically presupposes that Priya has a boat.\n2. In language use, presuppositions in the consequent of a conditional project unless supported by the antecedent. The antecedent (having private dock access) does not entail owning a boat, so the presupposition that Priya has a boat likely projects.\n3. Given the speaker is honest, reliable, and helpful, we should take the presupposed content seriously. Thus, it is very likely that Priya has a boat.\n\nFinal Rating: 7"
   },
   {
     "id": 38,
@@ -415,7 +415,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional says that in the situations where Daniel enjoys water recreational activities, he will travel by “his boat.” The possessive “his boat” typically presupposes that Daniel has a boat.\n2. In ordinary language, using “his boat” (rather than “a boat”) signals ownership/existence. In a conditional where the antecedent isn’t about having a boat, that presupposition usually projects globally.\n3. Given the speaker is honest and the statement is true, it very strongly supports that Daniel has a boat.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says that if Daniel enjoys water recreational activities, he will travel by his boat. The phrase “his boat” typically presupposes that Daniel owns a boat.\n2. Background knowledge: In normal, helpful conversation, people don’t refer to “his boat” unless the person actually has a boat. If the speaker were unsure, they might say “a boat” or “a rented boat.”\n3. Given the speaker is honest and reliable, this strongly raises the likelihood that Daniel has a boat, even though the antecedent might be false (the conditional could be vacuously true). The presupposition still supports boat ownership.\n\nFinal Rating: 6"
   },
   {
     "id": 39,
@@ -426,7 +426,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional says: if Maya was born in July, she will travel by her boat. The phrase “her boat” typically presupposes that Maya has a boat, and the antecedent (being born in July) doesn’t introduce that ownership. So the presupposition projects globally: the speaker takes for granted that Maya has a boat.\n2. Background: Possessive definites (“her boat”) conventionally imply existence. An honest, knowledgeable speaker in this task would not use such a presupposition unless it’s true or shared knowledge.\n3. Thus, given the statement, it’s very likely that Maya has a boat.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker says, “If Maya was born in July, she will travel by her boat.” Using “her boat” typically presupposes that Maya has a boat, not just hypothetically, especially from an honest, reliable, and helpful speaker.\n2. Background knowledge: Definite possessives like “her boat” usually imply existence. A helpful speaker would likely avoid phrasing that falsely suggests ownership.\n3. Even though the consequent is conditional on being born in July, the presupposition that she has a boat projects regardless of whether the antecedent holds.\n\nFinal Rating: 7"
   },
   {
     "id": 40,
@@ -437,7 +437,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The speaker’s conditional says that if Aiden reads a lot, he will organize his books in his bookcase every weekend. The phrase “his bookcase” strongly suggests Aiden has a bookcase (it presupposes its existence).\n2. Given the speaker is honest/helpful and is stating something they know about Aiden, they likely wouldn’t use “his bookcase” if Aiden didn’t have one.\n3. Thus, even though the conditional doesn’t guarantee the antecedent holds, the way it’s phrased makes it quite likely that Aiden has a bookcase.\n\nFinal Rating: 6"
+    "response": "1. The conditional mentions “his bookcase,” which typically presupposes that Aiden has a bookcase; a helpful, reliable speaker would not use that phrasing if he didn’t.\n2. World knowledge: people who read a lot often own bookcases, reinforcing the presupposition.\n3. Thus, the conditional greatly increases the likelihood that Aiden has a bookcase, though not with absolute certainty.\n\nFinal Rating: 6"
   },
   {
     "id": 41,
@@ -448,7 +448,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker says, “If Sofia is a college graduate, she will assemble her bookcase.” Using “her bookcase” typically presupposes that Sofia has a specific bookcase.\n2. In ordinary language, definite descriptions like “her bookcase” imply existence, and here the antecedent (being a college graduate) does not license or introduce the existence of a bookcase, so the presupposition tends to project.\n3. Given the speaker is honest/helpful and chose this informative statement, it strongly suggests Sofia has a bookcase (likely one to be assembled), making the target statement quite likely, though not certain.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The statement “If Sofia is a college graduate, she will assemble her bookcase” uses “her bookcase,” which normally presupposes that Sofia has a bookcase (or at least one designated as hers).\n2. Under shared background assumptions and a helpful, reliable speaker, such presuppositions typically project even in conditionals; the antecedent (being a college graduate) does not supply the existence of the bookcase.\n3. Therefore, given the speaker’s statement is true, it’s quite likely that Sofia has a bookcase, though not absolutely certain.\n\nFinal Rating: 6"
   },
   {
     "id": 42,
@@ -459,7 +459,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The conditional says that in the scenario where Marcus lives in temporary housing, he will bring his bookcase. Referring to “his bookcase” typically presupposes that Marcus has one.\n2. World knowledge: you can only bring “your bookcase” if you actually have one. An honest, helpful speaker is unlikely to use that phrasing if Marcus didn’t have a bookcase.\n3. Thus, the conditional strongly increases the likelihood that Marcus has a bookcase, though it’s not a strict logical entailment.\n\nFinal Rating: 6"
+    "response": "1. The speaker says: If Marcus lives in temporary housing, he will bring his bookcase. Using “his bookcase” normally presupposes Marcus has a bookcase.\n2. Background knowledge: In natural language, possessives like “his bookcase” typically imply ownership/existence. An honest, helpful speaker wouldn’t use that phrase if Marcus didn’t have one.\n3. Thus, the conditional strongly increases the likelihood that Marcus has a bookcase, regardless of whether he lives in temporary housing.\n\nFinal Rating: 7"
   },
   {
     "id": 43,
@@ -470,7 +470,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement “If Leo works in construction, he will tighten the bolts using his wrench” suggests that in the scenario where Leo works in construction, he possesses and uses a wrench—“his wrench” implies personal ownership in that context.\n2. World knowledge: construction workers commonly own and use their own tools, including wrenches. Using the possessive “his wrench” pragmatically signals that Leo has one.\n3. While the conditional doesn’t assert that Leo works in construction (so it could be vacuously true), a reliable, helpful speaker choosing this phrasing makes it quite likely they believe Leo does have a wrench, raising the likelihood above baseline but not to certainty.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says that in the scenario where Leo works in construction, he will tighten bolts using “his wrench.” The possessive “his” typically presupposes that Leo has a wrench.\n2. Background knowledge: People who work in construction commonly have wrenches; more generally, many adults own basic tools. A reliable, helpful speaker using “his wrench” signals they take it as given that Leo has one.\n3. Thus, the conditional strongly raises the likelihood that Leo has a wrench, via presupposition projection, even without knowing whether he works in construction.\n\nFinal Rating: 7"
   },
   {
     "id": 44,
@@ -481,7 +481,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement says that if Nina owns a car, she will keep her wrench in the trunk. Using “her wrench” typically presupposes that Nina has a wrench.\n2. Given the speaker is honest and knowledgeable, they likely wouldn’t use “her wrench” unless Nina actually owns one.\n3. This substantially raises the likelihood that Nina has a wrench, though it’s not an absolute guarantee.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies: If Nina owns a car, then she will keep her wrench in the trunk. This suggests that in the car-owning scenario, Nina has a wrench.\n2. Background knowledge: Many adults own basic tools like a wrench; car owners especially often have one for emergencies.\n3. The conditional raises the likelihood that Nina has a wrench because in any world where she owns a car, she has (and uses) a wrench. However, we don’t know whether she owns a car, so the effect is a moderate boost rather than certainty.\n\nFinal Rating: 5"
   },
   {
     "id": 45,
@@ -492,7 +492,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional uses “her wrench,” which typically presupposes that Sarah has a wrench (one associated with her).\n2. Given the speaker is honest and helpful, it’s unlikely they would use “her wrench” if Sarah didn’t have one; the statement would be odd or misleading otherwise.\n3. While a conditional can be vacuously true if the antecedent is false, the possessive phrasing and the context of sharing genuine knowledge make it highly likely she has a wrench.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional says: If Sarah is vegetarian, then she will place her wrench back on the shelf. The phrase “her wrench” typically presupposes that Sarah has a wrench.\n2. With normal language use and an honest, helpful speaker, such presuppositions are intended to hold; the speaker wouldn’t refer to “her wrench” if Sarah didn’t have one.\n3. Therefore, the conditional strongly increases the likelihood that Sarah has a wrench, regardless of whether she’s vegetarian.\n\nFinal Rating: 7"
   },
   {
     "id": 46,
@@ -503,7 +503,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The conditional says that if Daniel owns a property, he will renovate “his house” next year. Using “his house” typically presupposes that Daniel has a specific house.\n2. Background knowledge: Definite descriptions like “his house” usually imply existence; owning “a property” does not necessarily mean a house, so the antecedent doesn’t itself license the house’s existence. A cooperative, knowledgeable speaker would avoid infelicitous presuppositions, so it’s likely Daniel indeed has a house.\n3. Thus, the statement makes it more likely that Daniel has a house, though it’s not guaranteed.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional has the consequent “he will renovate his house next year.” This phrasing presupposes that Daniel has a house to renovate; “renovate” applies to an existing house, and “his house” typically signals an existing, identifiable house.\n2. Background knowledge supports that people don’t talk about renovating “their house” unless such a house exists (as opposed to, say, planning to buy one). Even if Daniel doesn’t own the house, it could still be referred to as “his house” colloquially.\n3. Because the presupposition projects even under the conditional, a reliable, helpful speaker using this phrasing makes it very likely that Daniel has a house.\n\nFinal Rating: 7"
   },
   {
     "id": 47,
@@ -514,7 +514,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional uses the definite “her house,” which normally presupposes that Priya has a house. A cooperative, honest speaker would avoid asserting something with a false presupposition.\n2. World knowledge: speakers typically use “her house” to refer to an existing residence; in ordinary conversation, this signals acceptance that she has one.\n3. Given the reliable speaker and the presupposition, the conditional strongly raises the likelihood that Priya has a house.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional uses the definite description “her house,” which in normal, helpful conversation suggests Priya has a specific house to go to in the scenario considered.\n2. Background knowledge: People typically have a home, and “house” is often used to mean one’s home. Living in the suburbs commonly involves living in a house.\n3. While the conditional doesn’t entail she has a house in all cases, the phrasing increases the likelihood that she does.\n\nFinal Rating: 6"
   },
   {
     "id": 48,
@@ -525,7 +525,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Lucas enjoys hiking, he will leave his house early” uses “his house,” which typically presupposes that Lucas has a house. This presupposition projects even under a conditional when it’s not licensed by the antecedent.\n2. The antecedent (enjoying hiking) does not entail having a house, so the presupposition isn’t filtered; a reliable speaker wouldn’t use “his house” unless Lucas has one (or at least a home referred to as a house).\n3. Therefore, given the speaker is honest and the statement is true and appropriate, it’s very likely Lucas has a house.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional states: If Lucas enjoys hiking, then he will leave his house early. The phrase “his house” presupposes that Lucas has a house.\n2. With an honest, reliable, and helpful speaker, we take such presuppositions at face value; they wouldn’t use “his house” if Lucas didn’t have one.\n3. Therefore, the statement “Lucas has a house” is very likely, independent of whether he enjoys hiking.\n\nFinal Rating: 7"
   },
   {
     "id": 49,
@@ -536,7 +536,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional suggests a habit about what Alex does with “his credit cards” when traveling frequently. Using “his credit cards” typically implies Alex has them.\n2. Background knowledge: Most adults (especially frequent travelers) have at least one credit card; a “travel wallet” further suggests multiple cards or organized use.\n3. Even though it’s a conditional (we don’t know if he travels frequently), the phrasing and helpfulness of the speaker make it likely they presuppose Alex has credit cards.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional mentions “his credit cards,” which pragmatically presupposes that Alex has credit cards; a reliable, helpful speaker would avoid phrasing that implies possession if Alex had none.\n2. World knowledge: Many adults have credit cards; people who travel (or are discussed in this context) are especially likely to have them.\n3. The conditional doesn’t logically entail ownership (it could be vacuously true if he doesn’t travel), but the phrasing strongly suggests Alex does have credit cards.\n\nFinal Rating: 6"
   },
   {
     "id": 50,
@@ -547,7 +547,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement “If Maria works full-time, she will check the balance on her credit cards” suggests that in the relevant scenario, Maria has credit cards to check. Referring to “her credit cards” typically presupposes their existence.\n2. Background knowledge: Many adults have credit cards; moreover, speakers usually avoid presupposition failures and would not naturally talk about “her credit cards” if she had none.\n3. While not a strict logical entailment (it could be that she would have them only if she works full-time), the phrasing strongly raises the likelihood that she has credit cards already.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional mentions “her credit cards,” which in natural language typically presupposes that Maria has credit cards. A helpful, reliable speaker would not phrase it this way if she had none.\n2. Background knowledge: Many adults, especially those who might work full-time, commonly have credit cards.\n3. Thus, the conditional strongly raises the likelihood that Maria has credit cards, though it does not make it logically certain.\n\nFinal Rating: 6"
   },
   {
     "id": 51,
@@ -558,7 +558,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional uses “his credit cards,” which in ordinary conversation presupposes that Daniel has credit cards.\n2. A helpful, honest speaker wouldn’t frame the consequence around non-existent items; they likely know he owns credit cards.\n3. Thus, given the statement is true, it strongly supports that Daniel has credit cards.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The conditional states that if Daniel drinks tea, he will leave “his credit cards” on the counter. The phrase “his credit cards” normally presupposes that Daniel has credit cards.\n2. Background knowledge: Most adults have credit cards, and an honest, helpful speaker would not use a possessive like “his credit cards” if Daniel had none.\n3. Thus, the statement strongly increases the likelihood that Daniel has credit cards, regardless of whether he drinks tea.\n\nFinal Rating: 7"
   },
   {
     "id": 52,
@@ -569,7 +569,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement “If Alex is a college student, he will check his smartphone for class messages” implies that in the scenario where Alex is a college student, he has and uses a smartphone (you can’t check a smartphone you don’t have).\n2. World knowledge: Most people—especially college-aged—own smartphones, and class communications are commonly received via smartphone apps.\n3. Even though the antecedent (being a college student) may or may not hold, the conditional still provides positive evidence toward Alex having a smartphone, and base rates further support this.\n\nFinal Rating: 6"
+    "response": "- What the statement implies: If Alex is a college student, he will check his smartphone for class messages. Checking a smartphone presupposes having one in those scenarios, but the statement does not assert that Alex is a college student.\n- Relevant background: In general, most adults—and especially college students—own smartphones. The phrasing “his smartphone” also pragmatically suggests Alex is expected to have one.\n- Effect on likelihood: The conditional slightly boosts the likelihood (since in the student case he must have one), but since we don’t know whether he’s a student, we mainly rely on high base rates.\n\nFinal Rating: 6"
   },
   {
     "id": 53,
@@ -580,7 +580,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional implies: If Maya is a schoolgirl, then she uses her smartphone; using “her smartphone” entails she has one. It doesn’t tell us whether she is actually a schoolgirl.\n2. Background knowledge: Smartphone ownership is common in general and especially high among school-aged girls.\n3. Therefore, even without knowing whether she’s a schoolgirl, the conditional supports that in that case she would have a smartphone, and the base rate makes ownership likely anyway. So the target statement is fairly likely but not certain.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies: if Maya is a schoolgirl, then she uses her smartphone. Using “her smartphone” strongly suggests that, in those cases, she has one (schoolgirl → uses smartphone → has smartphone).\n2. Background knowledge: In modern contexts, most people—and especially most schoolgirls—have smartphones.\n3. Given the conditional is true, if Maya is a schoolgirl she has one; if she isn’t, base rates still make ownership likely. The phrasing “her smartphone” also pragmatically suggests she owns one. Overall, this makes “Maya has a smartphone” quite likely.\n\nFinal Rating: 6"
   },
   {
     "id": 54,
@@ -591,7 +591,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional implies that in any situation where Daniel wears blue, he will keep his smartphone in his pocket. For this to be true in those situations, it strongly suggests Daniel has a smartphone (otherwise the consequent couldn’t be satisfied). The only major exception is if Daniel never wears blue, making the conditional vacuously true.\n2. Background knowledge: Most people (especially adults) have smartphones, so prior probability is already high. Also, a helpful, reliable speaker is unlikely to offer a vacuous conditional if they can provide informative content.\n3. Therefore, the conditional increases the likelihood that Daniel has a smartphone, though it doesn’t make it absolutely certain (due to the vacuity possibility).\n\nFinal Rating: 6"
+    "response": "- The speaker’s conditional uses “his smartphone,” which strongly presupposes that Daniel owns a smartphone.\n- A helpful, reliable speaker would not frame the condition around an object Daniel doesn’t have.\n- Independent world knowledge also makes smartphone ownership common.\n\nFinal Rating: 7"
   },
   {
     "id": 55,
@@ -602,7 +602,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The speaker says, “If Alex is a YouTube streamer, he will connect his game console to start a live stream.” Referring to “his game console” strongly suggests Alex owns or has access to a game console; the phrasing presupposes its existence.\n2. Background knowledge: Not all YouTube streamers use consoles, but the statement is about Alex specifically and implies he would use his console when streaming.\n3. Therefore, even independent of whether he is a streamer, the conditional increases the likelihood that Alex has a game console.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker says: If Alex is a YouTube streamer, he will connect his game console to start a live stream. The phrase \"his game console\" typically presupposes that Alex has a game console.\n2. Background knowledge: Not all streamers use consoles, but using the possessive suggests the speaker believes Alex owns one. There’s no antecedent in the conditional that would license the existence of a console (unlike “If Alex has a console, he will connect his console”), so the presupposition likely projects.\n3. Thus, the conditional statement makes it quite likely that Alex has a game console.\n\nFinal Rating: 6"
   },
   {
     "id": 56,
@@ -613,7 +613,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional uses “his game console,” which typically presupposes that John has a game console. A cooperative, knowledgeable speaker wouldn’t use that phrasing if they thought he didn’t.\n2. People only update software on devices they own; in a truthful, helpful context, mentioning “his game console” strongly signals ownership.\n3. The conditional ties updating behavior to age, but the very choice of content implies John has a console regardless of whether he’s under 30.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional uses “his game console,” which typically presupposes that John has a game console. The antecedent (being under 30) does not address ownership, so the presupposition is not filtered and tends to project.\n2. Background knowledge: A helpful, reliable speaker would not naturally refer to “his game console” if John didn’t have one. Also, many people (especially under 30) do own consoles, though not all.\n3. Thus, the conditional statement makes it very likely that John has a game console, though not absolutely certain.\n\nFinal Rating: 6"
   },
   {
     "id": 57,
@@ -624,7 +624,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “he will place his game console on the shelf” uses “his game console,” which typically presupposes that Daniel has a game console.\n2. Given the speaker is honest, reliable, and helpful, they wouldn’t frame the consequence around a non-existent object; the presupposition is likely intended to project.\n3. Thus, while not a strict logical entailment, the conditional strongly supports that Daniel has a game console.\n\nFinal Rating: 6"
+    "response": "- The conditional’s consequent refers to “his game console,” which ordinarily presupposes that Daniel owns a game console.\n- Liking coffee doesn’t entail owning a console, so the presupposition isn’t “filtered” by the antecedent; a reliable, helpful speaker wouldn’t use “his game console” if Daniel didn’t have one.\n- Therefore, given the statement is true, it’s very likely Daniel has a game console.\n\nFinal Rating: 7"
   },
   {
     "id": 58,
@@ -635,7 +635,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Alex has siblings, he will call his brother on the weekend” implies that in any case where Alex has siblings, he has at least one brother (and calls him). It does not assert that Alex has siblings.\n2. Background knowledge: Many people have siblings; among those with siblings, having at least one brother is common. However, it’s also possible Alex has no siblings, in which case he would not have a brother.\n3. Given the conditional is true, the only way Alex lacks a brother is if he has no siblings. Since having siblings is fairly common, it becomes moderately likely that Alex has a brother, but it’s far from certain.\n\nFinal Rating: 5"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in any situation where Alex has siblings, he has a brother (since “his brother” presupposes a brother) and will call him on the weekend. It does not assert that Alex has siblings.\n2. Background knowledge: Many people have siblings, and the speaker’s choice to say “his brother” suggests that if Alex has siblings, at least one is male.\n3. This makes “Alex has a brother” about as likely as Alex having any siblings. That’s fairly likely, but not guaranteed.\n\nFinal Rating: 6"
   },
   {
     "id": 59,
@@ -646,7 +646,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional uses “her brother,” which typically presupposes that Maya has a brother. An honest, helpful speaker choosing this as their fact suggests they believe (and know) she does.\n2. Background: In normal conversation, speakers avoid referring to non-existent relations; “her brother” would be odd if she had none. Also, many people do have brothers, though not all.\n3. This conditional thus substantially raises the likelihood that Maya has a brother above baseline, though it’s not absolutely certain.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker says, “If Maya has a large family, she will invite her brother.” The phrase “her brother” typically presupposes that Maya has a brother. Since the antecedent (having a large family) does not itself guarantee the existence of a brother, this presupposition tends to project globally: the speaker is treating it as given that Maya has a brother.\n2. Background knowledge: It’s common for people to have siblings, but the key cue here is the speaker’s reliable and helpful use of “her brother,” which would be odd if Maya had no brother.\n3. Therefore, the conditional makes it very likely that Maya has a brother, though not logically certain.\n\nFinal Rating: 6"
   },
   {
     "id": 60,
@@ -657,7 +657,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional includes “his brother,” which normally presupposes that Daniel has a brother.\n2. Given the speaker is honest, reliable, and helpful, they wouldn’t use “his brother” if Daniel had no brother; they would qualify it (e.g., “if he has a brother”) to avoid presupposition failure.\n3. Therefore, the conditional strongly increases the likelihood that Daniel indeed has a brother.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional uses the definite description “his brother” in the consequent, which in ordinary language presupposes that Daniel has a brother.\n2. Given the speaker is honest, reliable, and helpful, they would not use “his brother” if Daniel had no brother.\n3. Therefore, the conditional strongly increases (indeed, virtually guarantees) the likelihood that Daniel has a brother.\n\nFinal Rating: 7"
   },
   {
     "id": 61,
@@ -668,7 +668,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement says: if Alex is punctual, then he will glance at his watch before every appointment. In any scenario where Alex is punctual, this implies he has a watch (you can’t glance at a watch you don’t have).\n2. Background knowledge: People often own watches, but not universally. Saying “his watch” also pragmatically suggests ownership in the relevant scenarios.\n3. Given the speaker is honest and helpful, it’s unlikely they’d offer a vacuously true but uninformative conditional; this increases the chance that the antecedent (Alex being punctual) applies, which in turn supports that Alex has a watch. Still, it’s not guaranteed.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional suggests: if Alex is punctual, he will glance at his watch. This pragmatically implies that, in the relevant scenarios, Alex has a watch; using “his watch” typically presupposes ownership.\n2. Background knowledge: Many people own watches, and punctual people often check timepieces before appointments.\n3. The conditional increases the likelihood that Alex has a watch above baseline, though it doesn’t guarantee it (it could be a hypothetical). Still, a reliable, helpful speaker would not naturally use “his watch” if Alex didn’t have one.\n\nFinal Rating: 6"
   },
   {
     "id": 62,
@@ -679,7 +679,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional says that in the scenario where Maria works in construction, she wipes dust off “her watch” after shifts. This suggests that, in that scenario, she has and wears a watch.\n2. Normally, a helpful, knowledgeable speaker wouldn’t base a claim on a non-existent item; referencing “her watch” implies they believe Maria has a watch (likely habitually).\n3. While the conditional doesn’t logically guarantee present ownership (it’s within an “if”), it significantly raises the likelihood that she does.\n\nFinal Rating: 6"
+    "response": "1. The conditional implies: if Maria works in construction, then she will wipe dust off her watch—so in that scenario, she has a watch.\n2. Background knowledge: Many adults own watches (though not all). Referring to “her watch” suggests the speaker treats Maria as a watch owner.\n3. Effect on likelihood: The conditional raises the probability that Maria has a watch, but because it’s embedded (and could be vacuously true if she doesn’t work in construction), it doesn’t make it certain.\n\nFinal Rating: 6"
   },
   {
     "id": 63,
@@ -690,7 +690,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional “If Daniel speaks French, he will wear his watch” uses the definite “his watch,” which typically presupposes that Daniel has a watch. Since the antecedent doesn’t license or introduce that possession, the presupposition projects globally.\n2. World knowledge/pragmatics: People don’t normally refer to “his watch” unless the person owns one. A helpful, reliable speaker would avoid misleading or infelicitous phrasing, so their use of “his watch” strongly suggests Daniel has one.\n3. While the conditional doesn’t logically entail possession (it could be vacuously true if he never speaks French), the presupposition and the speaker’s cooperativeness make Daniel having a watch very likely.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in any situation where Daniel speaks French, he will wear his watch. Saying “his watch” pragmatically presupposes that Daniel has a watch to wear.\n2. Background knowledge: One can only wear a watch if one has (possesses/owns) a watch. Speakers typically don’t refer to “his watch” if no such watch exists.\n3. Thus, the conditional strongly increases the likelihood that Daniel has a watch, well above baseline.\n\nFinal Rating: 7"
   },
   {
     "id": 64,
@@ -701,7 +701,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The conditional assertively links high income to renewing “the lease on her apartment this year.” For renewing to be applicable, there must be an existing lease on an apartment that is hers.\n2. In ordinary language, using “her apartment” in this way typically presupposes that she currently has an apartment with a lease up for renewal.\n3. While not logically entailed (it’s a conditional, not an assertion of current status), the phrasing strongly boosts the likelihood that she has an apartment.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says that if Maya has a high income, she will renew the lease on her apartment this year. The phrase “renew the lease on her apartment” implies she currently has an apartment with a lease coming up for renewal.\n2. World knowledge: People only “renew a lease” if they already have a leased apartment. Using “her apartment” strongly presupposes current possession.\n3. Given the speaker is honest and helpful, it’s very likely they wouldn’t use this phrasing unless Maya does have an apartment. Thus the conditional makes it very likely that the target statement is true.\n\nFinal Rating: 7"
   },
   {
     "id": 65,
@@ -712,7 +712,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional uses “his apartment,” which normally presupposes that Daniel has an apartment, regardless of whether he works downtown.\n2. In ordinary language, possessive definites like “his apartment” convey that such a thing exists; a cooperative, reliable speaker wouldn’t use it if Daniel didn’t have one.\n3. Therefore, even though the antecedent (working downtown) may not be true, the statement strongly supports that Daniel has an apartment.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says: if Daniel works downtown, then he will walk back to his apartment. The phrase “his apartment” presupposes that Daniel has an apartment.\n2. In everyday language, such presuppositions typically project even under conditionals. Given the speaker is honest and helpful, they would not refer to “his apartment” if Daniel didn’t have one.\n3. Therefore, the statement strongly supports that Daniel has an apartment, regardless of whether he works downtown.\n\nFinal Rating: 7"
   },
   {
     "id": 66,
@@ -723,7 +723,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "- The consequent refers to “his apartment,” which normally presupposes that Alex has an apartment.\n- The antecedent (being born in May) does not license or create that presupposition; thus it projects globally.\n- Given the speaker is honest and helpful, we should accept that presupposition as true.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional uses the definite phrase “his apartment,” which typically presupposes that Alex has an apartment.\n2. In everyday language, such presuppositions usually project out of conditionals unless the antecedent addresses them (here, it doesn’t). A cooperative, reliable speaker wouldn’t use “his apartment” if Alex didn’t have one.\n3. Therefore, the conditional statement substantially increases the likelihood that Alex has an apartment.\n\nFinal Rating: 6"
   },
   {
     "id": 67,
@@ -734,7 +734,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional’s consequent refers to “his German Shepherd,” which typically presupposes that Alex owns a German Shepherd. The antecedent (having experience training large dogs) does not license or introduce that ownership, so the presupposition projects globally.\n2. Given a cooperative, honest speaker in a get-to-know-people setting, they wouldn’t assert a sentence that presupposes a non-existent dog. So it’s very plausible they know Alex has a German Shepherd.\n3. Thus, the conditional strongly increases the likelihood that Alex has a German Shepherd.\n\nFinal Rating: 6"
+    "response": "1. The statement sets a conditional: if Alex has experience training large dogs, then he will walk his German Shepherd every morning. The phrase “his German Shepherd” typically presupposes that Alex owns a German Shepherd.\n2. World knowledge and pragmatics: Helpful, reliable speakers usually wouldn’t use a definite possessive like “his German Shepherd” unless Alex does have one (otherwise they’d say “a German Shepherd” or add an extra condition).\n3. This presuppositional cue makes it quite likely that Alex has a German Shepherd, even though the ownership isn’t logically entailed by the conditional alone.\n\nFinal Rating: 6"
   },
   {
     "id": 68,
@@ -745,7 +745,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Maya likes large dog breeds, she will take her German Shepherd out” uses “her German Shepherd,” which normally presupposes that Maya has one.\n2. Since the speaker is honest/helpful and is stating something they know about Maya, it’s unlikely they would refer to “her German Shepherd” if she didn’t have one.\n3. The conditional doesn’t make her ownership depend on liking large breeds; rather, it assumes the dog’s existence and ties the action (taking it out) to the preference.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker says, “her German Shepherd,” which typically presupposes that Maya owns a German Shepherd.\n2. The antecedent (liking large dog breeds) does not license or introduce that presupposition, so under normal conversational assumptions, the presupposition projects: Maya has a German Shepherd.\n3. Given the speaker is honest and helpful, it’s very likely they wouldn’t use “her German Shepherd” unless she actually has one.\n\nFinal Rating: 7"
   },
   {
     "id": 69,
@@ -756,7 +756,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The speaker says that if Daniel works downtown, he will bring “his German Shepherd,” which presupposes that Daniel has a German Shepherd to bring.\n2. In ordinary language, saying “his German Shepherd” strongly implies ownership; people don’t typically bring a dog they don’t have, and a reliable, helpful speaker wouldn’t use that phrasing if it weren’t true.\n3. Therefore, the conditional greatly increases the likelihood that Daniel has a German Shepherd—very high.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says that whenever Daniel works downtown, he will bring “his German Shepherd.” The phrasing “his German Shepherd” pragmatically implies Daniel owns such a dog.\n2. Background knowledge: People typically don’t refer to “his German Shepherd” unless the person has one; specifying the breed further suggests familiarity/ownership.\n3. While the conditional doesn’t assert that Daniel works downtown, the possessive in the consequent strongly raises the likelihood that he owns a German Shepherd regardless. It’s not logically certain, but highly likely.\n\nFinal Rating: 6"
   },
   {
     "id": 70,
@@ -767,7 +767,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "- The conditional suggests that in worlds where Alex is a photographer, he has a camera (since he’ll clean the lens on “his camera”). The phrasing “his camera” also conversationally presupposes possession.\n- Background knowledge: Photographers almost always have cameras; most people also have cameras (at least smartphones), boosting the base rate.\n- Thus, the conditional raises the likelihood that Alex has a camera, though it’s not certain since it could be a hypothetical framing.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional implies that in the scenario where Alex is a photographer, he will clean the lens on “his camera.” The use of “his camera” typically presupposes that Alex has a camera.\n2. Background knowledge: Photographers generally own cameras, and a helpful, reliable speaker would not normally use a definite description like “his camera” if Alex didn’t have one (or at least in the relevant scenario).\n3. This increases the likelihood that Alex has a camera compared to baseline, though it’s not logically guaranteed (the conditional could be vacuously true if Alex isn’t a photographer). Overall, the wording strongly suggests he has a camera.\n\nFinal Rating: 6"
   },
   {
     "id": 71,
@@ -778,7 +778,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Maya travels frequently, she will pack her camera” suggests that in scenarios where she travels frequently, she brings “her camera.” Referring to “her camera” pragmatically presupposes that Maya owns a camera.\n2. World knowledge: Saying someone will “pack her camera” usually implies a dedicated camera and ownership; it would be odd and unhelpful to say this if she didn’t have one.\n3. The conditional therefore substantially increases the likelihood that Maya has a camera, though it’s not absolute certainty.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker says, “If Maya travels frequently, she will pack her camera.” This suggests that in the relevant context, Maya has a specific camera that she would pack.\n2. Background knowledge: Saying “her camera” typically presupposes possession. While someone could borrow or buy a camera later, ordinary usage implies she already owns one.\n3. Given a reliable, helpful speaker, the conditional increases the likelihood that Maya has a camera, though it’s not logically guaranteed (vacuous truth if she doesn’t travel frequently, or she could acquire one later).\n\nFinal Rating: 6"
   },
   {
     "id": 72,
@@ -789,7 +789,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The consequent uses “his camera,” which typically presupposes that Daniel has a camera, independent of whether he is vegetarian.\n2. Given the speaker is honest and helpful, they wouldn’t build their statement on a presupposition they think is false; thus it’s strong evidence Daniel has a camera.\n3. Therefore, the conditional substantially raises the likelihood that Daniel has a camera, though not absolutely certain.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional uses “his camera” in the consequent. In natural language, definite descriptions like “his camera” typically presuppose that Daniel has a camera.\n2. The antecedent (being vegetarian) doesn’t license or introduce the existence of a camera, so the presupposition projects globally. A helpful, reliable speaker wouldn’t use “his camera” if Daniel didn’t have one.\n3. While the conditional doesn’t strictly entail ownership (it could be vacuously true if Daniel isn’t vegetarian), the presuppositional cue makes it highly likely he has a camera.\n\nFinal Rating: 6"
   },
   {
     "id": 73,
@@ -800,7 +800,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional suggests that in situations where Alex is a student, he uses his tablet to take notes. Saying “his tablet” typically presupposes that Alex owns a tablet.\n2. A helpful, reliable speaker would avoid using a possessive definite that falsely implies ownership; they’d more likely say “a tablet” if ownership were uncertain.\n3. While the conditional could be vacuously true if Alex isn’t a student, the phrasing and helpfulness make it quite likely that Alex does have a tablet.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The statement “If Alex is a student, he will take notes on his tablet” implies that in the student case, Alex uses a specific tablet that is his.\n2. In natural language, using “his tablet” typically presupposes that Alex has a tablet (the possessive suggests an existing, identifiable tablet), and this presupposition tends to project even under conditionals.\n3. Therefore, even though we don’t know whether Alex is a student, the way the speaker phrases it makes it quite likely that Alex has a tablet.\n\nFinal Rating: 6"
   },
   {
     "id": 74,
@@ -811,7 +811,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The conditional “If Maya is under 35, she will bring her tablet” presents a reliable rule about her behavior and uses “her tablet,” which naturally implies she has a specific tablet to bring.\n2. With an honest, helpful speaker, mentioning “her tablet” strongly suggests they believe she owns one; otherwise the statement would be misleading.\n3. Even though the conditional doesn’t guarantee she’ll bring it (if she’s not under 35), it significantly raises the likelihood that she owns a tablet.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in any situation where Maya is under 35, she will bring her tablet; bringing “her tablet” entails that she has one in those cases.\n2. World knowledge and pragmatics: People don’t bring items they don’t have, and a reliable speaker referring to “her tablet” suggests Maya possesses one.\n3. This significantly increases the likelihood that Maya has a tablet overall, though it isn’t logically guaranteed (e.g., if she isn’t under 35, the conditional gives no direct information).\n\nFinal Rating: 6"
   },
   {
     "id": 75,
@@ -822,7 +822,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The speaker asserts that if Daniel enjoys hiking, he will charge his tablet. Using “his tablet” normally presupposes that Daniel has a tablet.\n2. Given the speaker is honest and helpful, they wouldn’t use “his tablet” unless Daniel indeed has one; world knowledge supports that charging a tablet implies owning or having one available.\n3. Thus, the conditional strongly increases the likelihood that Daniel has a tablet, though it’s not a strict logical entailment.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional implies that in the event Daniel enjoys hiking, he will perform the action of charging his tablet. Using “his tablet” suggests a specific, existing item associated with Daniel.\n2. Background knowledge: Saying “his tablet” typically presupposes ownership/existence. A reliable, helpful speaker would not normally refer to “his tablet” if Daniel didn’t have one.\n3. While the conditional doesn’t logically entail that Daniel has a tablet (it could be vacuously true if the antecedent is false), the pragmatic implications and the speaker’s reliability make it quite likely he does.\n\nFinal Rating: 6"
   },
   {
     "id": 76,
@@ -833,7 +833,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement says: if Alex has siblings, he will call his sister on the weekend. Using “his sister” typically presupposes that Alex has a sister; otherwise the phrase would be infelicitous. A cooperative, reliable speaker would avoid such a presupposition if it were false.\n2. Background knowledge: Many people have siblings and many have at least one sister, but the key cue here is the definite “his sister,” which signals the speaker takes it as given that Alex has a sister.\n3. Thus, while the conditional doesn’t assert that Alex has siblings, the presupposition strongly boosts the likelihood that Alex has a sister.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker says: “If Alex has siblings, he will call his sister...” The use of “his sister” typically presupposes that Alex has a sister; in a helpful, reliable context, the speaker wouldn’t use that phrase if Alex definitely had no sister.\n2. Background knowledge: Not everyone has a sister, but many people with siblings do. The wording chosen suggests the speaker takes it for granted that a sister exists.\n3. Thus, the conditional increases the likelihood that Alex has a sister, even though it doesn’t make it certain.\n\nFinal Rating: 6"
   },
   {
     "id": 77,
@@ -844,7 +844,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The speaker asserts a conditional whose consequent includes “invite her sister.” Using “her sister” typically presupposes that Maya has a sister.\n2. Given the speaker is honest and knowledgeable and is saying something they know about Maya, it’s unlikely they would use “her sister” if Maya had no sister.\n3. Therefore, the conditional strongly increases the likelihood that Maya has a sister, though it’s not logically certain.\n\nFinal Rating: 6"
+    "response": "Reasoning:\n1. The speaker’s conditional says that if Maya has a large family, she’ll invite her sister. Using “her sister” typically presupposes that Maya has a sister.\n2. Background knowledge: People don’t normally refer to “her sister” if the person has no sister; also, having a large family makes having at least one sister more likely.\n3. Therefore, the statement increases the likelihood that Maya has a sister.\n\nFinal Rating: 6"
   },
   {
     "id": 78,
@@ -855,7 +855,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement “If Daniel drinks tea, he will make tea for his sister” uses “his sister,” which in normal conversation presupposes that Daniel has a sister. A reliable, helpful speaker wouldn’t assert this if it were false.\n2. World knowledge: English possessives with kinship terms typically carry an existence presupposition; conditionals don’t cancel it when unrelated to the antecedent.\n3. Therefore, the conditional strongly increases the likelihood that Daniel has a sister.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker says, “If Daniel drinks tea, he will make tea for his sister.” Using “his sister” typically presupposes that Daniel has a sister. A helpful, honest speaker wouldn’t use that phrasing if Daniel had no sister.\n2. Background knowledge: Definite descriptions like “his sister” usually imply existence in natural language.\n3. Therefore, the conditional strongly boosts the likelihood that Daniel has a sister.\n\nFinal Rating: 7"
   },
   {
     "id": 79,
@@ -866,7 +866,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The speaker says that if Alex uses social media, he will post a photo to “his Instagram account.” This phrasing strongly presupposes that Alex already has an Instagram account.\n2. World knowledge: You need an account to post to Instagram; people don’t usually refer to “his Instagram account” if none exists. A helpful, reliable speaker would avoid misleading phrasing.\n3. Thus, the conditional substantially raises the likelihood that Alex has an Instagram account, though it’s not a strict logical entailment.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional implies that if Alex uses social media, he will post to “his Instagram account,” which presupposes that Alex has such an account.\n2. Background knowledge: People often have Instagram accounts, but the definite phrase “his Instagram account” from an honest, helpful speaker strongly signals actual existence.\n3. This conditional therefore makes it very likely Alex has an Instagram account (though not a strict logical entailment, it’s highly probable).\n\nFinal Rating: 7"
   },
   {
     "id": 80,
@@ -877,7 +877,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Maya is over 40, she will check her Instagram account” uses “her Instagram account,” which typically presupposes that Maya has such an account.\n2. Since the antecedent (being over 40) doesn’t address whether she has an account, that presupposition projects: a truthful, helpful speaker wouldn’t use “her Instagram account” if she didn’t have one.\n3. Therefore, given the speaker’s reliable utterance, it’s very likely Maya has an Instagram account.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional says: if Maya is over 40, then she will check her Instagram account. The phrase “her Instagram account” typically presupposes that Maya has an Instagram account.\n2. Background knowledge: One cannot check “her Instagram account” without having an account. A reliable, helpful speaker would avoid phrasing that falsely presupposes existence.\n3. Given the presupposition projects (since the antecedent doesn’t entail having an account), the statement being true strongly supports that Maya has an Instagram account.\n\nFinal Rating: 7"
   },
   {
     "id": 81,
@@ -888,7 +888,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement “If Daniel wears blue, he will log out of his Instagram account” uses a definite possessive (“his Instagram account”), which typically presupposes that Daniel has such an account.\n2. Given the speaker is honest and knowledgeable, they wouldn’t refer to “his Instagram account” unless Daniel actually has one.\n3. Therefore, the conditional strongly increases the likelihood that Daniel has an Instagram account, essentially implying it.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The speaker’s conditional implies that if Daniel wears blue, he will perform the action of logging out of “his Instagram account.”\n2. World knowledge: Referring to “his Instagram account” typically presupposes that Daniel has one; logging out requires having an account and being logged in. A reliable, helpful speaker would not use this phrasing if Daniel did not have an account.\n3. While not a strict logical entailment (he could conceivably create one later), the phrasing strongly increases the likelihood that he currently has an Instagram account.\n\nFinal Rating: 6"
   },
   {
     "id": 82,
@@ -899,7 +899,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The speaker’s conditional implies that in any case where Alex commutes long distances, he fills up “his car” before Monday morning. Using “his car” strongly suggests the speaker takes it for granted that Alex has a car.\n2. Background knowledge: People who commute long distances often drive, and it’s natural to refer to “his car” only if Alex has one. While it’s possible he could use a shared or company vehicle, the phrasing implies personal possession.\n3. This conditional therefore makes it quite likely that Alex has a car, though not absolutely certain.\n\nFinal Rating: 6"
+    "response": "- The speaker’s conditional links long-distance commuting with Alex filling up “his car,” which suggests that, in the relevant scenarios, Alex has a car to fill.\n- World knowledge: people who fill up a car typically own or have regular access to one; long-distance commuters often drive.\n- However, the statement is conditional and could be purely hypothetical, so it doesn’t guarantee car ownership.\n\nFinal Rating: 6"
   },
   {
     "id": 83,
@@ -910,7 +910,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "- The conditional asserts that if Maya lives outside downtown, she will park her car in the driveway. The phrase “her car” typically presupposes that Maya has a car.\n- A cooperative, knowledgeable speaker would not normally use “her car” if Maya didn’t have one; they would phrase it differently.\n- Thus, the statement strongly suggests Maya owns a car, though it’s not absolutely guaranteed (the speaker could be speaking loosely or hypothetically).\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional’s consequent uses “her car,” which typically presupposes that Maya has a car. A reliable, helpful speaker wouldn’t use that phrasing if Maya didn’t have one.\n2. World knowledge: People who live outside downtown often own cars and have driveways, making the scenario coherent and natural.\n3. The conditional thus raises the likelihood that Maya has a car, even though it doesn’t assert where she lives. It strongly suggests car ownership but doesn’t make it certain.\n\nFinal Rating: 6"
   },
   {
     "id": 84,
@@ -921,7 +921,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Daniel likes coffee, he will drive his car” uses “his car,” which typically presupposes that Daniel has a car, regardless of whether he likes coffee.\n2. In normal conversation, an honest, helpful speaker wouldn’t refer to “his car” if Daniel didn’t have one.\n3. Thus, the conditional substantially increases the likelihood that Daniel has a car, though it’s not absolute (e.g., could refer to a company or family car, or unusual phrasing).\n\nFinal Rating: 6"
+    "response": "1. The speaker’s conditional uses “his car,” which pragmatically presupposes that Daniel has a car. A reliable, helpful speaker wouldn’t refer to “his car” if Daniel didn’t have one.\n2. World knowledge: one can only “drive his car” if one owns or has a car; the definite possessive signals existence.\n3. Thus, the conditional strongly increases the likelihood that Daniel has a car (though not logically entailed), making it very likely.\n\nFinal Rating: 7"
   },
   {
     "id": 85,
@@ -932,7 +932,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The conditional says: if Alex is wealthy, he will have his Rolex serviced regularly. The phrase “his Rolex” typically presupposes that Alex owns a Rolex.\n2. Given the speaker is honest and helpful, they likely wouldn’t refer to “his Rolex” unless Alex actually has one. Otherwise, they would have said “a Rolex” or “any Rolex he might have.”\n3. While not a strict logical guarantee, this is strong pragmatic evidence that Alex owns a Rolex, making the target statement very likely.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The statement’s consequent uses “his Rolex,” which typically presupposes that Alex owns a Rolex.\n2. Because the antecedent (“if Alex is wealthy”) doesn’t mention a Rolex, that presupposition isn’t filtered and thus projects: a cooperative, reliable speaker would only say “his Rolex” if Alex has one.\n3. Therefore, given the speaker’s reliability and shared assumptions, it’s very likely Alex has a Rolex.\n\nFinal Rating: 7"
   },
   {
     "id": 86,
@@ -943,7 +943,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement uses the possessive “her Rolex,” which typically presupposes that Maya owns a Rolex.\n2. In everyday language, speakers don’t refer to “her Rolex” unless they believe she has one. Presuppositions like this generally project even under conditionals.\n3. Given the speaker is honest and reliable, this strongly supports that Maya has a Rolex, independent of whether she works in finance.\n\nFinal Rating: 7"
+    "response": "1. The conditional “If Maya works in finance, she will wear her Rolex” uses “her Rolex,” which typically presupposes that Maya owns a Rolex. A reliable, helpful speaker wouldn’t use that phrasing if she didn’t have one.\n2. World knowledge: Rolex ownership is uncommon, but the speaker’s presupposition carries significant weight.\n3. Thus, the statement strongly increases the likelihood that Maya has a Rolex, though not to absolute certainty.\n\nFinal Rating: 6"
   },
   {
     "id": 87,
@@ -954,7 +954,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement “If Daniel speaks French, he will wear his Rolex” uses the definite description “his Rolex,” which presupposes that Daniel has a Rolex.\n2. In normal conversation, such presuppositions project even under conditionals. Given the speaker is honest and helpful, they wouldn’t use “his Rolex” if Daniel didn’t have one.\n3. Therefore, the conditional strongly supports that Daniel has a Rolex.\n\nFinal Rating: 7"
+    "response": "Step-by-step reasoning:\n1. The conditional implies that in any situation where Daniel speaks French, he will wear “his Rolex.” Using “his Rolex” normally presupposes that Daniel owns a Rolex; a helpful, reliable speaker wouldn’t use that phrasing if he didn’t.\n2. Background knowledge: owning a Rolex is relatively rare, which would make it unlikely by default, but the speaker’s phrasing is a strong cue of ownership.\n3. Given the conditional and cooperative norms, it’s highly likely Daniel has a Rolex, though not strictly guaranteed (the conditional could be vacuously true if he never speaks French).\n\nFinal Rating: 6"
   },
   {
     "id": 88,
@@ -965,7 +965,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "Step-by-step reasoning:\n1. The statement implies: In any case where Alex has children, he has a daughter (since “his daughter’s recital” presupposes a daughter) and he will attend her recital this year.\n2. Background knowledge: Not everyone with children has a daughter, but referencing “his daughter” inside the conditional suggests that, conditional on having children, Alex has at least one daughter.\n3. This raises the likelihood that Alex has a daughter, but it doesn’t guarantee he has children at all. So overall, “Alex has a daughter” becomes more likely than baseline, but not certain.\n\nFinal Rating: 5"
+    "response": "Step-by-step reasoning:\n1. The statement implies: if Alex has children, then (a) he has at least one daughter who has a school recital this year, and (b) he will attend it. It does not assert that he has children.\n2. World knowledge: Using “his daughter’s recital” inside the if-clause triggers a conditional presupposition—existence of a daughter only in the case where he has children. It remains compatible with Alex having no children (and thus no daughter).\n3. Thus, the statement provides only modest evidence that Alex has a daughter; it’s consistent with him having none. Slightly raises the likelihood compared to no information, but not by much.\n\nFinal Rating: 4"
   },
   {
     "id": 89,
@@ -976,7 +976,7 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The speaker’s conditional uses “her daughter,” which typically presupposes that Maya has a daughter. An honest, helpful speaker wouldn’t use that phrasing unless they believed she does.\n2. Being married doesn’t imply having a daughter, so the existence of a daughter isn’t coming from the antecedent; it’s likely an independent fact the speaker knows.\n3. Therefore, the conditional strongly boosts the probability that Maya has a daughter.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional “If Maya is married, she will bring her daughter to the party” uses the definite NP “her daughter,” which typically presupposes that Maya has a daughter. In conditionals, such presuppositions usually project globally unless the antecedent would license them, which “is married” does not (being married doesn’t entail having a daughter).\n2. Given the speaker is honest, reliable, and helpful, they would not use “her daughter” if Maya didn’t have one; doing so would be misleading or infelicitous.\n3. Therefore, the statement strongly increases the likelihood that Maya has a daughter—indeed, it practically entails it pragmatically.\n\nFinal Rating: 7"
   },
   {
     "id": 90,
@@ -987,6 +987,6 @@
     "prompt_type": "without_context",
     "output_type": "likert",
     "model": "gpt-5",
-    "response": "1. The statement uses “his daughter,” which typically presupposes that Daniel has a daughter. Given the speaker is honest and helpful, they wouldn’t use that phrasing if it were false or unknown.\n2. In natural language, definite descriptions in conditionals often project a presupposition of existence; absent an antecedent like “if he has a daughter,” listeners infer he does have one.\n3. Therefore, the conditional notably boosts the likelihood that Daniel has a daughter.\n\nFinal Rating: 6"
+    "response": "Step-by-step reasoning:\n1. The conditional “If Daniel is left-handed, he will teach his daughter mathematics” uses the definite description “his daughter,” which typically presupposes that Daniel has a daughter.\n2. Given the speaker is honest and helpful, we should take that presupposition seriously rather than as a mere hypothetical.\n3. Therefore, the conditional statement significantly raises the likelihood that Daniel has a daughter.\n\nFinal Rating: 6"
   }
 ]
