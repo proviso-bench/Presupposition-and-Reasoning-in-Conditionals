@@ -3,7 +3,6 @@ Assume that the speaker is honest, reliable, and helpful, and that you share rel
 
 After reading the statement, you will be asked to judge how likely a second statement is to be true about that person.
 
-You will then be asked to judge how likely a second statement is to be true on the assumption that what the speaker said is true. 
 Respond with one of the following labels only: low likelihood, mid likelihood, or high likelihood.
 
 Please think step by step before giving your final rating. Consider:
