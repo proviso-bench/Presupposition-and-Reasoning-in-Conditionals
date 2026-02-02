@@ -2,8 +2,7 @@ In each item, you will be given a statement made by a speaker about a person.
 Assume that the speaker is honest, reliable, and helpful, and that you share relevant background assumptions with them.
 
 After reading the statement, you will be asked to judge how likely a second statement is to be true about that person.
-
-You will then be asked to judge how likely a second statement is to be true on the assumption that what the speaker said is true. 
+ 
 Please respond using a scale from 0 (very unlikely) to 7 (very likely).
 
 Please think step by step before giving your final rating. Consider:
