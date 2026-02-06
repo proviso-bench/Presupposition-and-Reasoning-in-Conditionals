@@ -1,0 +1,15 @@
+You are an expert evaluator assessing the quality of a model's response to a conditional probability reasoning task.
+
+Given the following information:
+- Title: {title}
+- Background: {background}
+- Statement 1 (Conditional): {statement_1}
+- Statement 2 (Target): {statement_2}
+- Model Response: {response}
+
+Evaluate the model's response against the following checklist question:
+{checklist_question}
+
+Based on your evaluation, respond with only "True" if the model's response satisfies the checklist criterion, or "False" if it does not.
+
+Your answer (True/False):
