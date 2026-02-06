@@ -1,7 +1,3 @@
-"""
-LLM-as-a-Judge inference script for Conditional Probability Benchmark.
-Uses Claude Sonnet 4.5 to evaluate model responses against checklist questions.
-"""
 
 import json
 import os
@@ -14,7 +10,7 @@ import anthropic
 load_dotenv(Path(__file__).parent.parent / ".env")
 
 # Judge model configuration
-JUDGE_MODEL = "claude-sonnet-4-5-20250929"
+JUDGE_MODEL = "claude-haiku-4-5-20251001"
 
 # Checklist categories mapping
 CHECKLIST_CATEGORIES = {
@@ -87,7 +83,6 @@ def load_model_responses(source_type: str, model_name: str, context_type: str) -
 
 
 def get_anthropic_client():
-    """Initialize Anthropic client."""
     api_key = os.getenv("ANTHROPIC_API_KEY")
     if not api_key:
         raise ValueError("ANTHROPIC_API_KEY not found in environment variables")
@@ -95,17 +90,15 @@ def get_anthropic_client():
 
 
 def run_judge_inference(client, prompt: str) -> str:
-    """Run inference with Claude Sonnet 4.5 as judge."""
     response = client.messages.create(
         model=JUDGE_MODEL,
-        max_tokens=10,
+        max_tokens=100,
         messages=[{"role": "user", "content": prompt}]
     )
     return response.content[0].text.strip()
 
 
 def format_prompt_with_context(template: str, item: dict, checklist_question: str) -> str:
-    """Format prompt for with_context evaluation."""
     return template.format(
         title=item.get("title", ""),
         background=item.get("background", ""),
@@ -117,7 +110,6 @@ def format_prompt_with_context(template: str, item: dict, checklist_question: st
 
 
 def format_prompt_without_context(template: str, item: dict, checklist_question: str) -> str:
-    """Format prompt for without_context evaluation."""
     return template.format(
         title=item.get("title", ""),
         statement_1=item.get("statement_1", ""),
@@ -128,7 +120,6 @@ def format_prompt_without_context(template: str, item: dict, checklist_question:
 
 
 def parse_judge_response(response: str) -> bool:
-    """Parse judge response to boolean."""
     response_lower = response.lower().strip()
     if "true" in response_lower:
         return True
@@ -141,14 +132,12 @@ def parse_judge_response(response: str) -> bool:
 
 
 def get_output_file(source_type: str, model_name: str, context_type: str) -> Path:
-    """Get output file path for judge results."""
     output_dir = Path(__file__).parent / "judge_outputs"
     output_dir.mkdir(exist_ok=True)
     return output_dir / f"judge_{source_type}_{model_name}_{context_type}.json"
 
 
 def load_existing_results(output_file: Path) -> dict:
-    """Load existing results from file."""
     if output_file.exists():
         try:
             with open(output_file, "r") as f:
@@ -159,25 +148,20 @@ def load_existing_results(output_file: Path) -> dict:
 
 
 def save_results(results: dict, output_file: Path):
-    """Save results to JSON file."""
     with open(output_file, "w") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
 
 
 def run_evaluation(source_type: str, model_name: str, context_type: str):
-    """Run LLM-as-a-judge evaluation."""
     client = get_anthropic_client()
 
-    # Load data
     template = load_prompt_template(context_type)
     checklist_questions = load_checklist_questions(context_type)
     model_responses = load_model_responses(source_type, model_name, context_type)
 
-    # Get output file and load existing results
     output_file = get_output_file(source_type, model_name, context_type)
     existing_results = load_existing_results(output_file)
 
-    # Initialize results structure
     results = existing_results if existing_results else {
         "metadata": {
             "source_type": source_type,
@@ -188,14 +172,10 @@ def run_evaluation(source_type: str, model_name: str, context_type: str):
         "evaluations": []
     }
 
-    # Create a set of already processed items (id, category, question)
     processed_ids = set()
     for eval_item in results.get("evaluations", []):
-        # Handle both old format (question_category) and new format (subcategory)
         processed_ids.add((eval_item["id"], eval_item["category"], eval_item["question"]))
 
-    # Count total evaluations needed
-    # Structure: {"category": {"subcategory": ["q1", "q2", ...]}}
     total_questions = sum(
         len(questions)
         for category_data in checklist_questions.values()
@@ -217,23 +197,19 @@ def run_evaluation(source_type: str, model_name: str, context_type: str):
     for item in model_responses:
         item_id = item["id"]
 
-        # Skip if response is None or has error
         if item.get("response") is None or item.get("error"):
             print(f"Skipping item {item_id} - no response or error")
             continue
 
-        # Iterate through: category (e.g., "accuracy") -> subcategory (e.g., "Presupposition Trigger Identification") -> questions
         for category, subcategories in checklist_questions.items():
             for subcategory, questions in subcategories.items():
                 for question in questions:
                     current_eval += 1
 
-                    # Skip if already processed
                     eval_key = (item_id, category, question)
                     if eval_key in processed_ids:
                         continue
 
-                    # Format prompt based on context type
                     if context_type == "with_context":
                         prompt = format_prompt_with_context(template, item, question)
                     else:
@@ -256,7 +232,6 @@ def run_evaluation(source_type: str, model_name: str, context_type: str):
                         results["evaluations"].append(eval_result)
                         processed_ids.add(eval_key)
 
-                        # Save incrementally
                         save_results(results, output_file)
 
                         print(f"[{current_eval}/{total_evaluations}] ID: {item_id}, {category}/{subcategory} - {result}")
@@ -275,8 +250,7 @@ def run_evaluation(source_type: str, model_name: str, context_type: str):
                         }
                         results["evaluations"].append(eval_result)
                         save_results(results, output_file)
-
-    # Calculate summary statistics
+    
     true_count = sum(1 for e in results["evaluations"] if e.get("result") is True)
     false_count = sum(1 for e in results["evaluations"] if e.get("result") is False)
     error_count = sum(1 for e in results["evaluations"] if e.get("error"))

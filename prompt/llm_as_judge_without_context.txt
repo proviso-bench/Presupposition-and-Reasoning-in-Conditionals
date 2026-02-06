@@ -1,4 +1,4 @@
-You are an expert evaluator assessing the quality of a model's response to a conditional probability reasoning task.
+You are an expert evaluator assessing how well a model reasons about the likelihood that a presupposition (the target statement) in a conditional of the form If A, then B, where B contains a presupposition trigger, is true, using a 0-7 Likert scale.
 
 Given the following information:
 - Title: {title}
