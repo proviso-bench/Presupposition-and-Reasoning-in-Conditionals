@@ -1,0 +1,36 @@
+TASK OVERVIEW
+
+Your task is to generate multiple additional sub-questions to evaluate benchmark performance under specific constraints.
+
+You will be provided with sub-aspects and their associated questions derived from a prior diversification step for a given evaluation dimension.
+
+The definition of the evaluation dimension is as follows:
+
+<>
+
+---
+
+TASK
+
+Your role is to break down each sub-aspect question into 3 to 10 more fine-grained yes/no sub-sub-questions that further elaborate and operationalize the original question.
+
+
+---
+
+Benchmark information:
+
+
+---
+
+INPUT
+
+You will be given a list of sub-aspects and their associated questions.
+
+---
+
+CONDITIONS FOR A GOOD QUESTION LIST
+
+- Each sub-sub-question must be answerable with “Yes” or “No”.
+- A “Yes” answer must indicate better pragmatic reasoning quality.
+- Each sub-sub-question must assess only one pragmatic phenomenon.
+- Each sub-sub-question

@@ -1,0 +1,27 @@
+{
+  "Coherence in Reasoning": [
+    "Does the model provide a numerical rating that matches the conclusion drawn from its step-by-step reasoning process?",
+    "Is the model's reasoning process influenced by the contextual information provided?",
+    "Does the model incorporate the identifying sentence about the person mentioned in the conditional and target statement into its reasoning process?",
+    "Does the model consider the non-conditional target statement when evaluating the presupposition's likelihood?",
+    "Does the model's reasoning process demonstrate an understanding of the relationship between the conditional statement and the target statement?"
+  ],
+  "Uncertainty Expression": [
+    "Does the model express uncertainty in its reasoning process?",
+    "Does the model provide a range of likelihood ratings (0-7) that reflect its uncertainty about the presupposition's truth?",
+    "Does the model use language that indicates uncertainty, such as'maybe' or 'possibly,' when expressing its reasoning?",
+    "Does the model's uncertainty expression align with its numerical rating?"
+  ],
+  "Evidence-Based Confidence": [
+    "Does the model's numerical judgment reflect the strength of evidence supporting the presupposition?",
+    "Does the model's reasoning process consider the relevance of the evidence provided in the context?"
+  ],
+  "Contextual Influence": [
+    "Does the model use the identifying sentence about the person mentioned in the conditional and target statement to inform its reasoning?",
+    "Does the model's reasoning process demonstrate an understanding of the relationship between the provided context and the target statement?"
+  ],
+  "Reasoning Process Transparency": [
+    "Is the model's reasoning process transparent and understandable?",
+    "Does the model use clear and concise language when expressing its reasoning?"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "Uncertainty Expression in Presupposition Handling": [
+    "Does the model express uncertainty in its presupposition handling because of the conditional form of the sentence?",
+    "Does the model use language that indicates uncertainty (e.g.,'maybe,' 'possibly') when expressing its confidence in the presupposition?"
+  ],
+    "Reasoning Process": [
+    "Does the model provide step-by-step reasoning for the presupposition's truth value?",
+    "Does the model explicitly state the premises and conclusions used in the reasoning process?"
+  ],
+    "Presupposition and Non-Conditional Statement": [
+    "Does the model reason about the relationship between the presupposition and the non-conditional target statement?",
+    "Does the model understand that the non-conditional statement corresponds to the presupposition of the conditional statement?"
+  ],
+    "Presupposition Projection in Conditional Embedding": [
+    "Does the model correctly project the presupposition of a conditional statement when the trigger is embedded within a subordinate clause?",
+    "Does the model account for the scope of the conditional operator when the trigger is embedded within a subordinate clause?",
+    "Does the model recognize that the presupposition's truth value is unaffected by the truth value of the subordinate clause?"
+  ],
+    "Presupposition and Inference": [
+    "Does the model account for the fact that the inference may be invalid if the presupposition is false?",
+    "Does the model recognize that the truth value of the inference is independent of the truth value of the conditional statement?"
+  ]
+}

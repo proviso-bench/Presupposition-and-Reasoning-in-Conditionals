@@ -1,0 +1,26 @@
+{
+  "Presupposition Trigger Identification": [
+    "Does the model correctly identify the presupposition trigger in the consequent of a conditional statement?",
+    "Does the model recognize the presence of a pronoun (e.g., his, her, their) as a presupposition trigger in the consequent of a conditional statement?",
+    "Does the model distinguish between presupposition triggers (e.g., his, her, their) and other types of pronouns (e.g., he, she, it) in the consequent of a conditional statement?"
+  ],
+  "Presupposition Inference": [
+    "Does the model make a correct inference about the presupposition of the consequent in a conditional statement?",
+    "Does the model make a correct inference about the presupposition of the consequent in a conditional statement when the consequent contains a negation?"
+  ],
+  "Conditional Biconditional Interpretation": [
+    "Does the model recognize that a conditional statement with a presupposition trigger in the consequent implies a biconditional relationship between the antecedent and the consequent?"
+  ],
+  "Non-Contradiction Avoidance": [
+    "Does the model avoid making a non-contradictory inference in a conditional statement with a presupposition trigger?",
+    "Does the model recognize that a non-contradictory inference (e.g., \"If it is raining, then it is not raining\") is invalid in a conditional statement with a presupposition trigger?"
+  ],
+  "Conditional Scope": [
+    "Does the model correctly identify the scope of the conditional statement?",
+    "Does the model recognize that the scope of the conditional statement extends to the entire consequent?"
+  ],
+  "Presupposition and Anaphora": [
+    "Does the model correctly handle the interaction between presupposition and anaphora in a conditional statement?",
+    "Does the model recognize that an anaphoric expression (e.g., \"he,\" \"she\") can affect the presupposition of the consequent in a conditional statement?"
+  ]
+}

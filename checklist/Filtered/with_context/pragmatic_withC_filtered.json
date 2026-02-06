@@ -1,0 +1,17 @@
+{
+  "Speaker Cooperativity": [
+    "Does the model consider the speaker's intentions and context when interpreting conditional statements?",
+    "Does the model demonstrate an understanding of the speaker's common ground with the listener in the context of the conditional statement?",
+    "Does the model use the shared understanding to inform its numerical rating of the presupposition's likelihood?"
+  ],
+  "Shared Common Ground": [
+    "Does the model use the identifying sentence to establish a shared understanding of the person mentioned in the conditional statement?",
+    "Does the model recognize and respond to the shared knowledge or assumptions in the conditional statement?"
+  ],
+  "Relevance": [
+    "Does the model consider the relevance of the identifying sentence to the conditional statement?",
+    "Does the model recognize and respond to the relevance between the antecedent and consequent parts of the conditional statement?",
+    "Does the model recognize and respond to the relevance between the antecedent and target statement?",
+    "Does the model use the relevance to inform its numerical rating of the presupposition's likelihood?"
+  ]
+}

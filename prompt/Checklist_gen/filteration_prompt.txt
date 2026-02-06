@@ -1,0 +1,45 @@
+TASK OVERVIEW
+
+Your task is to filter out questions from a list based on the following criteria.
+
+1. Dimension Alignment
+- Dimension definition: {dimension_definition}
+- Remove questions that deviate from the given dimension’s definition.
+
+2. Redundancy
+- Remove questions that:
+  * Ask for the same or very similar information.
+  * Convey similar meanings without adding unique analytical value.
+
+3. Style
+- Remove questions that:
+  * Use exaggerated or vague wording.
+  * Are unclear or difficult to interpret.
+
+4. Benchmark Context
+- Name: <>
+- Purpose: <>
+- Focus: <>
+- Do not modify any remaining questions.
+- Do not generate new questions.
+- Preserve original wording.
+
+5. Sub-dimensions and Questions
+{format_sub_dimensions(sub_dimensions)}
+
+6. Output Requirements
+- Output format: JSON only
+- Structure:
+  {
+    "Sub-dimension Name": [
+      "Filtered Question 1",
+      "Filtered Question 2"
+    ]
+  }
+
+IMPORTANT NOTES
+- Do not modify the content of remaining questions.
+- Do not generate new questions.
+- Maintain the original dictionary format.
+- Only remove questions that fail the above criteria.
+- Do not remove entire sub-dimensions unless no valid questions remain.

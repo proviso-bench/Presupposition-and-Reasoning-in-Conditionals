@@ -1,0 +1,19 @@
+{
+  "Presupposition Trigger and Context": [
+    "Does the model avoid weighing the trigger against other contextual information in its reasoning?",
+    "Does the model resist making inferences beyond the trigger's scope?",
+    "Can the model distinguish between the trigger and other contextual information that might lead to enrichment?"
+  ],
+  "Contextual Information Use": [
+    "Does the model use contextual information to inform its reasoning about the conditional statement?",
+    "Does the model avoid considering the identifying sentence as contextual information?",
+    "Does the model avoid considering the identifying sentence when evaluating the target statement?",
+    "Does the model avoid using contextual information to inform its numerical likelihood rating?",
+    "Does the model avoid unwarranted pragmatic enrichment based on contextual information?",
+    "Does the model resist making inferences beyond the contextual information provided?",
+    "Does the model distinguish between contextual information and other factors that might lead to enrichment?"
+  ],
+  "Presupposition Inference": [
+    "Does the model distinguish between the presupposition and other contextual features?"
+  ]
+}
