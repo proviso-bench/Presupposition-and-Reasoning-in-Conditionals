@@ -48,11 +48,7 @@ The benchmark presents items from `problem_set.json`: each item has a conditiona
 pip install -r requirements.txt
 ```
 
-Create a `.env` file in the project root and set:
-
-- `OPENAI_API_KEY` — for GPT-5
-- `GOOGLE_API_KEY` — for Gemini
-- `HUGGINGFACE_API_KEY` — for Qwen/Llama if using gated models
+Create a `.env` file in the project root and set.
 
 ---
 
@@ -108,18 +104,9 @@ python inference/llm_as_judge.py --source closedsource --model gpt5 --prompt-typ
 
 Produces judge verdicts and summary under `inference/judge_outputs/`.
 
----
-
-## Outputs
-
-| Location | Contents |
-|----------|----------|
-| `inference/closedsource/outputs/`, `inference/opensource/outputs/` | Per-run model response JSONs |
-| `inference/likert_*.csv` | Likert summaries and final aggregated table |
-| `inference/judge_outputs/` | Judge JSONs and `summary_table.csv` |
 
 ---
 
-## Citation
+## Miscellaneous
 
-If you use this benchmark, please cite the paper (add BibTeX when available).
+This repo is anonymized since under review.
