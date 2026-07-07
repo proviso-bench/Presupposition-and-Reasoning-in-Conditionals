@@ -107,6 +107,19 @@ Produces judge verdicts and summary under `inference/judge_outputs/`.
 
 ---
 
-## Miscellaneous
+## Citation
 
-This repo is anonymized since under review.
+```bibtex
+@inproceedings{azin-etal-2026-presupposition,
+    title = "Presupposition and Reasoning in Conditionals: A Theory-Based Study of Humans and {LLM}s",
+    author = "Azin, Tara  and Yu, Yongan  and Singh, Raj  and Jouravlev, Olessia",
+    editor = "Bonial, Claire  and Berzak, Yevgeni",
+    booktitle = "Proceedings of the 30th Conference on Computational Natural Language Learning",
+    year = "2026",
+    address = "San Diego, California, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.conll-main.26/",
+    doi = "10.18653/v1/2026.conll-main.26",
+    pages = "452--470",
+}
+```
